@@ -3,8 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<style>
+	.form-horizontal{
+	width: 500px;
+	padding-right:15px;
+	padding-left: 15px;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:150px;
+	margin-bottom:auto;
+	
+	}
+	.form-group .btn{
+	width:388px ;
+	}
+	
+</style>
 </head>
 <body>
-
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputID" class="col-sm-2 control-label">ID</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputID" placeholder="아이디를 입력하세요">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPW" class="col-sm-2 control-label">PW</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPW" placeholder="비밀번호를 입력하세요">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Login</button>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> ID 저장
+        </label>
+      </div>
+    </div>
+  </div>
+</form>
 </body>
 </html>
