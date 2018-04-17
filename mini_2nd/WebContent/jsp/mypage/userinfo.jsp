@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
@@ -28,11 +29,7 @@
     </ul>
   </div>
 </nav>
-<div>
-	<table>
-		<tr><th>제목</th></tr>
-	</table>
-</div>
+
 <footer id="buttons">
 <button type="button" class="btn btn-default" onclick="location.href='#'">회원정보 수정</button>
 <button type="button" class="btn btn-default" onclick="location.href='#'">비밀번호 변경</button>
