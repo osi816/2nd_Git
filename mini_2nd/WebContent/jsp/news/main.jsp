@@ -1,8 +1,9 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>bit news</title>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -13,6 +14,11 @@
 		font-size: 48px;
 		line-height: 100px;
 		font-weight: bold;
+	}
+	.content{
+		height: 100%;
+		text-overflow: ellipsis;
+		overflow: hidden;
 	}
 	.space {
 		height: 20px;
@@ -26,6 +32,7 @@
 	.row > ul > li {
 		float: left;
 	}
+
 </style>
 </head>
 <body>
@@ -55,7 +62,7 @@
       <ul class="nav navbar-nav">
 <!--         <li><a href="#">Link <span class="sr-only">(current)</span></a></li> class="active" 클릭시 활성화 -->
         <li><a href="http://localhost:8000/list.do">BLOTER</a></li>
-        <li><a href="http://localhost:8000/list.do">전자신문</a></li>
+        <li><a href="http://www.hellodd.com/">hellDD</a></li>
         <li><a href="http://localhost:8000/list.do">아이뉴스 24</a></li>
         <li><a href="http://localhost:8000/list.do">디지털 타임스</a></li>
         <li><a href="http://localhost:8000/list.do">ZD Net Korea</a></li>
@@ -82,6 +89,114 @@
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
-</nav>
+</nav> 
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10 content">
+				<table class="table table-hover">
+					<tr>
+						<th> </th>
+						<th>제목</th>
+						<th>글쓴이</th>
+						<th>등록일</th>
+						<th>조회수</th>
+					</tr>
+					<tr onclick='alert(\"hi~\")'>
+						<td><img src="http://www.hellodd.com/upload/news/201804/thumb/thumb_120x73_13bae57a535266706771aad9ba9ca3181.png"/></td>
+						<td>Css 라이브러리</td>
+						<td>이정훈</td>
+						<td>2018.03.30</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Css 라이브러리</td>
+						<td>이정훈</td>
+						<td>2018.03.30</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Css 라이브러리</td>
+						<td>이정훈</td>
+						<td>2018.03.30</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Css 라이브러리</td>
+						<td>이정훈</td>
+						<td>2018.03.30</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Css 라이브러리</td>
+						<td>이정훈</td>
+						<td>2018.03.30</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Css 라이브러리</td>
+						<td>이정훈</td>
+						<td>2018.03.30</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Css 라이브러리</td>
+						<td>이정훈</td>
+						<td>2018.03.30</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Css 라이브러리</td>
+						<td>이정훈</td>
+						<td>2018.03.30</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Css 라이브러리</td>
+						<td>이정훈</td>
+						<td>2018.03.30</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Css 라이브러리</td>
+						<td>이정훈</td>
+						<td>2018.03.30</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Css 라이브러리</td>
+						<td>이정훈</td>
+						<td>2018.03.30</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Css 라이브러리</td>
+						<td>이정훈</td>
+						<td>2018.03.30</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Css 라이브러리</td>
+						<td>이정훈</td>
+						<td>2018.03.30</td>
+						<td>123</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
 </body>
 </html>
