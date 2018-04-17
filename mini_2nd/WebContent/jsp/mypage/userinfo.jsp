@@ -11,8 +11,27 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
   #buttons{text-align: right;}
+  
+  .form-horizontal{
+  width: 580px;
+  padding-right:15px;
+  padding-left: 15px;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top:100px;
+  margin-bottom:auto;
+  }
+  .sign-form{
+  size:30;
+  }
+  h2{
+  text-align: center;
+  margin-bottom: 60px;
+  margin-right:80px;
+  }
   </style>
 </head>
+
 <body>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -30,9 +49,37 @@
   </div>
 </nav>
 
+<form class="form-horizontal" action="Test03.html">
+  <h2>회원정보수정</h2>
+  <div class="form-group">
+    <label for="inputPW" class="col-sm-2 control-label">PW</label>
+    <div class="col-sm-10">
+      <input type="password" class="sign-form" id="inputPW" placeholder="비밀번호를 입력하세요"  size="30">
+	       
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPW" class="col-sm-2 control-label">PW 확인</label>
+    <div class="col-sm-10">
+      <input type="password" class="sign-form" id="checkPW" placeholder="비밀번호를 한번 더 입력하세요" size="30">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPW" class="col-sm-2 control-label">NAME</label>
+    <div class="col-sm-10">
+      <input type="text" class="sign-form" id="inputName" placeholder="이름을 입력하세요"  size="30">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPW" class="col-sm-2 control-label" >E-MAIL</label>
+    <div class="col-sm-10">
+      <input type="text" class="sign-form" id="inputEmail" placeholder="E-MAIL주소를 입력하세요"  size="30">
+    </div>
+  </div>
+</form>
+
 <footer id="buttons">
-<button type="button" class="btn btn-default" onclick="location.href='#'">회원정보 수정</button>
-<button type="button" class="btn btn-default" onclick="location.href='#'">비밀번호 변경</button>
+<button type="button" class="btn btn-default" onclick="location.href='passchange.jsp'">비밀번호 변경</button>
 <button type="button" class="btn btn-default" onclick="location.href='leave.jsp'">탈퇴</button>
 </footer>
 </body>

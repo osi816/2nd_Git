@@ -33,21 +33,30 @@
     <thead>
       <tr class="w3-light-grey">
         <th>클립 번호</th>
+        <th>제목</th>
+        <th>내용</th>
         <th>기사 번호</th>
       </tr>
     </thead>
     <tr>
-      <td>Jill</td>
-      <td>Smith</td>
+      <td>1</td>
+      <td>사건</td>
+      <td>Happened</td>
+      <td>687372</td>
     </tr>
     <tr>
       <td>Eve</td>
       <td>94</td>
+      <td>123</td>
+      <td>123</td>
     </tr>
     <tr>
-      <td>Adam</td>
-      <td>Johnson</td>
+      <td>Eve</td>
+      <td>94</td>
+      <td>123</td>
+      <td>123</td>
     </tr>
+    
   </table>
 </div>
 </body>
