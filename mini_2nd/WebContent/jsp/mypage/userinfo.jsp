@@ -28,7 +28,11 @@
     </ul>
   </div>
 </nav>
-
+<div>
+	<table>
+		<tr><th>제목</th></tr>
+	</table>
+</div>
 <footer id="buttons">
 <button type="button" class="btn btn-default" onclick="location.href='#'">회원정보 수정</button>
 <button type="button" class="btn btn-default" onclick="location.href='#'">비밀번호 변경</button>
