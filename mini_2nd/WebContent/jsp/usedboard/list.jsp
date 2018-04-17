@@ -109,8 +109,8 @@
 	  </tr>
 	  <tr>
 		<td>1</td>
-	    <td><a href='detail.jsp'>미니프로젝트 화이팅</a></td>
-		<td>봉석</td>
+	    <td><a href='detail.jsp'>캐논 6d 4만컷 60에 팝니다.</a></td>
+		<td>중고나라 사기꾼</td>
 		<td>2018-04-18</td>
 		<td>1</td>
 	  </tr>

@@ -109,8 +109,8 @@
 	  </tr>
 	  <tr>
 		<td>1</td>
-	    <td><a href='detail.jsp'>미니프로젝트 화이팅</a></td>
-		<td>봉석</td>
+	    <td><a href='detail.jsp'>구글 알파고, 바둑 짱먹다.</a></td>
+		<td>알파고</td>
 		<td>2018-04-18</td>
 		<td>1</td>
 	  </tr>

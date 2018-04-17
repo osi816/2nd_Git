@@ -1,9 +1,8 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
-<html> 
+<html>
 <head>
   <meta charset='utf-8'>
 
@@ -38,10 +37,8 @@
 	}
 
 </style>
-
 </head>
 <body>
-
 	<div class="container-fluid space"></div>
 	<div class="container">
 		<div class="row tab">
@@ -96,30 +93,20 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav> 
-
-	    전체 1개<br>
-	  <hr>
-	  <table class="table">
-	  <tr>
-	    <th>번호</th>
-	    <th>제목</th>
-	    <th>글쓴이</th>
-	    <th>등록일</th>
-	    <th>조회수</th>
-	  </tr>
-	  <tr>
-		<td>1</td>
-	    <td><a href='detail.jsp'>미니프로젝트 화이팅</a></td>
-		<td>봉석</td>
-		<td>2018-04-18</td>
-		<td>1</td>
-	  </tr>
-
-		  <tr>
-
-		  </tr>
-
-		</table>
-		<a href='writeForm.jsp'>글쓰기</a>
+	 <hr />
+	 <form method='post' action='write' enctype="multipart/form-data">
+	    제목 : <input type='text' name='title' size='70' /><br>
+	    글쓴이 : <input type='text' name='writer' size='30' /><br>
+	    내용 : <textarea name='content' rows='7' cols='70'></textarea><br>
+	    첨부파일 : 
+	    <input type="file" name="attach1" /><br>
+	    <input type="file" name="attach2" /><br>
+	   <button type='submit'>등록</button>
+	 </form>
 </body>
 </html>
+
+
+
+
+
