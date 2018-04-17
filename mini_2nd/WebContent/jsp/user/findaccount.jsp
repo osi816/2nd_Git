@@ -18,11 +18,17 @@
 	.sign-form{
 	size:30;
 	}
+	h2{
+	text-align: center;
+	margin-bottom: 60px;
+	}
+	
 
 </style>
 </head>
 <body>
 <form class="form-horizontal" action="Test03.html">
+  <h2>ID/PW 찾기</h2>
   <div class="form-group">
     <label for="inputPW" class="col-sm-2 control-label">NAME</label>
     <div class="col-sm-10">

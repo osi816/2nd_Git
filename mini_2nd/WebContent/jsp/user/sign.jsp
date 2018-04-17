@@ -18,11 +18,16 @@
 	.sign-form{
 	size:30;
 	}
+	h2{
+	text-align: center;
+	margin-bottom: 60px;
+	}
 
 </style>
 </head>
 <body>
 <form class="form-horizontal" action="Test03.html">
+  <h2>회원가입</h2>
   <div class="form-group">
     <label for="inputID" class="col-sm-2 control-label">ID</label>
     <div class="col-sm-10">
