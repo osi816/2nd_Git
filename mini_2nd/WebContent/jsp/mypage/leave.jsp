@@ -22,6 +22,7 @@
       <input type="password" class="form-control" id="pwd2" placeholder="Enter password">
     </div>
     <button type="submit" class="btn btn-default" onclick="location.href='회원탈퇴수정관련 서블릿으로'">회원탈퇴</button>
+    <button type="button" class="btn btn-default" onclick="location.href='userinfo.jsp'">취소</button>
   </form>
 </div>
 </body> 

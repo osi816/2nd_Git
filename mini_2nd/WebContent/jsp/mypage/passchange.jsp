@@ -23,11 +23,11 @@
     </div>
     <div class="form-group">
       <label for="pwd">새로운 비밀번호</label>
-      <input type="password" class="form-control" id="npwd1" placeholder="Enter password">
+      <input type="password" class="form-control" id="npwd1" placeholder="Enter new password">
     </div>
     <div class="form-group">
       <label for="pwd">새로운 비밀번호 재확인</label>
-      <input type="password" class="form-control" id="npwd2" placeholder="Enter password">
+      <input type="password" class="form-control" id="npwd2" placeholder="Enter new password again">
     </div>
     <button type="submit" class="btn btn-default" onclick="location.href='비밀번호수정관련 서블릿으로'">회원탈퇴</button>
     <button type="button" class="btn btn-default" onclick="location.href='userinfo.jsp'">취소</button>
