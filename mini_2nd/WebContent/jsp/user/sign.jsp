@@ -42,26 +42,26 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPW" class="col-sm-2 control-label">PW 확인</label>
+    <label for="checkPW" class="col-sm-2 control-label">PW 확인</label>
     <div class="col-sm-10">
       <input type="password" class="sign-form" id="checkPW" placeholder="비밀번호를 한번 더 입력하세요" size="30">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPW" class="col-sm-2 control-label">NAME</label>
+    <label for="inputName" class="col-sm-2 control-label">NAME</label>
     <div class="col-sm-10">
       <input type="text" class="sign-form" id="inputName" placeholder="이름을 입력하세요"  size="30">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPW" class="col-sm-2 control-label" >E-MAIL</label>
+    <label for="inputEmail" class="col-sm-2 control-label" >E-MAIL</label>
     <div class="col-sm-10">
       <input type="text" class="sign-form" id="inputEmail" placeholder="E-MAIL주소를 입력하세요"  size="30">
       &nbsp;&nbsp;<button>인증</button>
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPW" class="col-sm-2 control-label">인증번호</label>
+    <label for="inputNum" class="col-sm-2 control-label">인증번호</label>
     <div class="col-sm-10">
       <input type="text" class="sign-form" id="confirmNum" placeholder="인증번호를 입력하세요"  size="30">
       &nbsp;&nbsp;<button>확인</button>
