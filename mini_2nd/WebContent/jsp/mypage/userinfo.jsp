@@ -19,10 +19,10 @@
       <a class="navbar-brand" href="#">마이페이지</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">회원정보</a></li>
-      <li><a href="#">스크랩</a></li>
-      <li><a href="#">내 글</a></li>
-      <li><a href="#">내 댓글</a></li>
+      <li class="active"><a href="#">회원정보 수정</a></li>
+      <li><a href="myscrap.jsp">스크랩</a></li>
+      <li><a href="mywriting.jsp">내 글</a></li>
+      <li><a href="mycomment.jsp">내 댓글</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     </ul>
@@ -36,7 +36,7 @@
 <footer id="buttons">
 <button type="button" class="btn btn-default" onclick="location.href='#'">회원정보 수정</button>
 <button type="button" class="btn btn-default" onclick="location.href='#'">비밀번호 변경</button>
-<button type="button" class="btn btn-default" onclick="location.href='#'">탈퇴</button>
+<button type="button" class="btn btn-default" onclick="location.href='leave.jsp'">탈퇴</button>
 </footer>
 </body>
 </html>
