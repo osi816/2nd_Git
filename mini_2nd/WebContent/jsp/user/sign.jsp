@@ -52,12 +52,14 @@
     <label for="inputPW" class="col-sm-2 control-label" >E-MAIL</label>
     <div class="col-sm-10">
       <input type="text" class="sign-form" id="inputEmail" placeholder="E-MAIL주소를 입력하세요"  size="30">
+      &nbsp;&nbsp;<button>인증</button>
     </div>
   </div>
   <div class="form-group">
     <label for="inputPW" class="col-sm-2 control-label">인증번호</label>
     <div class="col-sm-10">
       <input type="text" class="sign-form" id="confirmNum" placeholder="인증번호를 입력하세요"  size="30">
+      &nbsp;&nbsp;<button>확인</button>
     </div>
   </div>
 </form>
