@@ -26,7 +26,7 @@
 </style>
 </head>
 <body>
-<form class="form-horizontal" action="Test03.html">
+<form class="form-horizontal" method="post" action="/mini_2nd/jsp/news/main.jsp">
   <h2>회원가입</h2>
   <div class="form-group">
     <label for="inputID" class="col-sm-2 control-label">ID</label>
@@ -67,6 +67,7 @@
       &nbsp;&nbsp;<button>확인</button>
     </div>
   </div>
+  <button>회원가입</button>
 </form>
 </body>
 </html>

@@ -84,8 +84,8 @@
         <button type="submit" class="btn btn-default">Search</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">회원가입</a></li>
-        <li><a href="login.html">로그인</a></li>
+        <li><a href="/mini_2nd/jsp/user/sign.jsp">회원가입</a></li>
+        <li><a href="/mini_2nd/jsp/user/login.jsp">로그인</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

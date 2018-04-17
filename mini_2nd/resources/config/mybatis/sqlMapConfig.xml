@@ -20,8 +20,8 @@
 		1428213      
 	-->
 	<typeAliases>
-		<typeAlias alias="board" type="kr.co.board.domain.Board" />
-		<typeAlias alias="comment" type="kr.co.board.domain.Comment" />
+		<typeAlias alias="user" type="kr.co.bitnews.domain.User" />
+		
 	</typeAliases>
 	
 	<environments default="development">
@@ -40,6 +40,6 @@
 		개별적으로 작성한 mapper.xml(SQL)의 위치를 알려준다.
 	 -->
 	<mappers>
-		<mapper resource="config/sqlmap/oracle/board.xml"/>
+		<mapper resource="config/sqlmap/oracle/user.xml"/>
 	</mappers>
 </configuration>

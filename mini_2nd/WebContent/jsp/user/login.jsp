@@ -47,7 +47,7 @@
       <div class="checkbox">
         <label>   
           <input type="checkbox"> ID 저장        
-          <a href=''>ID/PW 찾기</a>
+          <a href='/mini_2nd/jsp/user/findaccount.jsp'>ID/PW 찾기</a>
 	      <a href=''>네이버ID로 로그인</a>
         </label>
       </div>
