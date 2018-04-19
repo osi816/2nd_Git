@@ -32,7 +32,6 @@
 		 where no = #{no}
 	</select>
 	
-	
 	<insert id="insertBoard" parameterType="board">
 		insert into tb_board(
 			no,
