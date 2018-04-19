@@ -41,7 +41,7 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">회원정보 수정</a></li>
       <li><a href="myscrap.jsp">스크랩</a></li>
-      <li><a href="mywriting.jsp">내 글</a></li>
+      <li><a href="usedboard.jsp">내 글</a></li>
       <li><a href="mycomment.jsp">내 댓글</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">

@@ -9,6 +9,10 @@
  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .board{margin-bottom:20px;}
+  .board:hover{text-decoration: none;}
+  </style>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -27,8 +31,18 @@
   </div>
 </nav>
 
-<div class="w3-container">
+<div class="board">
+<a href="freeboard.jsp"><strong>자유 게시판 </strong></a> 
+<a href="#"><strong>ㅣㅣ</strong></a> 
+<a href="#"><strong>중고 게시판 </strong></a> 
+<a href="#"><strong>ㅣㅣ</strong></a> 
+<a href="articleboard.jsp"><strong>기사 게시판 </strong></a> 
+</div>
 
+<h1>중고게시판</h1>
+<br>
+
+<div class="w3-container">
   <table class="w3-table-all w3-hoverable">
     <thead>
       <tr class="w3-light-grey">
