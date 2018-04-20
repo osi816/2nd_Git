@@ -107,6 +107,9 @@
 	  <hr>
 	  <table class="table">
 	  <tr>
+	  	<th> 
+	   		<input type="checkbox" id="all" name="all" value="all">
+	    </th>
 	    <th>번호</th>
 	    <th>제목</th>
 	    <th>글쓴이</th>
@@ -114,6 +117,7 @@
 	    <th>조회수</th>
 	  </tr>
 	  <tr>
+	  <td><input type="checkbox" id="f1" name="fruits" value="2" /></td>
 		<td>1</td>
 	    <td><a href='detail.jsp'>미니프로젝트 화이팅</a></td>
 		<td>봉석</td>

@@ -104,6 +104,7 @@
 	 <c:forEach var="file" items="${fileList}">
 	 	<a href="/00_board/common/file/down?path=${file.filePath}&sName=${file.systemName}&dName=${file.oriName}">${file.oriName}</a>(${file.fileSize} bytes)<br>
 	 </c:forEach>
+
 	 <br>
 	 <hr />
 	 <a href='updateForm.jsp'>수정</a>

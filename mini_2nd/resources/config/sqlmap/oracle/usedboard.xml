@@ -10,6 +10,7 @@
 		<result column="content" property="content"/>
 		<result column="reg_date" property="regDate"/>
 		<result column="view_cnt" property="viewCnt"/>
+		<result column="head" property="head"/>
 	</resultMap>
 	
 	<resultMap id="commentMap" type="comment">
@@ -38,19 +39,22 @@
 			no,
 			title,
 			writer,
-			content
+			content,
+			head
 		)values (
 			s_board_no.nextval,
 			#{title},
 			#{writer},
-			#{content}
+			#{content},
+			#{head}
 		)
 	</insert>
 	
 	<update id="updateBoard" parameterType="board">
 		update tb_board
 		   set title = #{title},
-			   content = #{content}
+			   content = #{content},
+			   head = #{head}
 		 where no = #{no}
 	</update>
 	
