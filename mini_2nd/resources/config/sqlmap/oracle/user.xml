@@ -54,5 +54,11 @@
 		 where user_id = #{userId}
 	</update>
 	
+	<update id="withdrawUser" parameterType="string">
+	update tb_user
+	   set user_withdraw = 1
+	 where user_id = #{id}
+	</update>
+	
 	
 </mapper>
