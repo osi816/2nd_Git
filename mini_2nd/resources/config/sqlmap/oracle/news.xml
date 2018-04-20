@@ -3,4 +3,37 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace = "kr.co.bitnews.mapper.NewsMapper">
 
+	<resultMap id="newsMap" type="news">
+		<result column="news_seq" property="newsSeq"/>
+		<result column="news_id" property="newsId"/>
+		<result column="user_id" property="userId"/>
+		<collection property="img" column="newsId"
+					ofType="newsimg" select="selectNewsImg" />
+	</resultMap>
+
+	<insert id="insertNews" parameterType="news">
+		insert into tb_news(
+			news_seq,
+			news_id,
+			user_id
+		)values(
+			s_tb_news_seq.nextval,
+			#{newsId},
+			#{userId}
+		)
+	</insert>
+	
+	<select id="selectNews" parameterType="news" 
+		resultMap="newsMap"  flushCache="true" useCache="false">
+		select *
+		  from tb_news
+		 where user_id = #{userId}
+		
+	</select>
+	
+	<select id="selectNewsImg" parameterType="string" resultType="newsimg">
+		select *
+		  from tb_news_img
+		 where news_id = #{newsId}
+	</select>
 </mapper>

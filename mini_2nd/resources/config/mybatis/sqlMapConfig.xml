@@ -21,6 +21,10 @@
 	-->
 	<typeAliases>
 		<typeAlias alias="user" type="kr.co.bitnews.domain.User" />
+		<typeAlias alias="article" type="kr.co.bitnews.domain.Article" />
+		<typeAlias alias="news" type="kr.co.bitnews.domain.News" />
+		<typeAlias alias="newsimg" type="kr.co.bitnews.domain.NewsImg" />
+		<typeAlias alias="scrap" type="kr.co.bitnews.domain.Scrap" />
 		
 	</typeAliases>
 	
@@ -41,5 +45,10 @@
 	 -->
 	<mappers>
 		<mapper resource="config/sqlmap/oracle/user.xml"/>
+		<mapper resource="config/sqlmap/oracle/article.xml"/>
+		<mapper resource="config/sqlmap/oracle/mypage.xml"/>
+		<mapper resource="config/sqlmap/oracle/news.xml"/>
+		<mapper resource="config/sqlmap/oracle/scrap.xml"/>
+		<mapper resource="config/sqlmap/oracle/newsimg.xml"/>
 	</mappers>
 </configuration>
