@@ -48,9 +48,8 @@
 	
 	<update id="updateUser" parameterType="user">
 		update tb_user
-		   set title = #{title},
-			   content = #{content}
-		 where no = #{no}
+		   set user_pw = #{userPw}
+		 where user_id = #{userId}
 	</update>
 	
 	
