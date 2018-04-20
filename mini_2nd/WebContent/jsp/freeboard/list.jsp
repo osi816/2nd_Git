@@ -96,7 +96,13 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav> 
-
+	 <div style="
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;"
+	 > 
+	 	자유 게시판
+	 </div>
 	    전체 1개<br>
 	  <hr>
 	  <table class="table">

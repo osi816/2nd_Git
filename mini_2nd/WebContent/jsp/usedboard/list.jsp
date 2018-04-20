@@ -36,6 +36,11 @@
 	.row > ul > li {
 		float: left;
 	}
+	.title{
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;
+	}
 
 </style>
 
@@ -96,7 +101,13 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav> 
-
+	 <div style="
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;"
+	 > 
+	 	중고장터 게시판
+	 </div>
 	    전체 1개<br>
 	  <hr>
 	  <table class="table">
