@@ -8,6 +8,16 @@ public class User {
     private String userName;
 
     private String userEmail;
+    
+    private int user_withdraw;
+
+	public int getUser_withdraw() {
+		return user_withdraw;
+	}
+
+	public void setUser_withdraw(int user_withdraw) {
+		this.user_withdraw = user_withdraw;
+	}
 
 	public String getUserId() {
 		return userId;
