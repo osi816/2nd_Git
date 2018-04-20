@@ -17,6 +17,14 @@ public class Board {
 	
 	private int viewCnt;
 	
+	private char head;
+	
+	public char getHead() {
+		return head;
+	}
+	public void setHead(char head) {
+		this.head = head;
+	}
 	public int getViewCnt() {
 		return viewCnt;
 	}

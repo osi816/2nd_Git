@@ -112,6 +112,9 @@
 	  <hr>
 	  <table class="table">
 	  <tr>
+	    <th> 
+	   		<input type="checkbox" id="all" name="all" value="all">
+	    </th>
 	    <th>번호</th>
 	    <th>말머리</th>
 	    <th>제목</th>
@@ -120,6 +123,16 @@
 	    <th>조회수</th>
 	  </tr>
 	  <tr>
+	  	<td><input type="checkbox" id="f1" name="fruits" value="2" /></td>
+		<td>2</td>
+		<td>삽니다</td>
+	    <td><a href='detail.jsp'>아이폰 7 구입하고 싶습니다.</a></td>
+		<td>불쌍한 호구</td>
+		<td>2018-04-20</td>
+		<td>1</td>
+	  </tr>
+	  <tr>
+		<td><input type="checkbox" id="f1" name="fruits" value="1" /></td>
 		<td>1</td>
 		<td>팝니다</td>
 	    <td><a href='detail.jsp'>캐논 6d 4만컷 60에 팝니다.</a></td>
