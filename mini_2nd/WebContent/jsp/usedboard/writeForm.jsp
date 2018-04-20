@@ -96,6 +96,11 @@
 	 <hr />
 	 <form method='post' action='write' enctype="multipart/form-data">
 	    제목 : <input type='text' name='title' size='70' /><br>
+	    말머리 : <select name="head">
+				<option value="">선택</option>
+				<option value="1">팝니다</option>
+				<option value="2">삽니다</option>
+			</select><br>
 	    글쓴이 : <input type='text' name='writer' size='30' /><br>
 	    내용 : <textarea name='content' rows='7' cols='70'></textarea><br>
 	    첨부파일 : 
