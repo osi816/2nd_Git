@@ -6,4 +6,6 @@ public interface UserMapper {
 	String selectUserById(String id);
 	void insertUser(User user);
 	void updateUser(User user);
+	String selectId(User user );
+	String selectPw(User user );
 }
