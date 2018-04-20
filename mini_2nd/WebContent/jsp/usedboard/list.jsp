@@ -36,6 +36,11 @@
 	.row > ul > li {
 		float: left;
 	}
+	.title{
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;
+	}
 
 </style>
 
@@ -96,12 +101,19 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav> 
-
+	 <div style="
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;"
+	 > 
+	 	중고장터 게시판
+	 </div>
 	    전체 1개<br>
 	  <hr>
 	  <table class="table">
 	  <tr>
 	    <th>번호</th>
+	    <th>말머리</th>
 	    <th>제목</th>
 	    <th>글쓴이</th>
 	    <th>등록일</th>
@@ -109,6 +121,7 @@
 	  </tr>
 	  <tr>
 		<td>1</td>
+		<td>팝니다</td>
 	    <td><a href='detail.jsp'>캐논 6d 4만컷 60에 팝니다.</a></td>
 		<td>중고나라 사기꾼</td>
 		<td>2018-04-18</td>
