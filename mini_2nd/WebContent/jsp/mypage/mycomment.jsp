@@ -28,6 +28,9 @@
 </nav>
 
 <div class="w3-container">
+
+<h1>내 댓글</h1>
+<br>
  
   <table class="w3-table-all w3-hoverable">
     <thead>
