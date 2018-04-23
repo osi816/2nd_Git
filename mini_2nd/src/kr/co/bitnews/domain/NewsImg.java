@@ -1,16 +1,17 @@
 package kr.co.bitnews.domain;
 
 public class NewsImg {
-	private int newsImgNo;
+	private String day;
 	private int newsId;
 	private String imgPath;
 	
-	public int getNewsImgNo() {
-		return newsImgNo;
+	public String getDay() {
+		return day;
 	}
-	public void setNewsImgNo(int newsImgNo) {
-		this.newsImgNo = newsImgNo;
+	public void setDay(String day) {
+		this.day = day;
 	}
+	
 	public int getNewsId() {
 		return newsId;
 	}

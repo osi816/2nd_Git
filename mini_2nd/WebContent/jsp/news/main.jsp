@@ -32,6 +32,10 @@
 	.row > ul > li {
 		float: left;
 	}
+	.ck {
+		float: left;
+		line-height: 20px;
+	}
 </style>
 </head>
 <body>
@@ -60,7 +64,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 <!--         <li><a href="#">Link <span class="sr-only">(current)</span></a></li> class="active" 클릭시 활성화 -->
-        <li><a href="http://localhost:8000/list.do">BLOTER</a></li>
+        <li><input class="ck" type="checkbox"/><a href="http://localhost:8000/list.do">BLOTER</a></li>
         <li><a href="http://www.hellodd.com/">hellDD</a></li>
         <li><a href="http://localhost:8000/list.do">아이뉴스 24</a></li>
         <li><a href="http://localhost:8000/list.do">디지털 타임스</a></li>

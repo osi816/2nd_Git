@@ -7,8 +7,12 @@
 		<result column="news_seq" property="newsSeq"/>
 		<result column="news_id" property="newsId"/>
 		<result column="user_id" property="userId"/>
-		<collection property="img" column="newsId"
-					ofType="newsimg" select="selectNewsImg" />
+	</resultMap>
+	
+	<resultMap id="newsimgMap" type="newsimg">
+		<result column="day" property="day"/>
+		<result column="news_id" property="newsId"/>
+		<result column="user_id" property="userId"/>
 	</resultMap>
 
 	<insert id="insertNews" parameterType="news">
@@ -23,17 +27,20 @@
 		)
 	</insert>
 	
-	<select id="selectNews" parameterType="news" 
-		resultMap="newsMap"  flushCache="true" useCache="false">
-		select *
+	<delete id="deleteNews" parameterType="int">
+		delete tb_news
+		 where news_id = #{newsId}
+	</delete>
+	
+	<select id="selectNewsByUser" parameterType="string" resultType="int">
+		select news_id
 		  from tb_news
 		 where user_id = #{userId}
-		
 	</select>
 	
-	<select id="selectNewsImg" parameterType="string" resultType="newsimg">
+	<select id="selectNewsImgByid" parameterType="string" resultMap="newsimgMap">
 		select *
 		  from tb_news_img
-		 where news_id = #{newsId}
+		 where user_id = #{userId}
 	</select>
 </mapper>

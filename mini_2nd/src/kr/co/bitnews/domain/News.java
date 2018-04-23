@@ -1,15 +1,10 @@
 package kr.co.bitnews.domain;
 
-import java.util.Date;
-import java.util.List;
-
 public class News {
 	
 	private int newsSeq;
 	private int newsId;
 	private String userId;
-	private Date newsDate;
-	private List<NewsImg> img;
 	
 	public int getNewsSeq() {
 		return newsSeq;
@@ -29,18 +24,5 @@ public class News {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	public Date getNewsDate() {
-		return newsDate;
-	}
-	public void setNewsDate(Date newsDate) {
-		this.newsDate = newsDate;
-	}
-	public List<NewsImg> getImg() {
-		return img;
-	}
-	public void setImg(List<NewsImg> img) {
-		this.img = img;
-	}
-
 
 }
