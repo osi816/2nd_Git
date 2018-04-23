@@ -11,10 +11,11 @@
 	</resultMap>
 	
 
-	<select id = "selectUserByID" resultType="string" parameterType="string">
-		select user_pw
+	<select id = "selectUserByID" resultType="user" parameterType="string">
+		select *
 		  from tb_user
-		 where user_id = #{userId}
+		 where user_id = #{userId} and 
+		 	   user_pw = #{userPw}
 	</select>
 	
 	<select id = "selectID" resultType="string" parameterType="user">
@@ -52,6 +53,11 @@
 		   	   user_name = #{userName}
 		   	   user_email = #{userEmail}
 		 where user_id = #{userId}
+	</update>
+	
+	<update id="withdrawUser" parameterType="string">
+		update tb_user
+		   set user
 	</update>
 	
 	
