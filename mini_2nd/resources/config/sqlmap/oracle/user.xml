@@ -56,8 +56,14 @@
 	</update>
 	
 	<update id="withdrawUser" parameterType="string">
+<<<<<<< HEAD
 		update tb_user
 		   set user
+=======
+	update tb_user
+	   set user_withdraw = 1
+	 where user_id = #{id}
+>>>>>>> 40b2d2b8f4f28271654386707df7e580ae9ad35b
 	</update>
 	
 	

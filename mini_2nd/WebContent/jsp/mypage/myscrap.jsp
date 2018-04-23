@@ -27,6 +27,9 @@
   </div>
 </nav>
 
+<h1>나의 스크랩</h1>
+<br>
+
 <div class="w3-container">
 
   <table class="w3-table-all w3-hoverable">
