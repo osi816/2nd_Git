@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -48,28 +50,18 @@
       <tr class="w3-light-grey">
         <th>글 번호</th>
         <th>제목</th>
-        <th>내용</th>
+        <th>조회수</th>
         <th>작성일</th>
       </tr>
     </thead>
+    <c:forEach var="board" items="${list}">
     <tr>
-      <td>1</td>
-      <td>1번게시글</td>
-      <td>내용</td>
-      <td>2018-04-16</td>
+      <td>${board.no}</td>
+      <td>${board.title}</td>
+      <td>${board.viewCnt}</td>
+      <td><fmt:formatDate value="${board.regDate}" pattern="yyyy-MM-dd" /></td>
     </tr>
-    <tr>
-      <td>Eve</td>
-      <td>Jackson</td>
-      <td>94</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Adam</td>
-      <td>Johnson</td>
-      <td>67</td>
-      <td></td>
-    </tr>
+   </c:forEach>
   </table>
 </div>
 

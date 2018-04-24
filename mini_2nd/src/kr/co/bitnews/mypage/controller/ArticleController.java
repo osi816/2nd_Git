@@ -21,6 +21,8 @@ public class ArticleController extends HttpServlet{
 		ArticleBoardMapper mapper = MyAppSqlConfig.getSqlSession().getMapper(ArticleBoardMapper.class);
 		List<Board> list = mapper.selectBoard();
 		
+		req.setAttribute("list", list);
+		
 		RequestDispatcher rd = req.getRequestDispatcher("/jsp/mypage/articleboard.jsp");
 	}
 
