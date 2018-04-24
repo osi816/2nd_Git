@@ -19,7 +19,7 @@ public class UsedController extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		UsedBoardMapper mapper =  MyAppSqlConfig.getSqlSession().getMapper(UsedBoardMapper.class);
-		List<Board> list =  mapper.selectBoard();
+		//List<Board> list = mapper//SelectByName(세션)
 		
 		req.setAttribute("list", list);
 		
