@@ -8,6 +8,7 @@
 		<result column="user_pw" property="userPw"/>
 		<result column="user_name" property="userName"/>
 		<result column="user_email" property="userEmail"/>
+		<result column="user_withdraw" property="userWithdraw"/>
 	</resultMap>
 	
 
