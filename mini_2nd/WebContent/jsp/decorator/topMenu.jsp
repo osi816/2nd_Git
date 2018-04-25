@@ -49,7 +49,7 @@
         <button type="submit" class="btn btn-default">Search</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/mini_2nd/jsp/mypage/userinfo.jsp">MyPage</a></li>
+        <li><a href="/mini_2nd/jsp/mypage/userupdate.jsp">MyPage</a></li>
         <li><a href="/mini_2nd/jsp/user/sign.jsp">회원가입</a></li>
         <li><a href="/mini_2nd/jsp/user/login.jsp">로그인</a></li>
       </ul>
