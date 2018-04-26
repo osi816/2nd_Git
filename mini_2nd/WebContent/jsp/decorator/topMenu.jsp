@@ -26,12 +26,12 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 <!--         <li><a href="#">Link <span class="sr-only">(current)</span></a></li> class="active" 클릭시 활성화 -->
-        <li><a href="http://localhost:8000/list.do">BLOTER</a></li>
-        <li><a href="http://www.hellodd.com/">hellDD</a></li>
-        <li><a href="http://localhost:8000/list.do">아이뉴스 24</a></li>
-        <li><a href="http://localhost:8000/list.do">디지털 타임스</a></li>
-        <li><a href="http://localhost:8000/list.do">ZD Net Korea</a></li>
-        <li><a href="http://localhost:8000/list.do">디지털 데일리</a></li>
+        <li><a href="#">BLOTER</a></li>
+        <li><a href="<c:url value="/jsp/news/detailnews.jsp" />">hellDD</a></li>
+        <li><a href="#">아이뉴스 24</a></li>
+        <li><a href="#">디지털 타임스</a></li>
+        <li><a href="#">ZD Net Korea</a></li>
+        <li><a href="#">디지털 데일리</a></li>
         
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 유저공간 <span class="caret"></span></a>
@@ -49,7 +49,7 @@
         <button type="submit" class="btn btn-default">Search</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/mini_2nd/jsp/mypage/userinfo.jsp">MyPage</a></li>
+        <li><a href="/mini_2nd/jsp/mypage/userupdate.jsp">MyPage</a></li>
         <li><a href="/mini_2nd/jsp/user/sign.jsp">회원가입</a></li>
         <li><a href="/mini_2nd/jsp/user/login.jsp">로그인</a></li>
       </ul>

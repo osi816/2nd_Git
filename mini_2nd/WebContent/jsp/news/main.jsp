@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,113 +7,41 @@
 <title>bit news</title>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-1"></div>
-			<div class="col-md-10 content">
-				<table class="table table-hover">
-					<tr>
-						<th> </th>
-						<th>제목</th>
-						<th>글쓴이</th>
-						<th>등록일</th>
-						<th>조회수</th>
-					</tr>
-					<tr onclick='alert(\"hi~\")'>
-						<td><img src="http://www.hellodd.com/upload/news/201804/thumb/thumb_120x73_13bae57a535266706771aad9ba9ca3181.png"/></td>
-						<td>Css 라이브러리</td>
-						<td>이정훈</td>
-						<td>2018.03.30</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Css 라이브러리</td>
-						<td>이정훈</td>
-						<td>2018.03.30</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Css 라이브러리</td>
-						<td>이정훈</td>
-						<td>2018.03.30</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Css 라이브러리</td>
-						<td>이정훈</td>
-						<td>2018.03.30</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Css 라이브러리</td>
-						<td>이정훈</td>
-						<td>2018.03.30</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Css 라이브러리</td>
-						<td>이정훈</td>
-						<td>2018.03.30</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Css 라이브러리</td>
-						<td>이정훈</td>
-						<td>2018.03.30</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Css 라이브러리</td>
-						<td>이정훈</td>
-						<td>2018.03.30</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Css 라이브러리</td>
-						<td>이정훈</td>
-						<td>2018.03.30</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Css 라이브러리</td>
-						<td>이정훈</td>
-						<td>2018.03.30</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Css 라이브러리</td>
-						<td>이정훈</td>
-						<td>2018.03.30</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Css 라이브러리</td>
-						<td>이정훈</td>
-						<td>2018.03.30</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Css 라이브러리</td>
-						<td>이정훈</td>
-						<td>2018.03.30</td>
-						<td>123</td>
-					</tr>
-				</table>
-			</div>
-			<div class="col-md-1"></div>
-		</div>
-	</div>
+	
+	<div id="sliderFrame">
+	    <div id="slider">
+			<img src="<c:url value="/images/slider-1.jpg" />" />
+			<img src="<c:url value="/images/slider-2.jpg" />" />
+			<img src="<c:url value="/images/slider-3.jpg" />" />
+			<img src="<c:url value="/images/slider-4.jpg" />" />
+        </div>
+        <!--Custom navigation buttons on both sides-->
+        <div class="group1-Wrapper">
+            <a onclick="imageSlider.previous()" class="group1-Prev"></a>
+            <a onclick="imageSlider.next()" class="group1-Next"></a>
+        </div>
+        <!--nav bar-->
+        <div style="text-align:center;padding:20px;z-index:20;">
+            <a onclick="imageSlider.previous()" class="group2-Prev"></a>
+            <a id='auto' onclick="switchAutoAdvance()"></a>
+            <a onclick="imageSlider.next()" class="group2-Next"></a>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        //The following script is for the group 2 navigation buttons.
+        function switchAutoAdvance() {
+            imageSlider.switchAuto();
+            switchPlayPauseClass();
+        }
+        function switchPlayPauseClass() {
+            var auto = document.getElementById('auto');
+            var isAutoPlay = imageSlider.getAuto();
+            auto.className = isAutoPlay ? "group2-Pause" : "group2-Play";
+            auto.title = isAutoPlay ? "Pause" : "Play";
+        }
+        switchPlayPauseClass();
+    </script>
+	
 </body>
 </html>

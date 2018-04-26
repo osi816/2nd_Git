@@ -19,9 +19,11 @@ public class FreeController extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		FreeBoardMapper mapper =  MyAppSqlConfig.getSqlSession().getMapper(FreeBoardMapper.class);
-		List<Board> list = mapper.selectBoard();
+		//List<Board> list = mapper//SelectByName(세션)
 		
-		RequestDispatcher rd = req.getRequestDispatcher("/jsp/mypage/free.jsp");
+		req.setAttribute("list", list);
+		
+		RequestDispatcher rd = req.getRequestDispatcher("/jsp/mypage/freeboard.jsp");
 	}
 
 }

@@ -6,7 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <title><sitemesh:write property="title" /></title>
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<link href="<c:url value="/jsp/news/4/js-image-slider.css" />" rel="stylesheet" type="text/css" />
+<script src="<c:url value="/jsp/news/4/js-image-slider.js" />" type="text/javascript"></script>
+<link href="<c:url value="/jsp/news/4/generic.css" />" rel="stylesheet" type="text/css" />
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <sitemesh:write property="head" />
@@ -50,8 +53,6 @@
 			<sitemesh:write property="body" />
 		</div>
 		
-		<div class="footer">
-			<c:import url="/jsp/decorator/footer.jsp" />
-		</div>
+
 </body>
 </html>
