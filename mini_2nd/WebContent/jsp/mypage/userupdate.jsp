@@ -26,8 +26,8 @@
   }
   h2{
   text-align: center;
-  margin-bottom: 60px;
-  margin-right:80px;
+  margin-bottom:60px;
+  margin-right:90px;
   }
   </style>
 </head>
@@ -49,7 +49,7 @@
   </div>
 </nav>
 
-<form class="form-horizontal" action="Test03.html">
+<form class="form-horizontal" action="/mini_2nd/jsp/mypage/userupdate">
   <h2>회원정보수정</h2>
   <div class="form-group">
     <label for="inputPW" class="col-sm-2 control-label">PW</label>
@@ -76,6 +76,7 @@
       <input type="text" class="sign-form" id="inputEmail" placeholder="E-MAIL주소를 입력하세요"  size="30">
     </div>
   </div>
+<button type="submit" class="btn btn-default">정보수정</button>
 </form>
 
 <footer id="buttons">

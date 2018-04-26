@@ -17,7 +17,7 @@
       <a class="navbar-brand" href="#">마이페이지</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="userinfo.jsp">회원정보 수정</a></li>
+      <li><a href="userupdate.jsp">회원정보 수정</a></li>
       <li><a href="myscrap.jsp">스크랩</a></li>
       <li><a href="usedboard.jsp">내 글</a></li>
       <li class="active"><a href="#">내 댓글</a></li>
