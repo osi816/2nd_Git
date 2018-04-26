@@ -12,18 +12,34 @@
 <body>
 <div class="container">
   <h2>회원탈퇴</h2>
-  <form>
+  <form action="leave">
     <div class="form-group">
       <label for="pwd">비밀번호</label>
-      <input type="password" class="form-control" id="pwd1" placeholder="Enter password">
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
     </div>
     <div class="form-group">
       <label for="pwd">비밀번호 재확인</label>
-      <input type="password" class="form-control" id="pwd2" placeholder="Enter password">
+      <input type="password" class="form-control" id="pwd-check" placeholder="Enter password">
     </div>
-    <button type="submit" class="btn btn-default" onclick="location.href='회원탈퇴수정관련 서블릿으로'">회원탈퇴</button>
-    <button type="button" class="btn btn-default" onclick="location.href='userinfo.jsp'">취소</button>
+    <button type="submit" class="btn btn-default">회원탈퇴</button>
+    <button type="button" class="btn btn-default" onclick="location.href='userupdate.jsp'">취소</button>
   </form>
 </div>
+<script>
+window.onsubmit = function(){
+    var pwd = document.getElementById('pwd').value;
+    var pwdcheck = document.getElementById('pwd-check').value
+    
+    if(pwd == ""|| pwdcheck ==""){
+    	alert("빈칸을 채워주십시오")
+    	return false;
+    }else if(pwd!=pwdcheck){
+    	alert("이전 비밀번호가 일치하지 않습니다.");
+    	return false;
+    }else{
+    	return true;
+    }
+}
+</script>
 </body> 
 </html>
