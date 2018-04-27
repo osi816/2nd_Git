@@ -46,9 +46,7 @@
 	<mappers>
 		<mapper resource="config/sqlmap/oracle/user.xml"/>
 		<mapper resource="config/sqlmap/oracle/article.xml"/>
-		<mapper resource="config/sqlmap/oracle/mypage.xml"/>
 		<mapper resource="config/sqlmap/oracle/news.xml"/>
-		<mapper resource="config/sqlmap/oracle/scrap.xml"/>
-		<mapper resource="config/sqlmap/oracle/newsimg.xml"/>
+		<mapper resource="config/sqlmap/oracle/scrap.xml"/>	
 	</mappers>
 </configuration>
