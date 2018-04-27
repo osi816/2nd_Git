@@ -6,13 +6,13 @@ public class Article {
 	
 	private int articleNo;
 	private String articleType;
-	private String articltTitle;
+	private String articleTitle;
 	private String articleSummary;
-	private String articltContent;
-	private String articltReporter;
-	private String articltThumb;
+	private String articleContent;
+	private String articleReporter;
+	private String articleThumb;
 	private String articleUrl;
-	private Date articltDate;
+	private String articleDate;
 	public int getArticleNo() {
 		return articleNo;
 	}
@@ -25,11 +25,11 @@ public class Article {
 	public void setArticleType(String articleType) {
 		this.articleType = articleType;
 	}
-	public String getArticltTitle() {
-		return articltTitle;
+	public String getArticleTitle() {
+		return articleTitle;
 	}
-	public void setArticltTitle(String articltTitle) {
-		this.articltTitle = articltTitle;
+	public void setArticleTitle(String articleTitle) {
+		this.articleTitle = articleTitle;
 	}
 	public String getArticleSummary() {
 		return articleSummary;
@@ -37,23 +37,23 @@ public class Article {
 	public void setArticleSummary(String articleSummary) {
 		this.articleSummary = articleSummary;
 	}
-	public String getArticltContent() {
-		return articltContent;
+	public String getArticleContent() {
+		return articleContent;
 	}
-	public void setArticltContent(String articltContent) {
-		this.articltContent = articltContent;
+	public void setArticleContent(String articleContent) {
+		this.articleContent = articleContent;
 	}
-	public String getArticltReporter() {
-		return articltReporter;
+	public String getArticleReporter() {
+		return articleReporter;
 	}
-	public void setArticltReporter(String articltReporter) {
-		this.articltReporter = articltReporter;
+	public void setArticleReporter(String articleReporter) {
+		this.articleReporter = articleReporter;
 	}
-	public String getArticltThumb() {
-		return articltThumb;
+	public String getArticleThumb() {
+		return articleThumb;
 	}
-	public void setArticltThumb(String articltThumb) {
-		this.articltThumb = articltThumb;
+	public void setArticleThumb(String articleThumb) {
+		this.articleThumb = articleThumb;
 	}
 	public String getArticleUrl() {
 		return articleUrl;
@@ -61,11 +61,11 @@ public class Article {
 	public void setArticleUrl(String articleUrl) {
 		this.articleUrl = articleUrl;
 	}
-	public Date getArticltDate() {
-		return articltDate;
+	public String getArticleDate() {
+		return articleDate;
 	}
-	public void setArticltDate(Date articltDate) {
-		this.articltDate = articltDate;
+	public void setArticleDate(String articleDate) {
+		this.articleDate = articleDate;
 	}
 	
 	
