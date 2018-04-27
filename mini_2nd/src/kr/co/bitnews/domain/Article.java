@@ -13,6 +13,7 @@ public class Article {
 	private String articleThumb;
 	private String articleUrl;
 	private String articleDate;
+	
 	public int getArticleNo() {
 		return articleNo;
 	}

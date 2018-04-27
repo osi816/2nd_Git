@@ -21,7 +21,7 @@ public class DetailnewsController extends HttpServlet{
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ArticleMapper mapper = MyAppSqlConfig.getSqlSession().getMapper(ArticleMapper.class);
 		List<Article> list = mapper.selectArticle();
-
+		
 		request.setAttribute("list", list);
 		RequestDispatcher rd = request.getRequestDispatcher("/jsp/news/detailnews.jsp");
 		rd.forward(request, response);
