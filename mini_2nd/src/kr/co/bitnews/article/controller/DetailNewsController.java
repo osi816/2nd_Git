@@ -15,7 +15,7 @@ import kr.co.bitnews.domain.Article;
 import kr.co.bitnews.mapper.ArticleMapper;
 
 @WebServlet("/detailnews")
-public class DetailnewsController extends HttpServlet{
+public class DetailNewsController extends HttpServlet{
 
 	@Override
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
