@@ -42,7 +42,7 @@
 			user_email
 		)values (
 			#{userId},
-			#{userPw,
+			#{userPw},
 			#{userName},
 			#{userEmail}
 		)
