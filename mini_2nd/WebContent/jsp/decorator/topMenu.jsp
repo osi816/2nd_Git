@@ -27,7 +27,7 @@
       <ul class="nav navbar-nav">
 <!--         <li><a href="#">Link <span class="sr-only">(current)</span></a></li> class="active" 클릭시 활성화 -->
         <li><a href="#">BLOTER</a></li>
-        <li><a href="<c:url value="/jsp/news/detailnews.jsp" />">hellDD</a></li>
+        <li><a href="<c:url value="/detailnews" />">hellDD</a></li>
         <li><a href="#">아이뉴스 24</a></li>
         <li><a href="#">디지털 타임스</a></li>
         <li><a href="#">ZD Net Korea</a></li>
