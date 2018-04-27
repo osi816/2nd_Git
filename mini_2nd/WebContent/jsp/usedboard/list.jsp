@@ -18,13 +18,10 @@
 	 > 
 	 	중고장터 게시판
 	 </div>
-	    전체 1개<br>
+	    전체 ${fn:length(list)}개<br>
 	  <hr>
 	  <table class="table">
 	  <tr>
-	    <th> 
-	   		<input type="checkbox" id="all" name="all" value="all">
-	    </th>
 	    <th>번호</th>
 	    <th>말머리</th>
 	    <th>제목</th>
@@ -32,30 +29,21 @@
 	    <th>등록일</th>
 	    <th>조회수</th>
 	  </tr>
-	  <tr>
-	  	<td><input type="checkbox" id="f1" name="fruits" value="2" /></td>
-		<td>2</td>
-		<td>삽니다</td>
-	    <td><a href='detail.jsp'>아이폰 7 구입하고 싶습니다.</a></td>
-		<td>불쌍한 호구</td>
-		<td>2018-04-20</td>
-		<td>1</td>
-	  </tr>
-	  <tr>
-		<td><input type="checkbox" id="f1" name="fruits" value="1" /></td>
-		<td>1</td>
-		<td>팝니다</td>
-	    <td><a href='detail.jsp'>캐논 6d 4만컷 60에 팝니다.</a></td>
-		<td>중고나라 사기꾼</td>
-		<td>2018-04-18</td>
-		<td>1</td>
-	  </tr>
-
+		<c:forEach var="board" items="${list}">
+	    <tr>
+			 <td>${board.no}</td>
+			 <td><a href='detail?no=${board.no}'>${board.title}</a></td>
+			 <td>${board.writer}</td>
+		  <td><fmt:formatDate value="${board.regDate}" pattern="yyyy-MM-dd" /></td>
+		  <td>${board.viewCnt}</td>
+		</tr>
+		</c:forEach>
+		<c:if test="${empty list}">
 		  <tr>
-
+		    <td colspan='5'>입력된 게시물이 없습니다.</td>
 		  </tr>
-
+		</c:if>
 		</table>
-		<a href='writeForm.jsp'>글쓰기</a>
+		<a href='writeForm'>글쓰기</a>
 </body>
 </html>

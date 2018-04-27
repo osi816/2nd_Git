@@ -36,9 +36,9 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 유저공간 <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-			<li><a href="http://localhost:8000/mini_2nd/jsp/freeboard/list.jsp">자유게시판</a></li>
-			<li><a href="http://localhost:8000/mini_2nd/jsp/usedboard/list.jsp">중고장터</a></li>
-			<li><a href="http://localhost:8000/mini_2nd/jsp/articleboard/list.jsp">시민기사 게시판</a></li>
+			<li><a href="http://localhost:8000/mini_2nd/freeBoard/list">자유게시판</a></li>
+			<li><a href="http://localhost:8000/mini_2nd/usedBoard/list">중고장터</a></li>
+			<li><a href="http://localhost:8000/mini_2nd/articleBoard/list">시민기사 게시판</a></li>
           </ul>
         </li>
       </ul>
