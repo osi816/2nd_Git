@@ -21,7 +21,7 @@ public class ArticleController extends HttpServlet{
 		ArticleBoardMapper mapper = MyAppSqlConfig.getSqlSession().getMapper(ArticleBoardMapper.class);
 		//List<Board> list = mapper//SelectByName(세션)
 		
-		req.setAttribute("list", list);
+		//req.setAttribute("list", list);
 		
 		RequestDispatcher rd = req.getRequestDispatcher("/jsp/mypage/articleboard.jsp");
 	}

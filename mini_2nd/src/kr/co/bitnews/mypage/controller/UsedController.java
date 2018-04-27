@@ -21,7 +21,7 @@ public class UsedController extends HttpServlet{
 		UsedBoardMapper mapper =  MyAppSqlConfig.getSqlSession().getMapper(UsedBoardMapper.class);
 		//List<Board> list = mapper//SelectByName(세션)
 		
-		req.setAttribute("list", list);
+		//req.setAttribute("list", list);
 		
 		RequestDispatcher rd = req.getRequestDispatcher("/jsp/mypage/usedboard.jsp");
 		

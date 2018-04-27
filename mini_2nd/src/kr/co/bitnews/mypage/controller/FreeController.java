@@ -21,7 +21,7 @@ public class FreeController extends HttpServlet{
 		FreeBoardMapper mapper =  MyAppSqlConfig.getSqlSession().getMapper(FreeBoardMapper.class);
 		//List<Board> list = mapper//SelectByName(세션)
 		
-		req.setAttribute("list", list);
+		//req.setAttribute("list", list);
 		
 		RequestDispatcher rd = req.getRequestDispatcher("/jsp/mypage/freeboard.jsp");
 	}
