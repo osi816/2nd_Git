@@ -26,13 +26,35 @@
 </style>
 </head>
 <body>
-<form class="form-horizontal" method="post" action="/sign">
+<form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/user/sign">
   <h2>회원가입</h2>
   <div class="form-group">
     <label for="inputID" class="col-sm-2 control-label">ID</label>
     <div class="col-sm-10">
-      <input type="text" class="sign-form" id="inputID" name="id" placeholder="아이디를 입력하세요"  size="30">
-      &nbsp;&nbsp;<button>중복확인</button>
+      <input type="text" class="sign-form" id="inputID" name="id" placeholder="아이디를 입력하세요"  size="30"><span id="result"></span>
+	  	<script>
+		$("#inputID").keyup(function () {
+			$.ajax({
+				url: "/mini_2nd/user/countid",
+				data: "id=" + this.value,
+				dataType: "json",
+				success: function (data) {
+					console.log(data.result);
+					var result = "사용 가능한 아이디";
+					if (data.result == 1) {
+						result = "중복된 아이디";						
+					}
+					$("#result").text(result);
+				},
+				error: function (e) {
+					console.log("에러", e.statusText)
+					console.log("에러코드", e.status)
+				}
+			});			
+		});
+		</script>
+
+<!--       &nbsp;&nbsp;<button>중복확인</button> -->
     </div>
   </div>
   <div class="form-group">
@@ -63,7 +85,7 @@
   <div class="form-group">
     <label for="inputNum" class="col-sm-2 control-label">인증번호</label>
     <div class="col-sm-10">
-      <input type="text" class="sign-form" id="confirmNum" placeholder="인증번호를 입력하세요"  size="30">
+      <input type="text" class="sign-form" id="confirmNum" name="num" placeholder="인증번호를 입력하세요"  size="30">
       &nbsp;&nbsp;<button>확인</button>
     </div>
   </div>
