@@ -32,7 +32,7 @@
 	    <tr>
 			 <td>${board.no}</td>
 			 <td><a href='detail?no=${board.no}'>${board.title}</a></td>
-			 <td>${board.writer}</td>
+			 <td>${board.userId}</td>
 		  <td><fmt:formatDate value="${board.regDate}" pattern="yyyy-MM-dd" /></td>
 		  <td>${board.viewCnt}</td>
 		</tr>

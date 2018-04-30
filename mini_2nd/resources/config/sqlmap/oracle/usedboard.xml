@@ -84,7 +84,7 @@
 		)
 	</insert>
 	
-	<select id="selectComment" parameterType="int"  resultMap="commentMap">
+	<select id="selectCommentByNo" parameterType="int"  resultMap="commentMap">
 		select writer, content, reg_date
 		  from tb_comment
 		 where no = #{no}

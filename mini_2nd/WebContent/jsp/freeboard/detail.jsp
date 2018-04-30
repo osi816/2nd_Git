@@ -12,7 +12,7 @@
 
 	 <hr />
 	 번호 :  ${board.no}<br>
-	 글쓴이 : <c:out value="${board.writer}" /><br>
+	 글쓴이 : <c:out value="${board.userId}" /><br>
 	 제목 : <c:out value="${board.title}" /><br>
 	 내용 : <c:out value="${board.content}" /><br>
 	 등록일 : <fmt:formatDate value="${board.regDate}" pattern="yyyy-MM-dd HH:mm:ss" /><br><br>
@@ -23,12 +23,12 @@
 	 </c:forEach>
 	 <br>
 	 <hr />
-	 <a href='updateForm.jsp'>수정</a>
-	 <a href='delete.jsp'>삭제</a>
-	<a href='list.jsp'>목록</a>
+	 <a href='updateForm?no=${board.no}'>수정</a>
+	 <a href='delete?no=${board.no}'>삭제</a>
+	<a href='list'>목록</a>
 		<div id="comment">
 			<form method="post" action="commentRegist">
-				<input type="hidden" name="no" value="2" />	
+				<input type="hidden" name="no" value="${board.no}" />	
 				<table width="70%">
 				<tr>
 					<td><input type="text" name="writer" /></td>
@@ -50,7 +50,7 @@
 			<c:choose>
 		  		<c:when test="${commentNo eq comment.commentNo}">	
 					<tr>
-					  <td><c:out value="${comment.writer}" /></td>
+					  <td><c:out value="${comment.userId}" /></td>
 					  <td>
 					  	<textarea name="content" rows="2" cols="60"><c:out value="${comment.content}" /></textarea>
 					  </td>
@@ -61,7 +61,7 @@
 			 	</c:when>
 			 	<c:otherwise>
 					<tr>
-					  <td><c:out value="${comment.writer}" /></td>
+					  <td><c:out value="${comment.userId}" /></td>
 					  <td>
 					  		<c:out value="${comment.content}" /></td>
 					  <td><fmt:formatDate var="regDate" value="${comment.regDate}" 

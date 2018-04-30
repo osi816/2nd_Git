@@ -58,38 +58,32 @@
 	</update>
 	
 	<resultMap id="commentMap" type="comment">
-		<result column="comment_no" property="cno"/>
+		<result column="comment_no" property="commentNo"/>
 		<result column="no" property="no"/>
 		<result column="user_id" property="userId"/>
 		<result column="content" property="content"/>
 		<result column="reg_date" property="regDate"/>
 	</resultMap>
 
-	<insert id="insertComment" parameterType="comment">
-		insert into tb_freeboard_cmt(
-			comment_no,
-			no,
-			user_id,
-			content
-		)values(
-			s_comment_no.nextval,
-			#{no},
-			#{userId},
-			#{content}
-		)
-	</insert>
-	
-	<select id="selectComment" parameterType="int"  resultMap="commentMap">
-		select user_id, content, reg_date
+	<select id="selectCommentByNo" parameterType="int"  resultMap="commentMap">
+		select *
 		  from tb_freeboard_cmt
 		 where no = #{no}
-		 order by comment_no desc
 	</select>
+	
+	<insert id="insertComment" parameterType="comment">
+		insert into tb_freeboard_cmt(
+			comment_no, no, user_id, content
+		)values(
+			s_freeboard_no.nextval, #{no}, #{userId}, #{content}
+		)
+	</insert>
 	
 	<update id="updateComment" parameterType="comment">
 		update tb_freeboard_cmt
 		   set content = #{content}
 		 where (no = #{no}) and (comment_no = #{commentNo})
+		 
 	</update>
 	<delete id="deleteComment" parameterType="int">
 		delete
