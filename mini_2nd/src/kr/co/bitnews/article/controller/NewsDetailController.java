@@ -14,16 +14,16 @@ import common.db.MyAppSqlConfig;
 import kr.co.bitnews.domain.Article;
 import kr.co.bitnews.mapper.ArticleMapper;
 
-@WebServlet("/detailnews")
-public class DetailNewsController extends HttpServlet{
+@WebServlet("/newsDetail")
+public class NewsDetailController extends HttpServlet{
 
 	@Override
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ArticleMapper mapper = MyAppSqlConfig.getSqlSession().getMapper(ArticleMapper.class);
-		List<Article> list = mapper.selectArticle();
+		Article article = mapper.selectArticleByNo(Integer.parseInt(request.getParameter("no")));
 		
-		request.setAttribute("list", list);
-		RequestDispatcher rd = request.getRequestDispatcher("/jsp/news/detailnews.jsp");
+		request.setAttribute("article", article);
+		RequestDispatcher rd = request.getRequestDispatcher("/jsp/news/newsdetail.jsp");
 		rd.forward(request, response);
 	}
 

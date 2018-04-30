@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
+import org.openqa.selenium.NoSuchElementException;  // util의 NoSuchElementException 과 다른 경우
 import java.util.concurrent.TimeUnit;
 
 import javax.servlet.RequestDispatcher;
@@ -44,7 +44,7 @@ public class ArticleDB extends HttpServlet{
 			System.out.println("체크 시작!");
 			if (no == null) a.setArticleNo(Integer.parseInt(noArr[1]));
 			else continue;
-			System.out.println("널값 으로 else 건너뜀 DB에 데이터 저장 ");
+			System.out.println("널값 으로 else 건너뜀 VO에 데이터 저장 ");
 			a.setArticleType("hellodd");
 			a.setArticleTitle(e.findElement(By.tagName("h3")).getText());
 			a.setArticleUrl(e.findElement(By.cssSelector("div.article > h3 > a")).getAttribute("href"));
@@ -52,6 +52,7 @@ public class ArticleDB extends HttpServlet{
 			try {
 				a.setArticleThumb(e.findElement(By.cssSelector("div.thumb > a > img")).getAttribute("src"));
 			}catch (NoSuchElementException e1) {
+				System.out.println("엘리먼트 못참음");
 				a.setArticleThumb(" ");
 			}
 			name = e.findElement(By.cssSelector("div.article > p")).getText();

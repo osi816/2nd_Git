@@ -48,5 +48,6 @@
 	<select id="selectArticle" resultMap="articleMap">
 		select * 
 		  from tb_article
+		 order by article_date desc
 	</select>
 </mapper>
