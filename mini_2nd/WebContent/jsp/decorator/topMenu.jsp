@@ -27,7 +27,7 @@
       <ul class="nav navbar-nav">
 <!--         <li><a href="#">Link <span class="sr-only">(current)</span></a></li> class="active" 클릭시 활성화 -->
         <li><a href="#">BLOTER</a></li>
-        <li><a href="<c:url value="/detailnews" />">hellDD</a></li>
+        <li><a href="<c:url value="/newsList?type=hellodd" />">hellDD</a></li>
         <li><a href="#">아이뉴스 24</a></li>
         <li><a href="#">디지털 타임스</a></li>
         <li><a href="#">ZD Net Korea</a></li>
@@ -57,7 +57,7 @@
         </c:when>
         <c:otherwise>
         	${sessionScope.user.name}님 접속
-        	<li><a href="<c:url value="/login/logout" />">로그아웃</a><li>        
+        	<li><a href="<c:url value="/login/logout" />">로그아웃</a><li>
         </c:otherwise>
         </c:choose>
       </ul>
