@@ -33,29 +33,27 @@
 	</script>
 </head>
 <body>
-	<div class="container">
-		<div id="gnb">
-			<div class="gnbLeft">
-				<div id="hdNews">
-					<strong class="icons ico_news">news</strong>
-					<div class="rollingNews" style="position: relative; width: 280px; height: 16px; overflow: hidden;">
-						<ul style="position: absolute; top: 0px; left: 0px; width: 280px;">
-							<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64821">바꾼 난자로 태어난 아이···엄마는 누구입니까?</a></li>
-							<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64827">포항 5.4 지진, 원인은 지열발전소?</a></li>
-							<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64822">"우리나라 최초 '우주 발사체' 이름을 지어 주세요" </a></li>
-							<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64819">"학문의 대를 잇는다"···'KAIST 초세대 협업 연구실' 개소</a></li>
-							<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64830">포항지진 원인 지열발전 탓? 국내외 논문 발표</a></li>
-							<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64820">임플란트용 전기화학 나노 표면처리 기술 개발</a></li>
-							<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64826">엄마 클래식 아들 랩 원하는 소리만? 해외 車업계 '눈독'</a></li>
-							<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64823">코셈·위드텍·꿈비·성진테크원 등 글로벌 강소기업으로</a></li>
-							<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64824">'펩트론 오송바이오파크' 준공···희귀병 신약개발 '시동'</a></li>
-							<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64828">국내 식량 위기 '코앞'···"농업 중장기 R&D 로드맵 긴요" </a></li>
-						</ul>
-					</div>
-				</div>
+	<div class="gnbLeft">
+		<div id="hdNews">
+			<strong class="icons ico_news">news</strong>
+			<div class="rollingNews" style="position: relative; width: 280px; height: 16px; overflow: hidden;">
+				<ul style="position: absolute; top: 0px; left: 0px; width: 280px;">
+					<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64821">바꾼 난자로 태어난 아이···엄마는 누구입니까?</a></li>
+					<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64827">포항 5.4 지진, 원인은 지열발전소?</a></li>
+					<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64822">"우리나라 최초 '우주 발사체' 이름을 지어 주세요" </a></li>
+					<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64819">"학문의 대를 잇는다"···'KAIST 초세대 협업 연구실' 개소</a></li>
+					<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64830">포항지진 원인 지열발전 탓? 국내외 논문 발표</a></li>
+					<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64820">임플란트용 전기화학 나노 표면처리 기술 개발</a></li>
+					<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64826">엄마 클래식 아들 랩 원하는 소리만? 해외 車업계 '눈독'</a></li>
+					<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64823">코셈·위드텍·꿈비·성진테크원 등 글로벌 강소기업으로</a></li>
+					<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64824">'펩트론 오송바이오파크' 준공···희귀병 신약개발 '시동'</a></li>
+					<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64828">국내 식량 위기 '코앞'···"농업 중장기 R&D 로드맵 긴요" </a></li>
+				</ul>
 			</div>
 		</div>
-	<div class="row">
+	</div>
+	<div class="container">
+		<div class="row">
 		<div class="col-md-1"></div>
 		<div class="col-md-10 content">
 			<div id="contents" class="sub_contents">
@@ -64,8 +62,8 @@
 					<div class="newsvw_header">
 						<div class="newsvw_title">
 							<h2 class="newsTitle">${article.articleTitle}</h2>
-							<span class="txt newsSubTitle">유럽 DESTRESS 연구팀과 김광희 부산대·김영희 서울대·이진한 고려대 교수 팀  논문 게재<br>
-								"포항 지진이 자연지진과 달리 심도 얕아" 등 근거 제시
+							<span class="txt newsSubTitle">
+								${article.articleSummary}
 							</span>
 						</div>
 					</div>
@@ -76,19 +74,28 @@
 							</li>
 						</ul>
 						<span class="profile">
-							기자이름
+							${article.articleReporter}
 						</span>
 						<span class="newsvw_infodate">
-							<span class="insert">작성일 : 2018.04.27</span>
+							<span class="insert">작성일 : ${article.articleDate}</span>
 						</span>
 					</div>
 				</div>
 				<div id="newsvw">
 					<div class="article_body">
-					
+						${article.articleContent}
 					</div>
 					<div class="article_info">
 						<span class="articlecopy">저작권자(c) HELLODD, 무단 전재 및 재배포 금지</span>
+					</div>
+					<div class="article_aside">
+						<span>
+							<a href="">스크랩</a>
+						</span>
+						<span class="txt_bar">|</span>
+						<span>
+							<a href="" title="">원본기사</a>
+						</span>
 					</div>
 				</div>
 			</div>

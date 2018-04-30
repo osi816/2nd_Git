@@ -9,4 +9,5 @@ public interface ArticleMapper {
 	public void insertArticle(Article article);
 	public Article selectArticleByNo(int no);
 	public List<Article> selectArticle();
+	public List<Article> selectRank();
 }

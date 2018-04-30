@@ -21,8 +21,12 @@ public class NewsListController extends HttpServlet{
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ArticleMapper mapper = MyAppSqlConfig.getSqlSession().getMapper(ArticleMapper.class);
 		List<Article> list = mapper.selectArticle();
-		System.out.println(request.getParameter("type"));
+//		System.out.println(request.getParameter("type"));
+		// 롤링 뉴스
+		List<Article> rList = mapper.selectRank();
+		System.out.println(rList.size());
 		request.setAttribute("list", list);
+		request.setAttribute("rList", rList);
 		request.setAttribute("type", request.getParameter("type"));
 		RequestDispatcher rd = request.getRequestDispatcher("/jsp/news/newslist.jsp");
 		rd.forward(request, response);

@@ -50,7 +50,7 @@ public class DetailBoardController extends HttpServlet {
 		request.setAttribute("fileList", fileList);
 		
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/jsp/freeBoard/detail.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/jsp/freeboard/detail.jsp");
 		rd.forward(request, response);
 	}
 }

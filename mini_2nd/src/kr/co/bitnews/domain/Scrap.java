@@ -34,5 +34,4 @@ public class Scrap {
 		this.scrapDate = scrapDate;
 	}
 	
-	
 }
