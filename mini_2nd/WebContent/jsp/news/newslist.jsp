@@ -9,7 +9,7 @@
 	<c:when test="${type eq 'hellodd'}">
 		<link rel="stylesheet" href="http://www.hellodd.com/views/_css/common.css">
 		<link rel="stylesheet" href="http://www.hellodd.com/views/_css/news.css">
-		<link rel="stylesheet" href="http://www.hellodd.com/views/_css/template.css">
+<!-- 		<link rel="stylesheet" href="http://www.hellodd.com/views/_css/template.css"> -->
 		<script type="text/javascript" src="http://www.hellodd.com/views/_js/jquery.rolling.js"></script>
 	</c:when>	
 <%-- 	<c:otherwise> --%>

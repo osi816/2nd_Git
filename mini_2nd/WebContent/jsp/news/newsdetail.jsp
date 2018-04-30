@@ -87,15 +87,15 @@
 					</div>
 					<div class="article_info">
 						<span class="articlecopy">저작권자(c) HELLODD, 무단 전재 및 재배포 금지</span>
-					</div>
-					<div class="article_aside">
-						<span>
-							<a href="">스크랩</a>
-						</span>
-						<span class="txt_bar">|</span>
-						<span>
-							<a href="" title="">원본기사</a>
-						</span>
+						<div class="article_aside">
+							<span>
+								<a href="">스크랩</a> <!-- 스크랩 서블릿으로 이동 -->
+							</span>
+							<span class="txt_bar">|</span>
+							<span>
+								<a href="${article.articleUrl}" title="원본기사로 이동" target="_blank">원본기사</a>
+							</span>
+						</div>
 					</div>
 				</div>
 			</div>
