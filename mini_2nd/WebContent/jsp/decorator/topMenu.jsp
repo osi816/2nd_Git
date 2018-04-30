@@ -51,7 +51,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="<c:url value="/jsp/mypage/mypagemove" />">MyPage</a></li>
         <li><a href="/mini_2nd/jsp/user/sign.jsp">회원가입</a></li>
-        <li><a href="/mini_2nd/jsp/user/login.jsp">로그인</a></li>
+        <li><a href="<c:url value="/login/login" />">로그인</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
