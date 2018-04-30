@@ -7,7 +7,7 @@ public class Board {
 	/** 글 번호 */
 	private int no;
 	/** 글쓴이 */
-	private String writer;
+	private String userId;
 	/** 제목 */
 	private String title;
 	/** 내용 */
@@ -40,11 +40,11 @@ public class Board {
 	public int getNo() {
 		return no;
 	}
-	public void setWriter(String writer) {
-		this.writer = writer;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
-	public String getWriter() {
-		return writer;
+	public String getUserId() {
+		return userId;
 	}
 	public void setTitle(String title) {
 		this.title = title;
@@ -71,7 +71,7 @@ public class Board {
 	}
 	@Override
 	public String toString() {
-		return "Board [no=" + no + ", writer=" + writer + ", title=" + title + ", content=" + content + ", regDate="
+		return "Board [no=" + no + ", userId=" + userId + ", title=" + title + ", content=" + content + ", regDate="
 				+ regDate + ", viewCnt=" + viewCnt + "]";
 	}
 }

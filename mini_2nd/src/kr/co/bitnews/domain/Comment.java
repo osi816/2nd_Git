@@ -6,7 +6,7 @@ public class Comment {
 	private int commentNo;
 	private int no;
 	private String content;
-	private String writer;
+	private String userId;
 	private Date regDate;
 	public int getCommentNo() {
 		return commentNo;
@@ -26,11 +26,11 @@ public class Comment {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getWriter() {
-		return writer;
+	public String getUserId() {
+		return userId;
 	}
-	public void setWriter(String writer) {
-		this.writer = writer;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 	public Date getRegDate() {
 		return regDate;

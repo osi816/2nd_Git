@@ -23,7 +23,7 @@ public class ListBoardController extends HttpServlet {
 		List<Board> list = mapper.selectBoard();
 		request.setAttribute("list", list);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/jsp/freeBoard/list.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/jsp/freeboard/list.jsp");
 		rd.forward(request, response);
 	}
 }

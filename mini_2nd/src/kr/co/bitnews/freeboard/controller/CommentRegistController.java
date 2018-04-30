@@ -26,7 +26,7 @@ public class CommentRegistController extends HttpServlet {
 		Comment comment = new Comment();
 		comment.setNo(no);
 		comment.setContent(request.getParameter("content"));
-		comment.setWriter(request.getParameter("writer"));
+		comment.setUserId(request.getParameter("writer"));
 		
 		// 게시물 저장 처리 부탁..
 		mapper.insertComment(comment);

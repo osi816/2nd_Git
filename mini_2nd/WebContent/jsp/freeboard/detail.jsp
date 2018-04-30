@@ -11,15 +11,15 @@
 <body>
 
 	 <hr />
-	 번호 :  1<br>
-	 글쓴이 : 봉석<br>
-	 제목 : 미니프로젝트 화이팅<br>
-	 내용 : 정말로 화이팅!<br>
-	 등록일 : 2018-04-18<br><br>
-	 조회수 : 1<br>
+	 번호 :  ${board.no}<br>
+	 글쓴이 : <c:out value="${board.writer}" /><br>
+	 제목 : <c:out value="${board.title}" /><br>
+	 내용 : <c:out value="${board.content}" /><br>
+	 등록일 : <fmt:formatDate value="${board.regDate}" pattern="yyyy-MM-dd HH:mm:ss" /><br><br>
+	 조회수 : ${board.viewCnt}<br>
 	 첨부파일 : 
 	 <c:forEach var="file" items="${fileList}">
-	 	<a href="/00_board/common/file/down?path=${file.filePath}&sName=${file.systemName}&dName=${file.oriName}">${file.oriName}</a>(${file.fileSize} bytes)<br>
+	 	<a href="/mini_2nd/common/file/down?path=${file.filePath}&sName=${file.systemName}&dName=${file.oriName}">${file.oriName}</a>(${file.fileSize} bytes)<br>
 	 </c:forEach>
 	 <br>
 	 <hr />

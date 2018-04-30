@@ -25,7 +25,9 @@
 		<typeAlias alias="news" type="kr.co.bitnews.domain.News" />
 		<typeAlias alias="newsimg" type="kr.co.bitnews.domain.NewsImg" />
 		<typeAlias alias="scrap" type="kr.co.bitnews.domain.Scrap" />
-		
+		<typeAlias alias="board" type="kr.co.bitnews.domain.Board" />		
+		<typeAlias alias="comment" type="kr.co.bitnews.domain.Comment" />		
+		<typeAlias alias="boardFile" type="kr.co.bitnews.domain.BoardFile" />		
 	</typeAliases>
 	
 	<environments default="development">
@@ -48,5 +50,8 @@
 		<mapper resource="config/sqlmap/oracle/article.xml"/>
 		<mapper resource="config/sqlmap/oracle/news.xml"/>
 		<mapper resource="config/sqlmap/oracle/scrap.xml"/>	
+		<mapper resource="config/sqlmap/oracle/freeboard.xml"/>	
+		<mapper resource="config/sqlmap/oracle/articleboard.xml"/>	
+		<mapper resource="config/sqlmap/oracle/usedboard.xml"/>	
 	</mappers>
 </configuration>
