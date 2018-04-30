@@ -12,7 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 public class UserUpdateController extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		/*
+		 * 데이터베이스 접근 유저 정보 변경 내용 추가
+		 * 
+		 */
+		resp.sendRedirect("mypagemove");
 	}
-
 }

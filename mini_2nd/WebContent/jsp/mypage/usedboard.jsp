@@ -23,10 +23,10 @@
       <a class="navbar-brand" href="#">마이페이지</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="userupdate.jsp">회원정보 수정</a></li>
-      <li><a href="myscrap.jsp">스크랩</a></li>
+      <li><a href="userupdate">회원정보 수정</a></li>
+      <li><a href="scrap">스크랩</a></li>
       <li class="active"><a href="#">내 글</a></li>
-      <li><a href="mycomment.jsp">내 댓글</a></li>
+      <li><a href="comment">내 댓글</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     </ul>
@@ -34,11 +34,11 @@
 </nav>
 
 <div class="board">
-<a href="freeboard.jsp"><strong>자유 게시판 </strong></a> 
+<a href="free"><strong>자유 게시판 </strong></a> 
 <a href="#"><strong>ㅣㅣ</strong></a> 
 <a href="#"><strong>중고 게시판 </strong></a> 
 <a href="#"><strong>ㅣㅣ</strong></a> 
-<a href="articleboard.jsp"><strong>기사 게시판 </strong></a> 
+<a href="article"><strong>기사 게시판 </strong></a> 
 </div>
 
 <h1>중고게시판</h1>

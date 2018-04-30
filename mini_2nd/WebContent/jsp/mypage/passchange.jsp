@@ -15,7 +15,7 @@
   <form action="passchange">
     <div class="form-group">
       <label for="pwd">현재 비밀번호</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+      <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter password">
     </div>
     <div class="form-group">
       <label for="pwd">비밀번호 재확인</label>
@@ -23,14 +23,14 @@
     </div>
     <div class="form-group">
       <label for="pwd">새로운 비밀번호</label>
-      <input type="password" class="form-control" id="npwd" placeholder="Enter new password">
+      <input type="password" class="form-control" id="npwd" name="npwd" placeholder="Enter new password">
     </div>
     <div class="form-group">
       <label for="pwd">새로운 비밀번호 재확인</label>
       <input type="password" class="form-control" id="npwd-check" placeholder="Enter new password again">
     </div>
-    <button type="submit" class="btn btn-default">회원탈퇴</button>
-    <button type="button" class="btn btn-default" onclick="location.href='userupdate.jsp'">취소</button>
+    <button type="submit" class="btn btn-default">변경 완료</button>
+    <button type="button" class="btn btn-default" onclick="location.href='userupdate'">취소</button>
   </form>
 </div>
 
@@ -49,7 +49,7 @@
             	alert("이전 비밀번호가 일치하지 않습니다.");
             	return false;
             }else if(pwd!=pwdcheck || npwd!=npwdcheck){
-            	alert("현재 비밀번호가 일치하지 않습니다.");
+            	alert("새로운 비밀번호가 일치하지 않습니다.");
             	return false;
             }else{
             	return true;

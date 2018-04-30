@@ -22,7 +22,7 @@
       <input type="password" class="form-control" id="pwd-check" placeholder="Enter password">
     </div>
     <button type="submit" class="btn btn-default">회원탈퇴</button>
-    <button type="button" class="btn btn-default" onclick="location.href='userupdate.jsp'">취소</button>
+    <button type="button" class="btn btn-default" onclick="location.href='mypagemove'">취소</button>
   </form>
 </div>
 <script>

@@ -40,9 +40,9 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">회원정보 수정</a></li>
-      <li><a href="myscrap.jsp">스크랩</a></li>
-      <li><a href="usedboard.jsp">내 글</a></li>
-      <li><a href="mycomment.jsp">내 댓글</a></li>
+      <li><a href="scrap">스크랩</a></li>
+      <li><a href="used">내 글</a></li>
+      <li><a href="comment">내 댓글</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     </ul>
@@ -80,8 +80,8 @@
 </form>
 
 <footer id="buttons">
-<button type="button" class="btn btn-default" onclick="location.href='passchange.jsp'">비밀번호 변경</button>
-<button type="button" class="btn btn-default" onclick="location.href='leave.jsp'">탈퇴</button>
+<button type="button" class="btn btn-default" onclick="location.href='passchange'">비밀번호 변경</button>
+<button type="button" class="btn btn-default" onclick="location.href='leave'">탈퇴</button>
 </footer>
 </body>
 </html>

@@ -17,10 +17,10 @@
       <a class="navbar-brand" href="#">마이페이지</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="userupdate.jsp">회원정보 수정</a></li>
+      <li><a href="mypagemove">회원정보 수정</a></li>
       <li class="active"><a href="#">스크랩</a></li>
-      <li><a href="usedboard.jsp">내 글</a></li>
-      <li><a href="mycomment.jsp">내 댓글</a></li>
+      <li><a href="used">내 글</a></li>
+      <li><a href="comment">내 댓글</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     </ul>

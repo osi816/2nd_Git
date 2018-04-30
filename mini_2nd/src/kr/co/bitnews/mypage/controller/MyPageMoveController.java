@@ -9,12 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/jsp/mypage/comment")
-public class CommentController extends HttpServlet{
+@WebServlet("/jsp/mypage/mypagemove")
+public class MyPageMoveController extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	RequestDispatcher rd= req.getRequestDispatcher("mycomment.jsp");
-	rd.forward(req, resp);
+		RequestDispatcher rd = req.getRequestDispatcher("userupdate.jsp");
+		rd.forward(req, resp);
 	}
+	
 
 }

@@ -18,12 +18,13 @@ import kr.co.bitnews.mapper.FreeBoardMapper;
 public class FreeController extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		FreeBoardMapper mapper =  MyAppSqlConfig.getSqlSession().getMapper(FreeBoardMapper.class);
+		//FreeBoardMapper mapper =  MyAppSqlConfig.getSqlSession().getMapper(FreeBoardMapper.class);
 		//List<Board> list = mapper//SelectByName(세션)
 		
 		//req.setAttribute("list", list);
 		
 		RequestDispatcher rd = req.getRequestDispatcher("/jsp/mypage/freeboard.jsp");
+		rd.forward(req, resp);
 	}
 
 }
