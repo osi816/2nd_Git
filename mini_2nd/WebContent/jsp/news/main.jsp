@@ -5,9 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>bit news</title>
-<link href="<c:url value="/jsp/news/4/js-image-slider.css" />" rel="stylesheet" type="text/css" />
-<script src="<c:url value="/jsp/news/4/js-image-slider.js" />" type="text/javascript"></script>
-<link href="<c:url value="/jsp/news/4/generic.css" />" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	
