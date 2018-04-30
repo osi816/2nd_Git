@@ -23,17 +23,17 @@
 </style>
 </head>
 <body>
-<form class="form-horizontal" action="Test03.html">
+<form class="form-horizontal" action="${pageContext.request.contextPath}/main">
   <div class="form-group">
     <label for="inputID" class="col-sm-2 control-label">ID</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputID" placeholder="아이디를 입력하세요">
+      <input type="text" class="form-control" id="inputID" name="id" placeholder="아이디를 입력하세요">
     </div>
   </div>
   <div class="form-group">
     <label for="inputPW" class="col-sm-2 control-label">PW</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPW" placeholder="비밀번호를 입력하세요">
+      <input type="password" class="form-control" id="inputPW" name="pw" placeholder="비밀번호를 입력하세요">
     </div>
   </div>
   <div class="form-group">

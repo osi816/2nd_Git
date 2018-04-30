@@ -1,4 +1,4 @@
-package kr.co.bitnews.controller.user;
+package kr.co.bitnews.user.controller;
 
 public class FindAccountController {
 
