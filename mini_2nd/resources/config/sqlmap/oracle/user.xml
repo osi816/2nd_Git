@@ -62,5 +62,11 @@
 		 where user_id = #{id}
 	</update>
 	
+	<select id="selectMemberCount" parameterType="string" resultType="int">
+		select count(*)
+		  from tb_user
+		 where user_id = #{userId} 
+	</select>
+	
 	
 </mapper>

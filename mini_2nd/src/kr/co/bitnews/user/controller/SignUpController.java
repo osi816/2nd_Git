@@ -2,6 +2,7 @@ package kr.co.bitnews.user.controller;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +13,7 @@ import common.db.MyAppSqlConfig;
 import kr.co.bitnews.domain.User;
 import kr.co.bitnews.mapper.UserMapper;
 
-@WebServlet("/sign")
+@WebServlet("/user/sign")
 public class SignUpController extends HttpServlet{
 
 	@Override
@@ -25,8 +26,9 @@ public class SignUpController extends HttpServlet{
 		user.setUserName(request.getParameter("name"));
 		user.setUserEmail(request.getParameter("email"));
 		mapper.insertUser(user);
-		
-		response.sendRedirect("main");
+
+		RequestDispatcher rd = request.getRequestDispatcher("/main");
+		rd.forward(request, response);
 	}
 	
 	
