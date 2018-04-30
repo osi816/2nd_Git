@@ -50,8 +50,16 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="<c:url value="/jsp/mypage/mypagemove" />">MyPage</a></li>
-        <li><a href="/mini_2nd/jsp/user/sign.jsp">회원가입</a></li>
-        <li><a href="<c:url value="/login/login" />">로그인</a></li>
+        <li><a href="<c:url value="/user/signupForm" />">회원가입</a></li>
+        <c:choose>
+        <c:when test="${empty sessionScope.user }">
+        	<li><a href="<c:url value="/login/login" />">로그인</a></li>
+        </c:when>
+        <c:otherwise>
+        	${sessionScope.user.name}님 접속
+        	<li><a href="<c:url value="/login/logout" />">로그아웃</a><li>        
+        </c:otherwise>
+        </c:choose>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
