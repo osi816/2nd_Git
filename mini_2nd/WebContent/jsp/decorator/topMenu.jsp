@@ -52,11 +52,11 @@
         <li><a href="<c:url value="/jsp/mypage/mypagemove" />">MyPage</a></li>
         <li><a href="<c:url value="/user/signupForm" />">회원가입</a></li>
         <c:choose>
-        <c:when test="${empty sessionScope.user }">
+        <c:when test="${empty sessionScope.user}">
         	<li><a href="<c:url value="/login/login" />">로그인</a></li>
         </c:when>
         <c:otherwise>
-        	${sessionScope.user.name}님 접속
+        	${sessionScope.user.userName}님 접속
         	<li><a href="<c:url value="/login/logout" />">로그아웃</a><li>
         </c:otherwise>
         </c:choose>

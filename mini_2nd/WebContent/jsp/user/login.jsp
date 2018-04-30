@@ -23,7 +23,8 @@
 </style>
 </head>
 <body>
-<form class="form-horizontal" action="${pageContext.request.contextPath}/main">
+<p style="color: red;">${errMsg}</p>
+<form method="post" class="form-horizontal" action="${pageContext.request.contextPath}/login/login">
   <div class="form-group">
     <label for="inputID" class="col-sm-2 control-label">ID</label>
     <div class="col-sm-10">

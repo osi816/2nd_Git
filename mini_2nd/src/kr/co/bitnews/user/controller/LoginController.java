@@ -36,7 +36,7 @@ public class LoginController extends HttpServlet {
 		System.out.println("login : " + login);
 		
 		if(login == null) {
-			request.setAttribute("errMsg", "아이디 확인해");
+			request.setAttribute("errMsg", "아이디를 확인하세요");
 		}
 		else if(login.getUserPw().equals(pw)) {
 			System.out.println("로그인 성공");
@@ -47,7 +47,7 @@ public class LoginController extends HttpServlet {
 			return;
 		}
 		else {
-			request.setAttribute("errMsg", "패스워드를 확인해");
+			request.setAttribute("errMsg", "패스워드를 확인하세요");
 		}
 		RequestDispatcher rd = request.getRequestDispatcher(
 				"/jsp/user/login.jsp"

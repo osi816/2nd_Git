@@ -22,41 +22,41 @@
 	text-align: center;
 	margin-bottom: 60px;
 	}
-
+	
 </style>
 </head>
 <body>
-<form class="form-horizontal" method="post" action="/mini_2nd/jsp/news/main.jsp">
+<form class="form-horizontal" method="post" action="/sign">
   <h2>회원가입</h2>
   <div class="form-group">
     <label for="inputID" class="col-sm-2 control-label">ID</label>
     <div class="col-sm-10">
-      <input type="text" class="sign-form" id="inputID" placeholder="아이디를 입력하세요"  size="30">
+      <input type="text" class="sign-form" id="inputID" name="id" placeholder="아이디를 입력하세요"  size="30">
       &nbsp;&nbsp;<button>중복확인</button>
     </div>
   </div>
   <div class="form-group">
     <label for="inputPW" class="col-sm-2 control-label">PW</label>
     <div class="col-sm-10">
-      <input type="password" class="sign-form" id="inputPW" placeholder="비밀번호를 입력하세요"  size="30">
+      <input type="password" class="sign-form" id="inputPW" name="pw" placeholder="비밀번호를 입력하세요"  size="30">
     </div>
   </div>
   <div class="form-group">
     <label for="checkPW" class="col-sm-2 control-label">PW 확인</label>
     <div class="col-sm-10">
-      <input type="password" class="sign-form" id="checkPW" placeholder="비밀번호를 한번 더 입력하세요" size="30">
+      <input type="password" class="sign-form" id="checkPW" name="pw2" placeholder="비밀번호를 한번 더 입력하세요" size="30">
     </div>
   </div>
   <div class="form-group">
     <label for="inputName" class="col-sm-2 control-label">NAME</label>
     <div class="col-sm-10">
-      <input type="text" class="sign-form" id="inputName" placeholder="이름을 입력하세요"  size="30">
+      <input type="text" class="sign-form" id="inputName" name="name" placeholder="이름을 입력하세요"  size="30">
     </div>
   </div>
   <div class="form-group">
     <label for="inputEmail" class="col-sm-2 control-label" >E-MAIL</label>
     <div class="col-sm-10">
-      <input type="text" class="sign-form" id="inputEmail" placeholder="E-MAIL주소를 입력하세요"  size="30">
+      <input type="text" class="sign-form" id="inputEmail" name="email" placeholder="E-MAIL주소를 입력하세요"  size="30">
       &nbsp;&nbsp;<button>인증</button>
     </div>
   </div>

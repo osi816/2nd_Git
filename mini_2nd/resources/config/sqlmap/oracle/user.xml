@@ -12,21 +12,21 @@
 	</resultMap>
 	
 
-	<select id = "selectUserByID" resultType="user" parameterType="string">
+	<select id = "selectUserById" resultMap="usermap" parameterType="string">
 		select *
 		  from tb_user
 		 where user_id = #{userId} and 
 		 	   user_pw = #{userPw}
 	</select>
 	
-	<select id = "selectID" resultType="string" parameterType="user">
+	<select id = "selectId" resultType="string" parameterType="user">
 		select user_id
 		  from tb_user
 		 where user_name = #{userName} and
 		 	   user_email = #{userEmail}
 	</select>
 	
-	<select id = "selectPW" resultType="string" parameterType="user">
+	<select id = "selectPw" resultType="string" parameterType="user">
 		select user_pw
 		  from tb_user
 		 where user_name = #{userName} and
