@@ -115,6 +115,7 @@
             $("input").each(function (index) {
                 if($(this).prop("checked")){
                     console.log(index);
+                    console.log(index);
                 }
                 // console.log( $(this).prop("checked") );
             });
