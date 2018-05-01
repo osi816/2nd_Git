@@ -25,13 +25,13 @@
 	<a href='list'>목록</a>
 <hr />
 	<div id="comment">
-		<form method="post" action="commentRegist">
+		<form method="post" action="commentRegist" onsubmit="return doCmt();">
 			<input type="hidden" name="no" value="${board.no}" />	
 			<table width="70%">
 				<tr>
 					<td><input type="text" name="writer" /></td>
 					<td><textarea name="content" rows="2" cols="60"></textarea></td>
-					<td><input type="submit" onclick="doCmt();" value="등록" /></td>
+					<td><button>등록</button></td>
 				</tr>	
 			</table>
 			<script>
