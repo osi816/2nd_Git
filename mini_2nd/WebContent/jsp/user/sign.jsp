@@ -79,7 +79,8 @@
     <label for="inputEmail" class="col-sm-2 control-label" >E-MAIL</label>
     <div class="col-sm-10">
       <input type="text" class="sign-form" id="inputEmail" name="email" placeholder="E-MAIL주소를 입력하세요"  size="30">
-      &nbsp;&nbsp;<button>인증</button>
+      &nbsp;&nbsp;<button onclick="certification();">인증</button>
+
     </div>
   </div>
   <div class="form-group">
@@ -89,7 +90,10 @@
       &nbsp;&nbsp;<button>확인</button>
     </div>
   </div>
+  <button>회원가입</button>
+</form>
     <script>
+    var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
 	function doAction(){
 		var f = document.mForm;
         if (f.id.value == "") {
@@ -119,13 +123,31 @@
             f.email.focus()
             return false;
         }
+        if (regex.test(f.email.value) === false) {
+            alert("잘못된 이메일 형식입니다.");
+            f.email.value=""
+            f.email.focus()
+            return false;
+        }
 		
 	}
   
+    function certification(){
+  	  if($("#inputEmail").val()==""){
+  		  alert("이메일을 입력하세요");
+  		  return false;
+  	  }
+  	  $.ajax({
+				url: "/mini_2nd/sendemail",
+				data: "email=" + this.value,
+				dataType: "json"
+
+				});
+				
+  		  
+  	   	  
+    }
   
-  
-  </script>
-  <button>회원가입</button>
-</form>
+  </script>  
 </body>
 </html>
