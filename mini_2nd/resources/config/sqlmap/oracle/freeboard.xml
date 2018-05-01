@@ -93,14 +93,6 @@
 	
 		<!-- 첨부파일 파트 시작 -->
 	
-	<insert id="insertBoardFile" parameterType="boardFile">
-		insert into tb_freeboard_file (
-			file_no, no, file_path, ori_name, system_name, file_size
-		) values (
-			s_board_file_no.nextval, #{no}, #{filePath}, #{oriName}, #{systemName}, #{fileSize}		
-		)
-	</insert> 
-	
 	<resultMap id="boardFileMap" type="boardFile">
 		<result column="file_no" property="fileNo" />
 		<result column="no" property="no" />
@@ -109,6 +101,14 @@
 		<result column="system_name" property="systemName" />
 		<result column="file_size" property="fileSize" />
 	</resultMap>
+	
+	<insert id="insertBoardFile" parameterType="boardFile">
+		insert into tb_freeboard_file (
+			file_no, no, file_path, ori_name, system_name, file_size
+		) values (
+			s_board_file_no.nextval, #{no}, #{filePath}, #{oriName}, #{systemName}, #{fileSize}		
+		)
+	</insert> 
 	
 	<select id="selectBoardFileByNo" parameterType="int" resultMap="boardFileMap">
 		select *
