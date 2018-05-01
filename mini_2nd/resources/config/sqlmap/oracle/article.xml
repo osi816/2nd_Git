@@ -51,13 +51,24 @@
 		 order by article_date desc
 	</select>
 	
-<!-- 랜덤 쿼리 10개 || 최신 데이터 10개 고민중... -->
+<!-- 최신 데이터 10개 ... -->
 	<select id="selectRank" resultMap="articleMap">
 		select *
 		  from (
 		    select *
 		     from tb_article
 		     order by article_date desc  <!-- order by DBMS_RANDOM.RANDOM -->
+		  )
+		  where rownum <![CDATA[ <= ]]> 10
+	</select>
+	
+	<!--  랜덤 쿼리 10개 || -->
+	<select id="selectRand" resultMap="articleMap">
+		select *
+		  from (
+		    select *
+		     from tb_article
+		     order by DBMS_RANDOM.RANDOM
 		  )
 		  where rownum <![CDATA[ <= ]]> 10
 	</select>

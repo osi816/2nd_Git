@@ -42,6 +42,10 @@
 		float: left;
 		line-height: 20px;
 	}
+	.opt .btn_stt{
+		overflow:hidden;display:inline-block;width:46px;height:21px;background:url(http://static.naver.net/newsstand/img/20140716/sp_nwstd.png) -332px -150px no-repeat;line-height:999px;vertical-align:top;
+	}
+	.opt a.btn_stt:hover,.opt a.btn_stt:focus{background-position:-332px -61px}
 </style>
 </head>
 <body>
