@@ -26,7 +26,7 @@
 </style>
 </head>
 <body>
-<form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/user/sign">
+<form name="mForm"class="form-horizontal" method="post" action="${pageContext.request.contextPath}/user/sign" onsubmit="return doAction()">
   <h2>회원가입</h2>
   <div class="form-group">
     <label for="inputID" class="col-sm-2 control-label">ID</label>
@@ -60,7 +60,7 @@
   <div class="form-group">
     <label for="inputPW" class="col-sm-2 control-label">PW</label>
     <div class="col-sm-10">
-      <input type="password" class="sign-form" id="inputPW" name="pw" placeholder="비밀번호를 입력하세요"  size="30">
+      <input type="password" class="sign-form" id="inputPW" name="pw" placeholder="비밀번호를 입력하세요"  size="30" >
     </div>
   </div>
   <div class="form-group">
@@ -89,6 +89,42 @@
       &nbsp;&nbsp;<button>확인</button>
     </div>
   </div>
+    <script>
+	function doAction(){
+		var f = document.mForm;
+        if (f.id.value == "") {
+            alert("아이디를 입력하지 않았습니다.")
+            f.id.focus()
+            return false;
+        }
+        if (f.pw.value == "") {
+            alert("비밀번호를 입력하지 않았습니다.")
+            f.pw.focus()
+            return false;
+        }
+        if (f.pw.value != f.pw2.value) {
+            alert("비밀번호가 일치하지 않습니다")
+            f.pw.value = ""
+            f.pw2.value = ""
+            f.pw.focus()
+            return false;
+        }
+        if (f.name.value == "") {
+            alert("이름을 입력하지 않았습니다.")
+            f.name.focus()
+            return false;
+        }
+        if (f.email.value == "") {
+            alert("이메일을 입력하지 않았습니다.")
+            f.email.focus()
+            return false;
+        }
+		
+	}
+  
+  
+  
+  </script>
   <button>회원가입</button>
 </form>
 </body>
