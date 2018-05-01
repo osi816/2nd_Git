@@ -31,7 +31,7 @@ public class NewsScrapController extends HttpServlet{
 		User user = (User) session.getAttribute("user");
 		Scrap s = mapper.selectScrapById(user.getUserId());
 		if(s.getArticleNo() == Integer.parseInt(no)){
-			out.print("해당 기사는 이미 스크랩 되어잇습니다.");
+			out.print("해당 기사는 이미 스크랩 되어있습니다.");
 			out.close();
 			return;
 		}
