@@ -56,7 +56,7 @@
 		<div class="content">
 			<sitemesh:write property="body" />
 		</div>
-		
+		 
 
 </body>
 </html>
