@@ -43,10 +43,10 @@
         </li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Search</button>
+<!--         <button type="submit" class="btn btn-default">언론사 선택</button> -->
+		  <div class="opt">
+		  	<a href="#1" class="btn_stt">설정</a>
+		  </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="<c:url value="/jsp/mypage/mypagemove" />">MyPage</a></li>
@@ -64,3 +64,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav> 
+
+<script>
+	
+</script>

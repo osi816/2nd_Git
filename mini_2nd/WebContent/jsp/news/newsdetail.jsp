@@ -7,10 +7,6 @@
 <title>기사 상세페이지</title>
 <link rel="stylesheet" href="http://www.hellodd.com/views/_css/common.css">
 <link rel="stylesheet" href="http://www.hellodd.com/views/_css/news.css">
-<link rel="stylesheet" href="http://www.hellodd.com/views/_css/template.css">
-<link rel="stylesheet" href="http://www.hellodd.com/views/_css/board.css">
-<link rel="stylesheet" href="http://www.hellodd.com/views/_css/etc.css">
-<link rel="stylesheet" href="http://www.hellodd.com/js/css/validationEngine.jquery.css">
 <script type="text/javascript" src="http://www.hellodd.com/views/_js/jquery.rolling.js"></script>
 
 	<script type="text/javascript">
@@ -25,7 +21,6 @@
 			max_view : 1, // 초기에 보일 배너의 갯수
 			speed : 5000 // 속도
 		});
-
 		$('.navWrap ul li').bind('mouseenter keyup', function() {
 			$(this).addClass('on').siblings().removeClass()
 		});
@@ -39,16 +34,9 @@
 				<strong class="icons ico_news">news</strong>
 				<div class="rollingNews" style="position: relative; width: 280px; height: 16px; overflow: hidden;">
 					<ul style="position: absolute; top: 0px; left: 0px; width: 280px;">
-						<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64821">바꾼 난자로 태어난 아이···엄마는 누구입니까?</a></li>
-						<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64827">포항 5.4 지진, 원인은 지열발전소?</a></li>
-						<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64822">"우리나라 최초 '우주 발사체' 이름을 지어 주세요" </a></li>
-						<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64819">"학문의 대를 잇는다"···'KAIST 초세대 협업 연구실' 개소</a></li>
-						<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64830">포항지진 원인 지열발전 탓? 국내외 논문 발표</a></li>
-						<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64820">임플란트용 전기화학 나노 표면처리 기술 개발</a></li>
-						<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64826">엄마 클래식 아들 랩 원하는 소리만? 해외 車업계 '눈독'</a></li>
-						<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64823">코셈·위드텍·꿈비·성진테크원 등 글로벌 강소기업으로</a></li>
-						<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64824">'펩트론 오송바이오파크' 준공···희귀병 신약개발 '시동'</a></li>
-						<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="/?md=news&mt=view&pid=64828">국내 식량 위기 '코앞'···"농업 중장기 R&D 로드맵 긴요" </a></li>
+						<c:forEach var="rlist" items="${randList}">
+							<li style="float: left; position: relative; width: 280px; height: 16px; text-align: left; display: block;"><a href="newsDetail?no=${rlist.articleNo}">${rlist.articleTitle}</a></li>
+						</c:forEach>
 					</ul>
 				</div>
 			</div>

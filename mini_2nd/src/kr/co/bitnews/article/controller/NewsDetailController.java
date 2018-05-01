@@ -22,7 +22,9 @@ public class NewsDetailController extends HttpServlet{
 		ArticleMapper mapper = MyAppSqlConfig.getSqlSession().getMapper(ArticleMapper.class);
 		Article article = mapper.selectArticleByNo(Integer.parseInt(request.getParameter("no")));
 		
+		
 		request.setAttribute("article", article);
+		request.setAttribute("randList", mapper.selectRand());
 		RequestDispatcher rd = request.getRequestDispatcher("/jsp/news/newsdetail.jsp");
 		rd.forward(request, response);
 	}

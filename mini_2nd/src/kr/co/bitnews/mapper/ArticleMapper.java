@@ -10,4 +10,5 @@ public interface ArticleMapper {
 	public Article selectArticleByNo(int no);
 	public List<Article> selectArticle();
 	public List<Article> selectRank();
+	public List<Article> selectRand();
 }
