@@ -18,6 +18,8 @@
 </c:choose>
 </head>
 <body>
+	<div class="container">
+	<hr>
 	<c:choose>
 		<c:when test="${type eq 'hellodd'}">
 			<div class="gnbLeft">
@@ -32,7 +34,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="container">
 			<div class="row">
 				<div class="col-md-1"></div>
 				<div class="col-md-10 content">
@@ -55,10 +56,9 @@
 				</div>
 				<div class="col-md-1"></div>
 			</div>
-			</div>
 		</c:when>
 	</c:choose>
-	
+	</div>
 	
 	
 	

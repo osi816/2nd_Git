@@ -1,5 +1,8 @@
 package kr.co.bitnews.mapper;
 
-public interface ScrapMapper {
+import kr.co.bitnews.domain.Scrap;
 
+public interface ScrapMapper {
+	public void insertScrap(Scrap scrap);
+	public Scrap selectScrapById(String userId);
 }
