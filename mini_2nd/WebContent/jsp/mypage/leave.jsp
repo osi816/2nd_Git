@@ -30,6 +30,10 @@ $("#form").on("submit", function() {
 	var pass = $("#pwd").val();
 	var pwdcheck =$("#pwd-check").val();
 	
+	if(pass == "" ||passcheck == ""){
+		alert("빈칸을 채워주십시오.");
+		return false;
+	}
 	if(pass==pwdcheck){
 		$.ajax({
 				url: "/mini_2nd/jsp/mypage/leave",

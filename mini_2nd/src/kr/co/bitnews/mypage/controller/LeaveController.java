@@ -32,7 +32,7 @@ public class LeaveController extends HttpServlet{
 			result = 0;
 		}
 		PrintWriter out = resp.getWriter();
-		out.write("{\"result\": " + result + "}");
+		out.print("{\"result\": " + result + "}");
 		out.close();
 					
 		/*
