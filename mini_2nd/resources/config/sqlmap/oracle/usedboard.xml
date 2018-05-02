@@ -12,6 +12,12 @@
 		<result column="view_cnt" property="viewCnt"/>
 	</resultMap>
 	
+	<select id="selectById" resultMap = "boardMap" parameterType="string">
+	    select *
+	      from tb_usedboard
+	     where user_id = #{userId}
+	</select>
+	
 	<select id = "selectBoard" resultMap = "boardMap">
 		select *
 		  from tb_usedboard

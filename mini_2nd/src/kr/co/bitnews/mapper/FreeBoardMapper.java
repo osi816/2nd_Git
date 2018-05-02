@@ -14,6 +14,8 @@ public interface FreeBoardMapper {
 	void deleteBoard(int no);
 	void updateBoardViewCnt(int no);
 	
+	List<Board> selectById(String userid);
+	
 	// 댓글 파트
 	void insertComment(Comment comment);
 	List<Comment> selectCommentByNo(int findNo);
