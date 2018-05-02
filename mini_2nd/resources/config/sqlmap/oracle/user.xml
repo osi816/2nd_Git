@@ -15,8 +15,7 @@
 	<select id = "selectUserById" resultMap="usermap" parameterType="string">
 		select *
 		  from tb_user
-		 where user_id = #{userId} and 
-		 	   user_pw = #{userPw}
+		 where user_id = #{userId}
 	</select>
 	
 	<select id = "selectAcc" resultMap="usermap" parameterType="user">
