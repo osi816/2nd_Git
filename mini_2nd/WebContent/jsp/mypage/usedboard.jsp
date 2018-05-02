@@ -50,7 +50,7 @@
       <tr class="w3-light-grey">
         <th>글 번호</th>
         <th>제목</th>
-        <th>조회수</th>
+        <th>내용</th>
         <th>작성일</th>
       </tr>
     </thead>
