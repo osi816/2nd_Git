@@ -5,12 +5,10 @@
 <!DOCTYPE html>
 <html> 
 <head>
-  <meta charset='utf-8'>
-
-<title>bit news</title>
+	<meta charset='utf-8'>
+	<title>bit news</title>
 </head>
 <body>
-
 	 <div style="
 		text-align: center;
 		font-size: 40px;
