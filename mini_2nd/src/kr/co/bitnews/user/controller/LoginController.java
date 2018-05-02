@@ -35,6 +35,7 @@ public class LoginController extends HttpServlet {
 		User login = mapper.selectUserById(id);
 		System.out.println("login : " + login);
 		
+		
 		if(login == null) {
 			request.setAttribute("errMsg", "아이디를 확인하세요");
 		}
@@ -43,6 +44,10 @@ public class LoginController extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("user", login);
 			
+			if(login.getUserId().equals("admin")) {
+				response.sendRedirect(request.getContextPath() + "/main");
+			}
+			else
 			response.sendRedirect(request.getContextPath() + "/main");
 			return;
 		}

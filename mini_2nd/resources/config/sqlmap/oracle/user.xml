@@ -19,19 +19,11 @@
 		 	   user_pw = #{userPw}
 	</select>
 	
-	<select id = "selectId" resultType="string" parameterType="user">
-		select user_id
+	<select id = "selectAcc" resultMap="usermap" parameterType="user">
+		select *
 		  from tb_user
 		 where user_name = #{userName} and
 		 	   user_email = #{userEmail}
-	</select>
-	
-	<select id = "selectPw" resultType="string" parameterType="user">
-		select user_pw
-		  from tb_user
-		 where user_name = #{userName} and
-		 	   user_email = #{userEmail} and
-		 	   user_id = #{userId}
 	</select>
 	
 	<insert id="insertUser" parameterType="user">

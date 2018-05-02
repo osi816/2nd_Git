@@ -20,11 +20,15 @@
 	div.checkbox > label > input, div.checkbox > label > a {
 		margin-left: 60px;
 	}
+	.form-p{
+	padding-left:200px;
+	}
 </style>
 </head>
 <body>
-<p style="color: red;">${errMsg}</p>
-<form method="post" class="form-horizontal" action="${pageContext.request.contextPath}/login/login">
+<form name="mForm" method="post" class="form-horizontal" action="${pageContext.request.contextPath}/login/login" 
+onsubmit="return doAction()">
+<p class="form-p" style="color: red;">${errMsg}</p>
   <div class="form-group">
     <label for="inputID" class="col-sm-2 control-label">ID</label>
     <div class="col-sm-10">
@@ -39,7 +43,7 @@
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10"> 
-      <button class="btn btn-default">Login</button>
+      <button class="btn btn-default" >Login</button>
     </div>
   </div>
   <div class="form-group">
@@ -53,6 +57,23 @@
       </div>
     </div>
   </div>
+  <script>
+  
+	var f = document.mForm;
+	function doAction() {
+		if (f.id.value == "") {
+			alert("아이디 입력하세요")
+			f.id.focus()
+			return false;
+		}
+		if (f.pw.value == "") {
+			alert("비밀번호 입력하세요")
+			f.pw.focus()
+			return false;
+		}	
+	
+	}
+  </script>
 </form>
 </body>
 </html>
