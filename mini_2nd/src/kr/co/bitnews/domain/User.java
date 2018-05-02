@@ -8,7 +8,7 @@ public class User {
     private String userName;
     private String userEmail;
     private Date acceptTime;
-    private int user_withdraw;
+    private int userWithdraw;
 
 	public Date getAcceptTime() {
 		return acceptTime;
@@ -18,13 +18,12 @@ public class User {
 		this.acceptTime = acceptTime;
 	}
     
-
-	public int getUser_withdraw() {
-		return user_withdraw;
+	public int getUserWithdraw() {
+		return userWithdraw;
 	}
 
-	public void setUser_withdraw(int user_withdraw) {
-		this.user_withdraw = user_withdraw;
+	public void setUserWithdraw(int userWithdraw) {
+		this.userWithdraw = userWithdraw;
 	}
 
 	public String getUserId() {

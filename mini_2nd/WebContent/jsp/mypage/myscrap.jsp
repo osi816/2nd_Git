@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -41,26 +43,15 @@
         <th>기사 번호</th>
       </tr>
     </thead>
-    <tr>
-      <td>1</td>
-      <td>사건</td>
-      <td>Happened</td>
-      <td>687372</td>
-    </tr>
-    <tr>
-      <td>Eve</td>
-      <td>94</td>
-      <td>123</td>
-      <td>123</td>
-    </tr>
-    <tr>
-      <td>Eve</td>
-      <td>94</td>
-      <td>123</td>
-      <td>123</td>
-    </tr>
-    
-  </table>
+    <c:forEach var="scrap" items="${list}">
+      <tr>
+      <td>${scrap.scrapNo}</td>
+      <td>${scrap.articleTitle}</td>
+      <td>${scrap.articleSummary}</td>
+      <td><fmt:formatDate value="${scrap.scrapDate}" pattern="yyyy-MM-dd" /></td>
+      </tr>
+    </c:forEach>     
+    </table>
 </div>
 </body>
 </html>

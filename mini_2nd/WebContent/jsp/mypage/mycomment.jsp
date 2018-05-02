@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,7 +20,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li><a href="userupdate">회원정보 수정</a></li>
-      <li><a href="myscrap">스크랩</a></li>
+      <li><a href="scrap">스크랩</a></li>
       <li><a href="used">내 글</a></li>
       <li class="active"><a href="#">내 댓글</a></li>
     </ul>
@@ -40,22 +42,14 @@
         <th>작성일</th>
       </tr>
     </thead>
+    <c:forEach var="comment" items="${list}">
     <tr>
-      <td>1</td>
-      <td>content</td>
-      <td>2018-04-16</td>
+      <td>${comment.no}</td>
+      <td>${comment.content}</td>
+      <td><fmt:formatDate value="${comment.reg_date}" pattern="yyyy-MM-dd" /></td>
     </tr>
-    <tr>
-      <td>Eve</td>
-      <td>Jackson</td>
-      <td>94</td>
-    </tr>
-    <tr>
-      <td>Adam</td>
-      <td>Johnson</td>
-      <td>67</td>
-    </tr>
-  </table>
+    </c:forEach>
+   </table>
 </div>
 </body>
 </html>

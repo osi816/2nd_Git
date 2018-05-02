@@ -24,9 +24,9 @@
     </div>
     <ul class="nav navbar-nav">
       <li><a href="userupdate">회원정보 수정</a></li>
-      <li><a href="myscrap">스크랩</a></li>
+      <li><a href="scrap">스크랩</a></li>
       <li class="active"><a href="#">내 글</a></li>
-      <li><a href="mycomment">내 댓글</a></li>
+      <li><a href="comment">내 댓글</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     </ul>

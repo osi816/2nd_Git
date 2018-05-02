@@ -9,4 +9,5 @@ public interface UserMapper {
 	String selectId(User user);
 	String selectPw(User user);
 	int selectMemberCount(String id);
+	void withdrawUser(String id);
 }

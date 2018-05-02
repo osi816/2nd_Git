@@ -12,7 +12,7 @@
 <body>
 <div class="container">
   <h2>비밀번호 변경</h2>
-  <form action="passchange">
+  <form action="passchange" method="post">
     <div class="form-group">
       <label for="pwd">현재 비밀번호</label>
       <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter password">

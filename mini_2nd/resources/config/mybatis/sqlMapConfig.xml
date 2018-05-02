@@ -28,6 +28,8 @@
 		<typeAlias alias="board" type="kr.co.bitnews.domain.Board" />		
 		<typeAlias alias="comment" type="kr.co.bitnews.domain.Comment" />		
 		<typeAlias alias="boardFile" type="kr.co.bitnews.domain.BoardFile" />		
+		<typeAlias alias="myScrap" type="kr.co.bitnews.domain.MyScrap" />		
+		<typeAlias alias="myComment" type="kr.co.bitnews.domain.MyComment" />		
 	</typeAliases>
 	
 	<environments default="development">
@@ -53,5 +55,6 @@
 		<mapper resource="config/sqlmap/oracle/freeboard.xml"/>	
 		<mapper resource="config/sqlmap/oracle/articleboard.xml"/>	
 		<mapper resource="config/sqlmap/oracle/usedboard.xml"/>	
+		<mapper resource="config/sqlmap/oracle/myscrap.xml"/>	
 	</mappers>
 </configuration>

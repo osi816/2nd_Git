@@ -12,10 +12,10 @@
 <body>
 <div class="container">
   <h2>회원탈퇴</h2>
-  <form action="leave">
+  <form action="leave" id="form" method="post">
     <div class="form-group">
       <label for="pwd">비밀번호</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+      <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter password">
     </div>
     <div class="form-group">
       <label for="pwd">비밀번호 재확인</label>
@@ -26,6 +26,35 @@
   </form>
 </div>
 <script>
+$("#form").on("submit", function() {
+	var pass = $("#pwd").val();
+	var pwdcheck =$("#pwd-check").val();
+	
+	if(pass==pwdcheck){
+		$.ajax({
+				url: "/mini_2nd/jsp/mypage/leave",
+				data: "pwd=" + pass,
+				dataType: "json",
+				success: function(data){
+					if(data.result == 1){
+						console.log(data.result);
+						alert("회원 탈퇴 성공,그동안 이용해주셔서 감사합니다.")
+						location.href = "/mini_2nd/login/logout"
+						}
+					else{
+						alert("비밀번호가 일치하지 않습니다.");
+						console.log(data.result);
+						location.href="/mini_2nd/jsp/mypage/leavemove"
+						}
+			}
+		})
+				
+	}else{
+		alert("확인/재확인 비밀번호가 일치하지 않습니다.");
+		return false;
+	}
+	});
+/*
 window.onsubmit = function(){
     var pwd = document.getElementById('pwd').value;
     var pwdcheck = document.getElementById('pwd-check').value
@@ -34,12 +63,13 @@ window.onsubmit = function(){
     	alert("빈칸을 채워주십시오")
     	return false;
     }else if(pwd!=pwdcheck){
-    	alert("이전 비밀번호가 일치하지 않습니다.");
+    	alert("비밀번호가 일치하지 않습니다.");
     	return false;
     }else{
     	return true;
     }
 }
+*/
 </script>
 </body> 
 </html>
