@@ -99,7 +99,7 @@
 	
 		<!-- 첨부파일 파트 시작 -->
 	
-	<resultMap id="boardFileMap" type="boardFile">
+	<resultMap id="boardFileMap" type="boardFile" >
 		<result column="file_no" property="fileNo" />
 		<result column="no" property="no" />
 		<result column="file_path" property="filePath" />
@@ -114,7 +114,7 @@
 		) values (
 			s_board_file_no.nextval, #{no}, #{filePath}, #{oriName}, #{systemName}, #{fileSize}		
 		)
-	</insert> 
+	</insert>
 	
 	<select id="selectBoardFileByNo" parameterType="int" resultMap="boardFileMap">
 		select *

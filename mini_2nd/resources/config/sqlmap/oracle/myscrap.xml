@@ -11,10 +11,10 @@
 	</resultMap>
 	
 	<select id="selectScrapById" resultMap="myScrapMap" parameterType="string">
-	select s.scrap_no,s.scrap_date,a.article_title,a.article_summary
+	select s.scrap_no, s.scrap_date, a.article_title, a.article_summary
       from tb_user u inner join tb_scrap s
         on u.user_id = s.user_id
-inner join tb_article a
+	 inner join tb_article a
         on s.article_no = a.article_no
      where u.user_id = #{userId}
 	</select>

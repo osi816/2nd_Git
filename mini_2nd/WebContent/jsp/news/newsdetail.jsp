@@ -97,10 +97,11 @@
 
 	<script>
 		console.log(`${sessionScope.user.userName}`);
-		var id = `${sessionScope.user.userId}`;
+		var id = ${sessionScope.user.userId};
 		function doScrap() {
 			if(id == ""){
 				alert("로그인 후 이용 가능합니다.");
+// 				location.href = ""
 				return;
 			}
 			$.ajax({

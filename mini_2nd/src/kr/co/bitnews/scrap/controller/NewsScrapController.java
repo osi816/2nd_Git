@@ -2,6 +2,7 @@ package kr.co.bitnews.scrap.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,11 +30,13 @@ public class NewsScrapController extends HttpServlet{
 //		세션데이터 Login user id 
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user");
-		Scrap s = mapper.selectScrapById(user.getUserId());
-		if(s.getArticleNo() == Integer.parseInt(no)){
-			out.print("해당 기사는 이미 스크랩 되어있습니다.");
-			out.close();
-			return;
+		List<Scrap> sList = mapper.selectScrapById(user.getUserId());
+		for (Scrap s : sList) {
+			if(s.getArticleNo() == Integer.parseInt(no)){
+				out.print("해당 기사는 이미 스크랩 되어있습니다.");
+				out.close();
+				return;
+			}			
 		}
 		Scrap scrap = new Scrap();
 		scrap.setArticleNo(Integer.parseInt(no));
