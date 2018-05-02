@@ -37,7 +37,7 @@
 	 <form id="rForm" class="form-inline">
 		<div id="comment">
 		    <div class="form-group">
-			    <input type="text" name="writer" class="form-control" value="${sessionScope.user.userId}" placeholder="아이디를 입력하세요">
+			    <input type="text" name="writer" class="form-control" value="${user.userId}" placeholder="아이디를 입력하세요">
 		    </div>
 		    <div class="form-group">
 			    <input type="text" name="content" class="form-control input-wp1" placeholder="내용을 입력하세요">
@@ -121,9 +121,9 @@
 			dataType: "json"
 		})
 		.done(function (result) {
-// 			if (1==1) {
-// 			}
+			if (!'$(user.userId)') {
 				$("#rForm input[name='writer']").val("");
+			}
 			$("#rForm input[name='content']").val("");
 			
 			makeCommentList(result);

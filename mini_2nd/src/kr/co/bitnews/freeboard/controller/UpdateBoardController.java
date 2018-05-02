@@ -18,13 +18,14 @@ public class UpdateBoardController extends HttpServlet {
 	@Override
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		FreeBoardMapper mapper = MyAppSqlConfig.getSqlSession().getMapper(FreeBoardMapper.class);
-
+		request.setCharacterEncoding("utf-8");
+		
 		Board board = new Board();
 		board.setNo(Integer.parseInt(request.getParameter("no")));
 		board.setTitle(request.getParameter("title"));
 		board.setContent(request.getParameter("content"));
 		mapper.updateBoard(board);
 		
-		response.sendRedirect("list");
+		response.sendRedirect("detail?no="+ request.getParameter("no"));
 	}
 }
