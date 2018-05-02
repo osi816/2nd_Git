@@ -15,7 +15,7 @@ import kr.co.bitnews.domain.Board;
 import kr.co.bitnews.domain.User;
 import kr.co.bitnews.mapper.UsedBoardMapper;
 
-@WebServlet("/jsp/mypage/used")
+@WebServlet("/mypage/used")
 public class UsedController extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/jsp/mypage/mypagemove")
+@WebServlet("/mypage/mypagemove")
 public class MyPageMoveController extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher rd = req.getRequestDispatcher("userupdate.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("/jsp/mypage/userupdate.jsp");
 		rd.forward(req, resp);
 	}
 	

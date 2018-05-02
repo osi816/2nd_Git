@@ -81,7 +81,7 @@
 </form>
 
 <footer id="buttons">
-<button type="button" class="btn btn-default" onclick="location.href='passchange'">비밀번호 변경</button>
+<button type="button" class="btn btn-default" onclick="location.href='passchangemove'">비밀번호 변경</button>
 <button type="button" class="btn btn-default" onclick="location.href='leavemove'">탈퇴</button>
 </footer>
 </body>

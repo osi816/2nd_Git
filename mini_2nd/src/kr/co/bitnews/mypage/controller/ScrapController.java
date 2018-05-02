@@ -15,7 +15,7 @@ import kr.co.bitnews.domain.MyScrap;
 import kr.co.bitnews.domain.User;
 import kr.co.bitnews.mapper.MyScrapMapper;
 
-@WebServlet("/jsp/mypage/scrap")
+@WebServlet("/mypage/scrap")
 public class ScrapController extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -26,7 +26,7 @@ public class ScrapController extends HttpServlet{
 		
 		req.setAttribute("list", scrap);
 				
-		RequestDispatcher rd = req.getRequestDispatcher("myscrap.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("/jsp/mypage/myscrap.jsp");
 		rd.forward(req, resp);
 	}
 

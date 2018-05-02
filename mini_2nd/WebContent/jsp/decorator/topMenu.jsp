@@ -49,7 +49,7 @@
 		  </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="<c:url value="/jsp/mypage/mypagemove" />">MyPage</a></li>
+        <li><a href="<c:url value="/mypage/mypagemove" />">MyPage</a></li>
         <li><a href="<c:url value="/user/signupForm" />">회원가입</a></li>
         <c:choose>
         <c:when test="${empty sessionScope.user}">

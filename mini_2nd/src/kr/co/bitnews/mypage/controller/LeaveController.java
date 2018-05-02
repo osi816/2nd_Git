@@ -13,7 +13,7 @@ import common.db.MyAppSqlConfig;
 import kr.co.bitnews.domain.User;
 import kr.co.bitnews.mapper.UserMapper;
 
-@WebServlet("/jsp/mypage/leave")
+@WebServlet("/mypage/leave")
 public class LeaveController extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

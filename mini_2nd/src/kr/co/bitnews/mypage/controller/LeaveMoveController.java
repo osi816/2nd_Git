@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/jsp/mypage/leavemove")
+@WebServlet("/mypage/leavemove")
 public class LeaveMoveController extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher rd = req.getRequestDispatcher("leave.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("/jsp/mypage/leave.jsp");
 		rd.forward(req, resp);
 	}
 

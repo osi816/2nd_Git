@@ -12,7 +12,7 @@
 <body>
 <div class="container">
   <h2>회원탈퇴</h2>
-  <form action="leave" id="form" method="post">
+  <form action="/mini_2nd/mypage/leave" id="form" method="post">
     <div class="form-group">
       <label for="pwd">비밀번호</label>
       <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter password">
@@ -30,29 +30,30 @@ $("#form").on("submit", function() {
 	var pass = $("#pwd").val();
 	var pwdcheck =$("#pwd-check").val();
 	
-	if(pass == "" ||passcheck == ""){
+	if(pass == "" ||pwdcheck == ""){
 		alert("빈칸을 채워주십시오.");
 		return false;
 	}
-	if(pass==pwdcheck){
+
+	if(pass == pwdcheck){
+					
 		$.ajax({
-				url: "/mini_2nd/jsp/mypage/leave",
+				url: "/mini_2nd/mypage/leave",
 				data: "pwd=" + pass,
 				dataType: "json",
 				success: function(data){
 					if(data.result == 1){
-						console.log(data.result);
-						alert("회원 탈퇴 성공,그동안 이용해주셔서 감사합니다.")
-						location.href = "/mini_2nd/login/logout"
+						alert("회원 탈퇴 성공,그동안 이용해주셔서 감사합니다.");
+						location.href ='/mini_2nd/login/logout';
+						//console.log(data.result);
 						}
 					else{
 						alert("비밀번호가 일치하지 않습니다.");
-						console.log(data.result);
-						location.href="/mini_2nd/jsp/mypage/leavemove"
+						location.href='/mini_2nd/mypage/leavemove';
+						//console.log(data.result);
 						}
 			}
 		})
-				
 	}else{
 		alert("확인/재확인 비밀번호가 일치하지 않습니다.");
 		return false;

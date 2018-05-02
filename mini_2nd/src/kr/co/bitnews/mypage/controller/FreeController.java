@@ -15,7 +15,7 @@ import kr.co.bitnews.domain.Board;
 import kr.co.bitnews.domain.User;
 import kr.co.bitnews.mapper.FreeBoardMapper;
 
-@WebServlet("/jsp/mypage/free")
+@WebServlet("/mypage/free")
 public class FreeController extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

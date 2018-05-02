@@ -12,7 +12,7 @@
 <body>
 <div class="container">
   <h2>비밀번호 변경</h2>
-  <form action="passchange" method="post">
+  <form action="passchange" id="form" method="post">
     <div class="form-group">
       <label for="pwd">현재 비밀번호</label>
       <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter password">
@@ -35,32 +35,53 @@
 </div>
 
  <script>
-        window.onsubmit = function(){
-            var pwd = document.getElementById('pwd').value;
-            var pwdcheck = document.getElementById('pwd-check').value
-            
-            var npwd = document.getElementById('npwd').value;
-            var npwdcheck = document.getElementById('npwd-check').value;
-
-            if(pwd == ""|| pwdcheck ==""||npwd==""||npwdcheck==""){
-            	alert("빈칸을 채워주십시오")
-            	return false;
-            }else if(pwd!=pwdcheck){
-            	alert("이전 비밀번호가 일치하지 않습니다.");
-            	return false;
-            }else if(pwd!=pwdcheck || npwd!=npwdcheck){
-            	alert("새로운 비밀번호가 일치하지 않습니다.");
-            	return false;
-            }else{
-            	return true;
-            }
-            /*if(pass==passCheck){
-                alert("성공")
-            }else{
-                alert('다시 입력해주세요.')
-                return false;
-            }*/
-        }
+ $("#form").on("submit", function() {
+		var pass = $("#pwd").val();
+		var pwdcheck =$("#pwd-check").val();
+		
+		var npwd = $("#npwd").val();
+		var npwdcheck = $("#npwd-check").val();
+		
+		if(pass == "" ||pwdcheck == ""||npwd =="" ||npwdcheck==""){
+			alert("빈칸을 채워주십시오.");
+			return false;
+		}
+		
+		if(pass != pwdcheck){
+			alert("현재 비밀번호를 똑같이 입력해주십시오.")
+			return false;
+		}
+		
+		if(npwd != npwdcheck){
+			alert("새로운 비밀번호를 똑같이 입력해주십시오.")
+		}
+		
+		if(pass == pwdcheck && npwd == npwdcheck){
+			$.ajax({
+					url: "/mini_2nd/jsp/mypage/passchange",
+					data: "pwd=" + pwd + "&npwd=" + npwd,
+					dataType: "json",
+					success: function(data){
+						if(data.result == 1){
+							console.log(data.result);
+							alert("비밀번호 변경 성공.")
+							location.href = "/mini_2nd/login/logout"
+							}
+						else{
+							alert("비밀번호가 일치하지 않습니다.");
+							console.log(data.result);
+							location.href="/mini_2nd/mypage/leavemove"
+							}
+				}
+			})
+					
+		}else{
+			alert("확인/재확인 비밀번호가 일치하지 않습니다.");
+			return false;
+		}
+		});
+           
+        
         </script>
 
 </body>

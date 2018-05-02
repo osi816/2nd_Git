@@ -15,7 +15,7 @@ import kr.co.bitnews.domain.MyComment;
 import kr.co.bitnews.domain.User;
 import kr.co.bitnews.mapper.MyScrapMapper;
 
-@WebServlet("/jsp/mypage/comment")
+@WebServlet("/mypage/comment")
 public class CommentController extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -26,7 +26,7 @@ public class CommentController extends HttpServlet{
 	
     req.setAttribute("list", comment);
     
-	RequestDispatcher rd= req.getRequestDispatcher("mycomment.jsp");
+	RequestDispatcher rd= req.getRequestDispatcher("/jsp/mypage/mycomment.jsp");
 	rd.forward(req, resp);
 	}
 

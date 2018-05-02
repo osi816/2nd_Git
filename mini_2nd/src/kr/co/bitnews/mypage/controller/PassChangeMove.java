@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/jsp/mypage/passchangemove")
+@WebServlet("/mypage/passchangemove")
 public class PassChangeMove extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher rd = req.getRequestDispatcher("passchange.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("/jsp/mypage/passchange.jsp");
 		rd.forward(req, resp);
 	}
 

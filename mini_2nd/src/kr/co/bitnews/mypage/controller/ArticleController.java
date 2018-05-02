@@ -15,7 +15,7 @@ import kr.co.bitnews.domain.Board;
 import kr.co.bitnews.domain.User;
 import kr.co.bitnews.mapper.ArticleBoardMapper;
 
-@WebServlet("/jsp/mypage/article")
+@WebServlet("/mypage/article")
 public class ArticleController extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
