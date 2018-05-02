@@ -9,4 +9,5 @@ public interface UserMapper {
 	User selectAcc(User user);
 	int selectMemberCount(String id);
 	void withdrawUser(String id);
+	void updatePass(User user);
 }
