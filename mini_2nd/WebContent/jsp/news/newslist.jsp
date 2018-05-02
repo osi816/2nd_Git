@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="navi"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,7 +48,7 @@
 										<h3><a href="newsDetail?no=${list.articleNo}">${list.articleTitle}</a></h3>
 										<span class="txt"><a href="newsDetail?no=${list.articleNo}">${list.articleSummary}</a></span>
 										<p class="date_author">${list.articleReporter}<span>|</span>${list.articleDate}</p>
-									</div>					
+									</div>
 								</li>
 							</c:forEach>
 							</ul>
@@ -58,13 +59,20 @@
 			</div>
 		</c:when>
 	</c:choose>
+	<navi:page data="${pageResult}"/>
 	</div>
 	
 	
 	
 	
-<!-- rolling news  -->
 <script type="text/javascript">
+// paging
+	function goPage(pageNo) {
+		location.href = "newsList?pageNo=" + pageNo + "&type=hellodd";
+	}
+
+
+// <!-- rolling news  -->
 	var logged_pid = '0';
 	var logged_id = '';
 	var logged_gubun = '';

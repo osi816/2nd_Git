@@ -46,10 +46,10 @@ public class DBServlet extends HttpServlet{
 		}
 		driver.close();
 //		request.setAttribute("aList", aList);
-		List<Article> list = mapper.selectArticle();
+//		List<Article> list = mapper.selectArticle();
 		
-		request.setAttribute("list", list);
-		RequestDispatcher rd = request.getRequestDispatcher("/jsp/news/detailnews.jsp");
+//		request.setAttribute("list", list);
+		RequestDispatcher rd = request.getRequestDispatcher("/newsList?type=hellodd");
 		rd.forward(request, response);
 	}
 

@@ -45,10 +45,16 @@
 		 where article_no = #{no}
 	</select>
 
-	<select id="selectArticle" resultMap="articleMap">
-		select * 
-		  from tb_article
-		 order by article_date desc
+	<select id="selectArticle" resultMap="articleMap" parameterType="page">
+    	select *
+    	  from ( 
+    	  		 select rownum rnum, a.*
+    	           from (select *  
+    	                   from tb_article 
+    	                  order by article_no desc 
+    	                ) a
+    	       )  
+    	 where rnum between #{begin} and #{end}
 	</select>
 	
 <!-- 최신 데이터 10개 ... -->
@@ -72,4 +78,10 @@
 		  )
 		  where rownum <![CDATA[ <= ]]> 10
 	</select>
+	
+	<select id="selectArticleCount" parameterType="page" resultType="int">
+		select count(*)
+		  from tb_article 
+	</select>
+	
 </mapper>

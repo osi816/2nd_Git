@@ -20,6 +20,7 @@
 		1428213      
 	-->
 	<typeAliases>
+		<typeAlias alias="page" type="kr.co.bitnews.domain.Page" />
 		<typeAlias alias="user" type="kr.co.bitnews.domain.User" />
 		<typeAlias alias="article" type="kr.co.bitnews.domain.Article" />
 		<typeAlias alias="news" type="kr.co.bitnews.domain.News" />

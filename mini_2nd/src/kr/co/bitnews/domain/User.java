@@ -17,7 +17,7 @@ public class User {
 	public void setAcceptTime(Date acceptTime) {
 		this.acceptTime = acceptTime;
 	}
-    
+
 	public int getUserWithdraw() {
 		return userWithdraw;
 	}
