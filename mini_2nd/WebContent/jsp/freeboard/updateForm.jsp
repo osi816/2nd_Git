@@ -8,7 +8,7 @@
 </head>
 <body>
 	 <hr />
-	 <form action='list' method='post'>
+	 <form action='update' method='post'>
 	   <input type='hidden' name='no' value='${board.no}' />
 	    제목 : <input type='text' name='title' value='${board.title}' /><br>
 	    글쓴이 : <input type='text' name='writer' readonly value='${board.userId}' /><br>
