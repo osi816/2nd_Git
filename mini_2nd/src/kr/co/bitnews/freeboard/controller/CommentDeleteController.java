@@ -1,12 +1,15 @@
 package kr.co.bitnews.freeboard.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.Gson;
 
 import common.db.MyAppSqlConfig;
 import kr.co.bitnews.mapper.FreeBoardMapper;
@@ -25,7 +28,10 @@ public class CommentDeleteController extends HttpServlet {
 		
 		mapper.deleteComment(commentNo);
 		
-		response.sendRedirect("detail?no=" + no);
+		response.setContentType("application/json; charset=utf-8"); 
+		PrintWriter out = response.getWriter();
+		
+		out.println(new Gson().toJson(mapper.selectCommentByNo(no)));
 		
 	}
 }
