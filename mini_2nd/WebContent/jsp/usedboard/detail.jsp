@@ -8,6 +8,12 @@
 	<title>bit news</title>
 </head>
 <body>
+	<div style="
+		 text-align: center;
+		 font-size: 40px;
+		 font-weight: bold;"
+	> 자유 게시판
+	</div>
 
 <hr/>
 번호 :  ${board.no}<br>

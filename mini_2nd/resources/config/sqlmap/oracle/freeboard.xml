@@ -25,13 +25,16 @@
 	</select>
 	
 	<insert id="insertBoard" parameterType="board">
+	    <selectKey keyProperty="no" resultType="int" order="BEFORE">
+    		select s_freeboard_no.nextval from dual
+    	</selectKey>
 		insert into tb_freeboard(
 			no,
 			title,
 			user_id,
 			content
 		)values (
-			s_freeboard_no.nextval,
+			#{no},
 			#{title},
 			#{userId},
 			#{content}

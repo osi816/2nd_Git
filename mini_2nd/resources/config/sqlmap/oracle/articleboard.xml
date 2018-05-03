@@ -25,6 +25,9 @@
 	</select>
 	
 	<insert id="insertBoard" parameterType="board">
+	    <selectKey keyProperty="no" resultType="int" order="BEFORE">
+    		select s_articleboard_no.nextval from dual
+    	</selectKey>
 		insert into tb_articleboard(
 			no,
 			title,

@@ -43,9 +43,11 @@ public class WriteBoardController extends HttpServlet {
 		
 		// 게시물 등록
 		Board board = new Board();
-		board.setUserId(mRequest.getParameter("writer"));
+		board.setUserId(mRequest.getParameter("userId"));
 		board.setTitle(mRequest.getParameter("title"));
 		board.setContent(mRequest.getParameter("content"));
+		System.out.println(board.getNo());
+		System.out.println(mRequest.getParameter("userId"));
 		mapper.insertBoard(board);
 		
 		// 파일 저장..

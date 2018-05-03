@@ -15,7 +15,7 @@
 	    		<option value="b">삽니다</option>
 	    		<option value="s">팝니다</option>
 	    	</select><br>
-	    글쓴이 : <input type='text' readonly value='${user.userId}' name='writer' size='30' /><br>
+	    글쓴이 : <input type='text' readonly value='${user.userId}' name='userId' size='30' /><br>
 	    내용 : <textarea name='content' rows='7' cols='70'></textarea><br>
 	    첨부파일 : 
 	    <input type="file" name="attach1" /><br>
