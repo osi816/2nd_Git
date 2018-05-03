@@ -45,7 +45,9 @@
       <form class="navbar-form navbar-right" role="search">
 <!--         <button type="submit" class="btn btn-default">언론사 선택</button> -->
 		  <div class="opt">
-		  	<a href="#1" class="btn_stt">설정</a>
+		  	<c:if test="${!empty sessionScope.user}">
+		  	<a href="#" onclick="doPop();" class="btn_stt">설정</a>
+		  	</c:if>
 		  </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
@@ -66,5 +68,11 @@
 </nav> 
 
 <script>
-	
+	function doPop(){
+        var left = (screen.width - 700) / 2;
+        var top = (screen.height - 1000) / 2;
+        console.log(`width=${left},height=${top}`);
+        window.name = "config"; 
+        window.open("<c:url value='/config/newsconfig.jsp' />", "", `width=600, height=600, left=${left}, top=${top}`);
+	}
 </script>
