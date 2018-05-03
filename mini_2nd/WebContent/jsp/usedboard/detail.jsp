@@ -9,8 +9,14 @@
 </head>
 <body>
 
-<hr />
+<hr/>
 번호 :  ${board.no}<br>
+말머리 :  
+	<c:set var="head" value="head" />
+	<c:choose>
+		<c:when test="${board.head eq 's' }">팝니다</c:when>
+		<c:otherwise>삽니다</c:otherwise>
+	</c:choose><br>
 글쓴이 : <c:out value="${board.userId}" /><br>
 제목 : <c:out value="${board.title}" /><br>
 내용 : <c:out value="${board.content}" /><br>
@@ -19,11 +25,11 @@
 첨부파일 : <c:forEach var="file" items="${fileList}">
 	<a href="/mini_2nd/common/file/down?path=${file.filePath}&sName=${file.systemName}&dName=${file.oriName}">${file.oriName}</a>(${file.fileSize} bytes)<br>
 	</c:forEach><br>
-<hr />
+<hr/>
 	<a href='updateForm?no=${board.no}'>수정</a>
-	<a href='delete?no=${board.no}'>삭제</a>
+	<a href='delete?no=${board.no}' id="del">삭제</a>
 	<a href='list'>목록</a>
-<hr />
+<hr/>
 	 <%--  댓글 파트입니다.  --%>	
 	 <form action="commentUpdate" method="post">
 		<input type="hidden" name="no" value="${board.no}" />
@@ -47,6 +53,12 @@
 	 </form>
 		
 	<script>
+	
+	$("#del").click( function () {
+		if(confirm("정말로 삭제하시겠습니까?")){
+			return true;
+		} return false;
+	});
 	
 	function commentDelete(commentNo) {
 		$.ajax({

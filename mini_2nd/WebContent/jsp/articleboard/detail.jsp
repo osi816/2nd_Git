@@ -21,7 +21,7 @@
 	</c:forEach><br>
 <hr />
 	<a href='updateForm?no=${board.no}'>수정</a>
-	<a href='delete?no=${board.no}'>삭제</a>
+	<a href='delete?no=${board.no}' id="del">삭제</a>
 	<a href='list'>목록</a>
 <hr />
 	 <%--  댓글 파트입니다.  --%>	
@@ -47,6 +47,12 @@
 	 </form>
 		
 	<script>
+
+	$("#del").click( function () {
+		if(confirm("정말로 삭제하시겠습니까?")){
+			return true;
+		} return false;
+	});
 	
 	function commentDelete(commentNo) {
 		$.ajax({

@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="navi" %>  
 <!DOCTYPE html>
 <html> 
 <head>
@@ -9,38 +10,47 @@
 	<title>bit news</title>
 </head>
 <body>
-	 <div style="
-		text-align: center;
-		font-size: 40px;
-		font-weight: bold;"
-	 > 
-	 	기사 게시판
-	 </div>
-	    전체 ${fn:length(list)}개<br>
-	  <hr>
-	  <table class="table">
-	  <tr>
-	    <th>번호</th>
-	    <th>제목</th>
-	    <th>글쓴이</th>
-	    <th>등록일</th>
-	    <th>조회수</th>
-	  </tr>
+	<div style="
+		 text-align: center;
+		 font-size: 40px;
+		 font-weight: bold;"
+	> 기사 게시판 
+	</div>
+	
+	전체 <c:out value="${pageResult.count}"/>개
+	<hr>
+	
+	<table class="table">
+	<tr>
+		<th>번호</th>
+		<th>제목</th>
+		<th>글쓴이</th>
+		<th>등록일</th>
+		<th>조회수</th>
+	</tr>
 		<c:forEach var="board" items="${list}">
-	    <tr>
-			 <td>${board.no}</td>
-			 <td><a href='detail?no=${board.no}'>${board.title}</a></td>
-			 <td>${board.userId}</td>
-		  <td><fmt:formatDate value="${board.regDate}" pattern="yyyy-MM-dd" /></td>
-		  <td>${board.viewCnt}</td>
-		</tr>
+	<tr>
+		<td>${board.no}</td>
+		<td><a href='detail?no=${board.no}'>${board.title}</a></td>
+		<td>${board.userId}</td>
+		<td><fmt:formatDate value="${board.regDate}" pattern="yyyy-MM-dd" /></td>
+		<td>${board.viewCnt}</td>
+	</tr>
 		</c:forEach>
 		<c:if test="${empty list}">
-		  <tr>
-		    <td colspan='5'>입력된 게시물이 없습니다.</td>
-		  </tr>
+			<tr>
+				<td colspan='5'>입력된 게시물이 없습니다.</td>
+			</tr>
 		</c:if>
-		</table>
+	</table>
 		<a href='writeForm'>글쓰기</a>
+	<navi:page data="${pageResult}" />
+<script>
+	$("ul.nav.navbar-nav > li").removeClass("active");
+	
+	function goPage(pageNo) {
+		location.href = "list?pageNo=" + pageNo;
+	}
+</script>
 </body>
 </html>

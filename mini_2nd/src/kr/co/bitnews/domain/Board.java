@@ -17,12 +17,12 @@ public class Board {
 	
 	private int viewCnt;
 	
-	private char head;
+	private String head;
 	
-	public char getHead() {
+	public String getHead() {
 		return head;
 	}
-	public void setHead(char head) {
+	public void setHead(String head) {
 		this.head = head;
 	}
 	public int getViewCnt() {

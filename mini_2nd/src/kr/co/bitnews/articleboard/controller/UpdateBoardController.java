@@ -25,6 +25,6 @@ public class UpdateBoardController extends HttpServlet {
 		board.setContent(request.getParameter("content"));
 		mapper.updateBoard(board);
 		
-		response.sendRedirect("list");
+		response.sendRedirect("detail?no=" + request.getParameter("no"));
 	}
 }

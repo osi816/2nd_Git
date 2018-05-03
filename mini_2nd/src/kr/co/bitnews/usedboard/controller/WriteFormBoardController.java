@@ -14,7 +14,7 @@ public class WriteFormBoardController extends HttpServlet {
 
 	@Override
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher rd = request.getRequestDispatcher("/jsp/board/writeForm.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/jsp/usedboard/writeForm.jsp");
 		rd.forward(request, response);
 	}
 }

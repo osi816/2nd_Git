@@ -22,9 +22,10 @@ public class UpdateBoardController extends HttpServlet {
 		Board board = new Board();
 		board.setNo(Integer.parseInt(request.getParameter("no")));
 		board.setTitle(request.getParameter("title"));
+		board.setHead(request.getParameter("head"));
 		board.setContent(request.getParameter("content"));
 		mapper.updateBoard(board);
 		
-		response.sendRedirect("list");
+		response.sendRedirect("detail?no="+ request.getParameter("no"));
 	}
 }

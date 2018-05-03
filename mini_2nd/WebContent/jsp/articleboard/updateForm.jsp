@@ -16,6 +16,14 @@
 	   <textarea name='content' rows='5' cols='70'>${board.content}</textarea><br>
 	   <button type='submit'>수정</button>
 	 </form>
+	 
+	 <script>
+		$("button").click( function () {
+			if( confirm("글을 진짜로 수정하세요?") ){
+				return true;
+			} return false;
+		});
+	</script>
 </body>
 </html>
 

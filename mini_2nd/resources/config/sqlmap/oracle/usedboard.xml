@@ -17,12 +17,6 @@
 	      from tb_usedboard
 	     where user_id = #{userId}
 	</select>
-	
-	<select id = "selectBoard" resultMap = "boardMap">
-		select *
-		  from tb_usedboard
-		 order by no desc
-	</select>
 
 	<select id="selectBoardByNo" parameterType="int" resultMap = "boardMap">
 		select *
@@ -33,11 +27,13 @@
 	<insert id="insertBoard" parameterType="board">
 		insert into tb_usedboard(
 			no,
+			head,
 			title,
 			user_id,
 			content
 		)values (
 			s_usedboard_no.nextval,
+			#{head},
 			#{title},
 			#{userId},
 			#{content}
@@ -62,6 +58,22 @@
 		   set view_cnt = view_cnt + 1
 		 where no = #{no}
 	</update>
+	
+		<!-- 페이징 관련 -->
+	
+	<select id="selectBoard" parameterType="page" resultMap="boardMap">
+    	select *
+    	  from ( 
+    	  		 select rownum rnum, a.*
+    	           from (select * from tb_usedboard order by no desc) a 
+    	       )  
+    	 where rnum between #{begin} and #{end}
+    </select> 
+
+    <select id="selectBoardCount" parameterType="page" resultType="int">
+    	select count(*)
+          from tb_usedboard
+    </select> 
 	
 	<resultMap id="commentMap" type="comment">
 		<result column="comment_no" property="commentNo"/>
