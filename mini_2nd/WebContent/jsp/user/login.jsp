@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,7 +52,7 @@ onsubmit="return doAction()">
       <div class="checkbox">
         <label>   
           <input type="checkbox"> ID 저장        
-          <a href='/mini_2nd/jsp/user/findaccount.jsp'>ID/PW 찾기</a>
+          <a href="<c:url value="/findaccform" />">ID/PW 찾기</a>
 	      <a href=''>네이버ID로 로그인</a>
         </label>
       </div>

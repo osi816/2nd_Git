@@ -184,10 +184,14 @@ h2 {
 				}
 			});
 		}
-		
-		function checknum(){
 
-		}
 	</script>
 </body>
 </html>
+
+
+
+
+
+
+
