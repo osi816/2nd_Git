@@ -65,8 +65,16 @@ onsubmit="return doAction()">
       </div>
     </div>
   </div>
-  
+</form>
+<form name="hForm" method="post" action="${pageContext.request.contextPath}/user/sign">
+	<input type="hidden" id="hID" name="id" >
+	<input type="hidden" id="hPW" name="pw">
+	<input type="hidden" id="hName" name="name" >
+	<input type="hidden" id="hEmail" name="email">
+</form>
+
   <script>
+  
 	var f = document.mForm;
 	function doAction() {
 		if (f.id.value == "") {
@@ -189,18 +197,22 @@ onsubmit="return doAction()">
 			
 			$("#gnbLogin").click(function () {
 				naverLogin.logout();
-				location.reload();
+// 				location.reload();
 			});
 		}		
-		var name;
-		var email;
+
+  	var hf = document.hForm;
+	var name;
+	var email;
+	var uniqId;
 		
 		naverLogin.getLoginStatus(function (status) {
 			if (status) {
 				email = naverLogin.user.getEmail();
 				name = naverLogin.user.getNickName();
+				uniqId = naverLogin.user.getId();
 				var profileImage = naverLogin.user.getProfileImage();
-				var birthday = naverLogin.user.getBirthday();			var uniqId = naverLogin.user.getId();
+				var birthday = naverLogin.user.getBirthday();
 				var age = naverLogin.user.getAge();
 				
 				console.log(name);
@@ -213,8 +225,16 @@ onsubmit="return doAction()">
 				console.log("AccessToken이 올바르지 않습니다.");
 			}
 		});
+	
+  	function doAction2(){
+  		hf.id.value = uniqId;
+  		hf.pw.value = uniqId;
+  		hf.name.value = name;
+  		hf.email.value = email;
+  		hf.submit();
+  	}
 	</script>
-</form>
+
 </body>
 </html>
 
