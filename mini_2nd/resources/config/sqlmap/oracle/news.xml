@@ -27,16 +27,31 @@
 		)
 	</insert>
 	
-	<delete id="deleteNews" parameterType="int">
+	<delete id="deleteNewsById" parameterType="string">
 		delete tb_news
-		 where news_id = #{newsId}
+		 where user_id = #{userId}
 	</delete>
 	
-	<select id="selectNewsByUser" parameterType="string" resultType="int">
+	<select id="selectNewsByUser" parameterType="string" resultType="string">
 		select news_id
 		  from tb_news
 		 where user_id = #{userId}
 	</select>
+	
+	<!-- news_img db작업 -->
+	<insert id="insertNewsImg" parameterType="newsimg">
+		insert into tb_news_img(
+			day,
+			news_id,
+			img_path
+		)values(
+			#{day},
+			#{newsId},
+			#{imgPath}
+		)
+	</insert>
+	
+	
 	
 	<select id="selectNewsImgByid" parameterType="string" resultMap="newsimgMap">
 		select *
