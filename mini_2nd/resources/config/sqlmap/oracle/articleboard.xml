@@ -35,7 +35,7 @@
 			user_id,
 			content
 		)values (
-			s_articleboard_no.nextval,
+			#{no},
 			#{title},
 			#{userId},
 			#{content}
@@ -64,7 +64,7 @@
 		<!-- 페이징 관련 -->
 	
 	<select id="selectBoard" parameterType="page" resultMap="boardMap">
-    	select b.*, (select count(*) from tb_freeboard_cmt where no=b.no) as cmtCount
+    	select b.*, (select count(*) from tb_articleboard_cmt where no=b.no) as cmtCount
     	  from ( 
     	  		 select rownum rnum, a.*
     	           from (select * from tb_articleboard order by no desc) a 

@@ -32,7 +32,7 @@
 	<a href="/mini_2nd/common/file/down?path=${file.filePath}&sName=${file.systemName}&dName=${file.oriName}">${file.oriName}</a>(${file.fileSize} bytes)<br>
 	</c:forEach><br>
 <hr/>
-	<a href='updateForm?no=${board.no}'>수정</a>
+	<a href='updateForm?no=${board.no}' id="mod">수정</a>
 	<a href='delete?no=${board.no}' id="del">삭제</a>
 	<a href='list'>목록</a>
 <hr/>
@@ -59,6 +59,13 @@
 	 </form>
 		
 	<script>
+	
+	$("#mod").click( function () {
+		if ( $("sessionScope.user.userId") != $("user.userId") ) {
+			alert("자신이 작성한 글이 아닙니다.");
+			return false;
+		} return true;
+	});
 	
 	$("#del").click( function () {
 		if(confirm("정말로 삭제하시겠습니까?")){

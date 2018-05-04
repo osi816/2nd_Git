@@ -14,7 +14,6 @@
 		 font-weight: bold;"
 	> 자유 게시판
 	</div>
-	
 	 <hr />
 	 <form method='post' action='write' enctype="multipart/form-data">
 	    제목 : <input type='text' name='title' size='70' /><br>

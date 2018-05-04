@@ -26,7 +26,7 @@
 	<a href="/mini_2nd/common/file/down?path=${file.filePath}&sName=${file.systemName}&dName=${file.oriName}">${file.oriName}</a>(${file.fileSize} bytes)<br>
 	</c:forEach><br>
 <hr />
-	<a href='updateForm?no=${board.no}'>수정</a>
+	<a href='updateForm?no=${board.no}' id="mod">수정</a>
 	<a href='delete?no=${board.no}' id="del">삭제</a>
 	<a href='list'>목록</a>
 <hr />
@@ -54,17 +54,25 @@
 		
 	<script>
 	
+	$("#mod").click( function () {
+		if ( ${sessionScope.user.userId} != ${board.userId}){			
+			alert("자신이 작성한 글이 아닙니다.");
+			return false;
+		} return true;
+	});
+	
+	console.log("${sessionScope.user.userId}");
+	console.log("${board.userId}");
+	
 	$("#del").click( function () {
-		if(confirm("정말로 삭제하시겠습니까?")){
+		if ( ${sessionScope.user.userId} != ${user.userId} ) {
+			alert("자신이 작성한 글이 아닙니다.");
+			return false;
+		} else { 
+			confirm("정말로 삭제하시겠습니까?");
 			return true;
 		} return false;
 	});
-	
-	function docmtDel() {
-		if(confirm("정말로 삭제하시겠습니까?")){
-			return true;
-		} return false;
-	};
 	
 	function commentDelete(commentNo) {
 		$.ajax({
@@ -174,11 +182,12 @@
 			         + date.getSeconds();
 			html += '	<td>' + time + '</td>';  
 			html += '	<td>';    
-			html += '		<a href="javascript:commentUpdateForm(' + comment.commentNo + ')" class="btn btn-success btn-sm" role="button">수정</a>';    
-			html += '		<a href="javascript:commentDelete(' + comment.commentNo + ')" class="btn btn-danger btn-sm" onclick="return docmtDel();" role="button">삭제</a>';    
+			html += '		<a href="javascript:commentUpdateForm(' + comment.commentNo + ')" class="btn btn-success btn-sm" id="a" role="button">수정</a>';    
+			html += '		<a href="javascript:commentDelete(' + comment.commentNo + ')" class="btn btn-danger btn-sm" id="b" role="button">삭제</a>';    
 			html += '	</td>';    
 			html += '</tr>';
 		}
+		
 		if (result.length == 0) {
 			html += '<tr><td colspan="4">댓글이 존재하지 않습니다.</td></tr>';
 		}

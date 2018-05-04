@@ -8,6 +8,12 @@
 	<title>bit news</title>
 </head>
 <body>
+	<div style="
+		 text-align: center;
+		 font-size: 40px;
+		 font-weight: bold;"
+	> 기사 게시판
+	</div>
 	 <hr />
 	 <form method='post' action='write' enctype="multipart/form-data">
 	    제목 : <input type='text' name='title' size='70' /><br>

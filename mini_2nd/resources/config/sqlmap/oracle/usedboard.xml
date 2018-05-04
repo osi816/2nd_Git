@@ -2,7 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace = "kr.co.bitnews.mapper.UsedBoardMapper">
-
 	<resultMap id="boardMap" type="board">
 		<result column="no" property="no"/>
 		<result column="title" property="title"/>
@@ -36,7 +35,7 @@
 			user_id,
 			content
 		)values (
-			s_usedboard_no.nextval,
+			#{no},
 			#{head},
 			#{title},
 			#{userId},
@@ -66,7 +65,7 @@
 		<!-- 페이징 관련 -->
 	
 	<select id="selectBoard" parameterType="page" resultMap="boardMap">
-    	select b.*, (select count(*) from tb_freeboard_cmt where no=b.no) as cmtCount
+    	select b.*, (select count(*) from tb_usedboard_cmt where no=b.no) as cmtCount
     	  from ( 
     	  		 select rownum rnum, a.*
     	           from (select * from tb_usedboard order by no desc) a 
@@ -89,28 +88,28 @@
 
 	<select id="selectCommentByNo" parameterType="int"  resultMap="commentMap">
 		select *
-		  from tb_articleboard_cmt
+		  from tb_usedboard_cmt
 		 where no = #{no}
 		 order by comment_no asc
 	</select>
 	
 	<insert id="insertComment" parameterType="comment">
-		insert into tb_articleboard_cmt(
+		insert into tb_usedboard_cmt(
 			comment_no, no, user_id, content
 		)values(
-			s_articleboard_no.nextval, #{no}, #{userId}, #{content}
+			s_usedboard_no.nextval, #{no}, #{userId}, #{content}
 		)
 	</insert>
 	
 	<update id="updateComment" parameterType="comment">
-		update tb_articleboard_cmt
+		update tb_usedboard_cmt
 		   set content = #{content}
 		 where comment_no = #{commentNo}
 		 
 	</update>
 	<delete id="deleteComment" parameterType="int">
 		delete
-		  from tb_articleboard_cmt
+		  from tb_usedboard_cmt
 		 where comment_no = #{commentNo}
 	</delete>
 	
@@ -126,7 +125,7 @@
 	</resultMap>
 	
 	<insert id="insertBoardFile" parameterType="boardFile">
-		insert into tb_aritcleboard_file (
+		insert into tb_usedboard_file (
 			file_no, no, file_path, ori_name, system_name, file_size
 		) values (
 			s_board_file_no.nextval, #{no}, #{filePath}, #{oriName}, #{systemName}, #{fileSize}		
@@ -135,7 +134,7 @@
 	
 	<select id="selectBoardFileByNo" parameterType="int" resultMap="boardFileMap">
 		select *
-		  from tb_articleboard_file
+		  from tb_usedboard_file
 		 where no = #{no} 
 	</select>
 	
