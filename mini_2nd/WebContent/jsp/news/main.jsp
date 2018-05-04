@@ -10,10 +10,6 @@
 	
 	<div id="sliderFrame">
 	    <div id="slider">
-<%-- 			<img src="<c:url value="/images/slider-1.jpg" />" /> --%>
-<%-- 			<img src="<c:url value="/images/slider-2.jpg" />" /> --%>
-<%-- 			<img src="<c:url value="/images/slider-3.jpg" />" /> --%>
-<%-- 			<img src="<c:url value="/images/slider-4.jpg" />" /> --%>
 			<c:choose>
 				<c:when test="${empty sessionScope.user}">
 					<img src="<c:url value="/images/헬로디디 주요뉴스.png" />" />
@@ -28,7 +24,9 @@
 					<img src="<c:url value="/images/키뉴스 주요뉴스.png" />" />
 				</c:when>
 				<c:otherwise>
-					
+					<c:forEach var="list" items="${imgList}">
+						<img src="<c:url value="captureimages/${list.imgPath}" />" />
+					</c:forEach>
 				</c:otherwise>
 			</c:choose>
         </div>
@@ -46,6 +44,7 @@
     </div>
     
     <script type="text/javascript">
+//     	console.log(${imgList});
         //The following script is for the group 2 navigation buttons.
         function switchAutoAdvance() {
             imageSlider.switchAuto();

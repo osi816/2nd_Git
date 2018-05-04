@@ -12,7 +12,7 @@
 	<resultMap id="newsimgMap" type="newsimg">
 		<result column="day" property="day"/>
 		<result column="news_id" property="newsId"/>
-		<result column="user_id" property="userId"/>
+		<result column="img_path" property="imgPath"/>
 	</resultMap>
 
 	<insert id="insertNews" parameterType="news">
@@ -50,12 +50,10 @@
 			#{imgPath}
 		)
 	</insert>
-	
-	
-	
+		
 	<select id="selectNewsImgByid" parameterType="string" resultMap="newsimgMap">
 		select *
 		  from tb_news_img
-		 where user_id = #{userId}
+		 where news_id = #{newsId}
 	</select>
 </mapper>

@@ -10,4 +10,5 @@ public interface NewsMapper {
 	public List<String> selectNewsByUser(String userId);
 	public int deleteNewsById(String userId);
 	public void insertNewsImg(NewsImg newsimg); 
+	public NewsImg selectNewsImgByid(String newsId);
 }

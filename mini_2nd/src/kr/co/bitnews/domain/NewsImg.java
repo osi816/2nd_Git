@@ -2,7 +2,7 @@ package kr.co.bitnews.domain;
 
 public class NewsImg {
 	private String day;
-	private int newsId;
+	private String newsId;
 	private String imgPath;
 	
 	public String getDay() {
@@ -12,10 +12,10 @@ public class NewsImg {
 		this.day = day;
 	}
 	
-	public int getNewsId() {
+	public String getNewsId() {
 		return newsId;
 	}
-	public void setNewsId(int newsId) {
+	public void setNewsId(String newsId) {
 		this.newsId = newsId;
 	}
 	public String getImgPath() {
@@ -24,6 +24,5 @@ public class NewsImg {
 	public void setImgPath(String imgPath) {
 		this.imgPath = imgPath;
 	}
-	
 	
 }
