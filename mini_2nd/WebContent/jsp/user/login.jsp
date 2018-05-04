@@ -66,7 +66,7 @@ onsubmit="return doAction()">
     </div>
   </div>
 </form>
-<form name="hForm" method="post" action="${pageContext.request.contextPath}/user/sign">
+<form name="hForm" method="post" action="${pageContext.request.contextPath}/naverlogin">
 	<input type="hidden" id="hID" name="id" >
 	<input type="hidden" id="hPW" name="pw">
 	<input type="hidden" id="hName" name="name" >
@@ -153,7 +153,7 @@ onsubmit="return doAction()">
 			{
 				clientId: "sAofArGGSfpJx6lL_dV7",
 				callbackUrl: "http://localhost/mini_2nd/login/login",
-				isPopup: true, /* 팝업을 통한 연동처리 여부 */
+				isPopup: false, /* 팝업을 통한 연동처리 여부 */
 				loginButton: {color: "green", type: 3, height: 60} /* 로그인 버튼의 타입을 지정 */
 			}
 		);
@@ -180,10 +180,19 @@ onsubmit="return doAction()">
 			
 			console.dir(naverLogin.user);
 			
-			var profileImage = naverLogin.user.getProfileImage();
+			//var profileImage = naverLogin.user.getProfileImage();
 			var nickName = naverLogin.user.getNickName();
-			var email;
+			var email = naverLogin.user.getEmail();
 			var uniqId = naverLogin.user.getId();
+			var name = naverLogin.user.getNickName();
+  			var hf = document.hForm;
+			
+		  		hf.id.value() = uniqId;
+		  		hf.pw.value() = uniqId;
+		  		hf.name.value() = name;
+		  		hf.email.value() = email;
+		  		hf.submit();
+
 // 			if (email == undefined || email == null) {
 // 				alert("이메일 정보가 필요합니다. 정보 동의를 해주셔야 합니다.");
 // 				naverLogin.reprompt();
@@ -191,48 +200,17 @@ onsubmit="return doAction()">
 // 			}
 			
 			
-			$("#naverIdLogin_loginButton").html('<br><br><img src="' + profileImage + '" height=50 /> <p>' + nickName + '님 반갑습니다.</p>');
+			//$("#naverIdLogin_loginButton").html('<br><br><img src="' + profileImage + '" height=50 /> <p>' + nickName + '님 반갑습니다.</p>');
 			$("#gnbLogin").html("Logout");
 			$("#gnbLogin").attr("href", "#");
 			
 			$("#gnbLogin").click(function () {
 				naverLogin.logout();
-// 				location.reload();
+				location.reload();
 			});
 		}		
 
-  	var hf = document.hForm;
-	var name;
-	var email;
-	var uniqId;
-		
-		naverLogin.getLoginStatus(function (status) {
-			if (status) {
-				email = naverLogin.user.getEmail();
-				name = naverLogin.user.getNickName();
-				uniqId = naverLogin.user.getId();
-				var profileImage = naverLogin.user.getProfileImage();
-				var birthday = naverLogin.user.getBirthday();
-				var age = naverLogin.user.getAge();
-				
-				console.log(name);
-				
-				$.ajax({
-					
-				});
-				
-			} else {
-				console.log("AccessToken이 올바르지 않습니다.");
-			}
-		});
 	
-  	function doAction2(){
-  		hf.id.value = uniqId;
-  		hf.pw.value = uniqId;
-  		hf.name.value = name;
-  		hf.email.value = email;
-  		hf.submit();
-  	}
 	</script>
 
 </body>

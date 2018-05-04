@@ -16,7 +16,5 @@ public class SignUpFormController extends HttpServlet{
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher rd = request.getRequestDispatcher("/jsp/user/sign.jsp");
 		rd.forward(request, response);
-	}
-	
-	
+	}		
 }

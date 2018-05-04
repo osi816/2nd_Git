@@ -22,10 +22,16 @@ public class SignUpController extends HttpServlet{
 	
 		User user = new User();
 		user.setUserId(request.getParameter("id"));
+		System.out.println(request.getParameter("id"));
 		user.setUserPw(request.getParameter("pw"));
 		user.setUserName(request.getParameter("name"));
 		user.setUserEmail(request.getParameter("email"));
 		mapper.insertUser(user);
+		
+		
+		
+		
+		
 
 		RequestDispatcher rd = request.getRequestDispatcher("/main");
 		rd.forward(request, response);

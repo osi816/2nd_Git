@@ -27,7 +27,7 @@ public class FindAccountController extends HttpServlet{
 		User user = mapper.selectAcc(name);
 		
 		if(user == null) {
-			request.setAttribute("errMsg", "이름을 확인하세요");
+			//request.setAttribute("errMsg", "이름을 확인하세요");
 		}
 		else if(user.getUserName().equals(name) && user.getUserEmail().equals(email)) {
 			
