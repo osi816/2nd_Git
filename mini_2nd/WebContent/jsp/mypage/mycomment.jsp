@@ -19,7 +19,7 @@
       <a class="navbar-brand" href="#">마이페이지</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="userupdate">회원정보 수정</a></li>
+      <li><a href="mypagemove">회원정보 수정</a></li>
       <li><a href="scrap">스크랩</a></li>
       <li><a href="used">내 글</a></li>
       <li class="active"><a href="#">내 댓글</a></li>
@@ -40,16 +40,27 @@
         <th>댓글 번호</th>
         <th>댓글 내용</th>
         <th>작성일</th>
-      </tr>
+        </tr>
     </thead>
     <c:forEach var="comment" items="${list}">
     <tr>
       <td>${comment.no}</td>
       <td>${comment.content}</td>
       <td><fmt:formatDate value="${comment.reg_date}" pattern="yyyy-MM-dd" /></td>
+      
     </tr>
     </c:forEach>
+   <c:if test="${empty list}"> 
+   <tr>
+   <td colspan="3" align="center">데이터가 존재하지 않습니다.</td>
+   </tr>
+   </c:if>
    </table>
 </div>
+
+<script>
+
+
+</script>
 </body>
 </html>

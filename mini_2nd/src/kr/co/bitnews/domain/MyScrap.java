@@ -7,7 +7,14 @@ public class MyScrap {
 	private Date scrapDate;
 	private String articleTitle;
 	private String articleSummary;
+	private int articleNo;	
 	
+	public int getArticleNo() {
+		return articleNo;
+	}
+	public void setArticleNo(int articleNo) {
+		this.articleNo = articleNo;
+	}
 	public int getScrapNo() {
 		return scrapNo;
 	}

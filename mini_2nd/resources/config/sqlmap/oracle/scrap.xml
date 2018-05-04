@@ -27,5 +27,11 @@
 		 where user_id = #{userId}
 	</select>
 	
+	<delete id="deleteScrap" parameterType="scrap">
+	    delete from tb_scrap
+	    where user_id = #{userId} and
+	         scrap_no = #{scrapNo}	          	
+	</delete>
+	
 	
 </mapper>

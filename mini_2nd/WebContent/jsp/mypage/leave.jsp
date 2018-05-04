@@ -36,7 +36,6 @@ $("#form").on("submit", function() {
 	}
 
 	if(pass == pwdcheck){
-					
 		$.ajax({
 				url: "/mini_2nd/mypage/leave",
 				data: "pwd=" + pass,

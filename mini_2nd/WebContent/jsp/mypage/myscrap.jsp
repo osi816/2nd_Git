@@ -41,17 +41,44 @@
         <th>제목</th>
         <th>내용</th>
         <th>기사 번호</th>
+        <th></th>
       </tr>
     </thead>
     <c:forEach var="scrap" items="${list}">
       <tr>
       <td>${scrap.scrapNo}</td>
-      <td>${scrap.articleTitle}</td>
+      <td><a href="${pageContext.request.contextPath}/newsDetail?no=${scrap.articleNo}">${scrap.articleTitle}</a></td>
       <td>${scrap.articleSummary}</td>
       <td><fmt:formatDate value="${scrap.scrapDate}" pattern="yyyy-MM-dd" /></td>
+      <td>
+      <a href="#" onclick="doDelete(${scrap.scrapNo});">
+      <img src="../images/delete.png" style="width: 20px; height: 20px;">
+      </a>
+      </td>
       </tr>
     </c:forEach>     
+    <c:if test="${empty list}"> 
+   <tr>
+   <td colspan="4" align="center">데이터가 존재하지 않습니다.</td>
+   </tr>
+   </c:if>
     </table>
 </div>
+
+<script>
+function doDelete(scrapNo){
+	if(confirm("댓글을 삭제하시겠습니까?") == true){
+		$.ajax({
+			url:"/mini_2nd/ajax/dScrap",
+			data:`id=${sessionScope.user.userId}&scrapNo=`+scrapNo,
+			success:function(){
+				location.href = "/mini_2nd/mypage/scrap";
+			}
+		})
+	}else{
+		return;
+	}
+}
+</script>
 </body>
 </html>

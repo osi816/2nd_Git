@@ -50,7 +50,7 @@
   </div>
 </nav>
 
-<form class="form-horizontal" action="/mini_2nd/jsp/mypage/userupdate">
+<form class="form-horizontal" id="form" action="/mini_2nd/mypage/userupdate" method="post">
   <h2>회원정보수정</h2>
   <div class="form-group">
     <label for="inputPW" class="col-sm-2 control-label">PW</label>
@@ -72,17 +72,64 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPW" class="col-sm-2 control-label" >E-MAIL</label>
+    <label for="inputPW" class="col-sm-2 control-label" onblur="" >E-MAIL</label>
     <div class="col-sm-10">
       <input type="text" class="sign-form" id="inputEmail" placeholder="E-MAIL주소를 입력하세요"  size="30">
     </div>
   </div>
-<button type="submit" class="btn btn-default">정보수정</button>
+<button type="button" id="submit" class="btn btn-default">정보수정</button>
 </form>
 
 <footer id="buttons">
 <button type="button" class="btn btn-default" onclick="location.href='passchangemove'">비밀번호 변경</button>
 <button type="button" class="btn btn-default" onclick="location.href='leavemove'">탈퇴</button>
 </footer>
+
+<script>
+var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+
+$("#submit").on("click",function(){
+	var pwd = $("#inputPW").val();
+	var pwdcheck = $("#checkPW").val();
+	var name = $("#inputName").val();
+	var email = $("#inputEmail").val();
+	
+	if(pwd == "" || pwdcheck ==""){
+		alert("빈칸을 채워주십시오.");
+		return false;
+	}
+	
+	if (regex.test(form.inputEmail.value) === false) {
+		alert("잘못된 이메일 형식입니다.");
+		form.inputEmail.value = ""
+		form.inputEmail.focus()
+		return false;
+	}
+
+	if(pwd == pwdcheck){
+		$.ajax({
+			url:"/mini_2nd/mypage/userupdate",
+			data:"pwd=" + pwd +"&name=" + name + "&email=" + email,
+			dataType:"json",
+			success:function(data){
+				if(data.result == 1){
+					alert("정보 변경 성공");
+					location.href = "/mini_2nd/mypage/mypagemove";
+				}else{
+					alert("비밀번호가 일치하지 않습니다.");
+					location.href = "/mini_2nd/mypage/mypagemove";
+					}
+			}
+		})
+	}else{
+		alert("확인/재확인 비밀번호가 일치하지 않습니다.");
+		form.inputPW.value ="";
+		form.checkPW.value ="";
+		return false;
+	}
+});
+
+
+</script>
 </body>
 </html>
