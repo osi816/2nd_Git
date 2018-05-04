@@ -32,12 +32,25 @@ public class LoginController extends HttpServlet {
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		
+		//User u = mapper.selectUserById(id);
 		User login = mapper.selectUserById(id);
+		
+		
+		
 		System.out.println("login : " + login);
 		
 		
 		if(login == null) {
 			request.setAttribute("errMsg", "아이디를 확인하세요");
+		}
+		else if(login.getUserWithdraw() == 1) {
+			request.setAttribute("errMsg", "탈퇴한 회원입니다");
+			
+			RequestDispatcher rd = request.getRequestDispatcher(
+					"/jsp/user/login.jsp"
+					);
+			rd.forward(request, response);
+			
 		}
 		else if(login.getUserPw().equals(pw)) {
 			System.out.println("로그인 성공");

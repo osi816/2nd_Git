@@ -164,6 +164,7 @@ onsubmit="return doAction()">
 		/* (5) 현재 로그인 상태를 확인 */
 		window.addEventListener('load', function () {
 			naverLogin.getLoginStatus(function (status) {
+				console.log(status);
 				if (status) {
 					/* (6) 로그인 상태가 "true" 인 경우 로그인 버튼을 없애고 사용자 정보를 출력합니다. */
 					setLoginStatus();
@@ -180,17 +181,18 @@ onsubmit="return doAction()">
 			
 			console.dir(naverLogin.user);
 			
+				naverLogin.logout();
 			//var profileImage = naverLogin.user.getProfileImage();
-			var nickName = naverLogin.user.getNickName();
+			//var nickName = naverLogin.user.getNickName();
 			var email = naverLogin.user.getEmail();
 			var uniqId = naverLogin.user.getId();
 			var name = naverLogin.user.getNickName();
   			var hf = document.hForm;
 			
-		  		hf.id.value() = uniqId;
-		  		hf.pw.value() = uniqId;
-		  		hf.name.value() = name;
-		  		hf.email.value() = email;
+		  		hf.id.value = uniqId;
+		  		hf.pw.value = uniqId;
+		  		hf.name.value = name;
+		  		hf.email.value = email;
 		  		hf.submit();
 
 // 			if (email == undefined || email == null) {
@@ -202,13 +204,17 @@ onsubmit="return doAction()">
 			
 			//$("#naverIdLogin_loginButton").html('<br><br><img src="' + profileImage + '" height=50 /> <p>' + nickName + '님 반갑습니다.</p>');
 			$("#gnbLogin").html("Logout");
-			$("#gnbLogin").attr("href", "#");
+// 			$("#gnbLogin").attr("href", "#");
+		$("#naverIdLogin_loginButton").click(function(){
+
 			
-			$("#gnbLogin").click(function () {
-				naverLogin.logout();
-				location.reload();
-			});
-		}		
+// 			$("#gnbLogin").click(function () {
+// 				location.reload();
+ 			});
+			
+		}
+		
+		
 
 	
 	</script>
