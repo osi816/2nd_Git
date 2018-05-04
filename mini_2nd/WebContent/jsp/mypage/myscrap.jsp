@@ -67,7 +67,7 @@
 
 <script>
 function doDelete(scrapNo){
-	if(confirm("댓글을 삭제하시겠습니까?") == true){
+	if(confirm("스크랩을 취소하시겠습니까?") == true){
 		$.ajax({
 			url:"/mini_2nd/ajax/dScrap",
 			data:`id=${sessionScope.user.userId}&scrapNo=`+scrapNo,
