@@ -51,8 +51,18 @@
 		  </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="<c:url value="/mypage/mypagemove" />">MyPage</a></li>
+      	<c:choose>
+        <c:when test="${empty sessionScope.user}">
         <li><a href="<c:url value="/user/signupForm" />">회원가입</a></li>
+        </c:when>
+        <c:when test="${sessionScope.user.userId eq 'admin'}">
+        <li><a href="<c:url value="/adminpagemove" />">AdminPage</a></li>        
+        </c:when>                
+        <c:otherwise>
+        <li><a href="<c:url value="/mypage/mypagemove" />">MyPage</a></li>        
+        </c:otherwise>
+        </c:choose>
+              	
         <c:choose>
         <c:when test="${empty sessionScope.user}">
         	<li><a href="<c:url value="/login/login" />">로그인</a></li>

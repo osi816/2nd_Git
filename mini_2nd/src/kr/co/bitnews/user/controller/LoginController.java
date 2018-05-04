@@ -46,10 +46,12 @@ public class LoginController extends HttpServlet {
 			
 			if(login.getUserId().equals("admin")) {
 				response.sendRedirect(request.getContextPath() + "/main");
+				return;
 			}
-			else
+			else {
 			response.sendRedirect(request.getContextPath() + "/main");
 			return;
+			}
 		}
 		else {
 			request.setAttribute("errMsg", "패스워드를 확인하세요");
