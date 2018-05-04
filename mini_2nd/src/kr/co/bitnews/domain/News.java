@@ -1,9 +1,11 @@
 package kr.co.bitnews.domain;
 
+import java.util.List;
+
 public class News {
 	
 	private int newsSeq;
-	private int newsId;
+	private String newsId;
 	private String userId;
 	
 	public int getNewsSeq() {
@@ -12,17 +14,17 @@ public class News {
 	public void setNewsSeq(int newsSeq) {
 		this.newsSeq = newsSeq;
 	}
-	public int getNewsId() {
-		return newsId;
-	}
-	public void setNewsId(int newsId) {
-		this.newsId = newsId;
-	}
 	public String getUserId() {
 		return userId;
 	}
 	public void setUserId(String userId) {
 		this.userId = userId;
+	}
+	public String getNewsId() {
+		return newsId;
+	}
+	public void setNewsId(String newsId) {
+		this.newsId = newsId;
 	}
 
 }

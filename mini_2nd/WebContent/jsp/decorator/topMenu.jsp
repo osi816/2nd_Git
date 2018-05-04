@@ -83,6 +83,6 @@
         var top = (screen.height - 1000) / 2;
         console.log(`width=${left},height=${top}`);
         window.name = "config"; 
-        window.open("<c:url value='/config/newsconfig.jsp' />", "", `width=600, height=600, left=${left}, top=${top}`);
+        window.open("<c:url value='/setting' />", "", `width=600, height=600, left=${left}, top=${top}`);
 	}
 </script>

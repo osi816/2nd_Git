@@ -15,12 +15,6 @@ import javax.servlet.http.HttpSession;
 public class LoginCheckFilter implements Filter{
 
 	@Override
-	public void destroy() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
 			throws IOException, ServletException {
 		HttpServletRequest httpRequest = (HttpServletRequest)req;
@@ -39,7 +33,6 @@ public class LoginCheckFilter implements Filter{
 			RequestDispatcher rd = req.getRequestDispatcher("/login/login");
 			rd.forward(req, resp);
 		}
-		
 		
 	}
 

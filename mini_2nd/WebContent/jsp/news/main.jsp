@@ -14,16 +14,23 @@
 <%-- 			<img src="<c:url value="/images/slider-2.jpg" />" /> --%>
 <%-- 			<img src="<c:url value="/images/slider-3.jpg" />" /> --%>
 <%-- 			<img src="<c:url value="/images/slider-4.jpg" />" /> --%>
-			<img src="<c:url value="/images/헬로디디 주요뉴스.png" />" />
-			<img src="<c:url value="/images/전자신문 주요뉴스.png" />" />
-			<img src="<c:url value="/images/넥스트데일리 주요뉴스.png" />" />
-			<img src="<c:url value="/images/디지털데일리 주요뉴스.png" />" />
-			<img src="<c:url value="/images/IT조선 주요뉴스.png" />" />
-			<img src="<c:url value="/images/디지털타임스 주요뉴스.png" />" />
-			<img src="<c:url value="/images/보안뉴스 주요뉴스.png" />" />
-			<img src="<c:url value="/images/블로터 주요뉴스.png" />" />
-			<img src="<c:url value="/images/지디넷코리아 주요뉴스.png" />" />
-			<img src="<c:url value="/images/키뉴스 주요뉴스.png" />" />
+			<c:choose>
+				<c:when test="${empty sessionScope.user}">
+					<img src="<c:url value="/images/헬로디디 주요뉴스.png" />" />
+					<img src="<c:url value="/images/전자신문 주요뉴스.png" />" />
+					<img src="<c:url value="/images/넥스트데일리 주요뉴스.png" />" />
+					<img src="<c:url value="/images/디지털데일리 주요뉴스.png" />" />
+					<img src="<c:url value="/images/IT조선 주요뉴스.png" />" />
+					<img src="<c:url value="/images/디지털타임스 주요뉴스.png" />" />
+					<img src="<c:url value="/images/보안뉴스 주요뉴스.png" />" />
+					<img src="<c:url value="/images/블로터 주요뉴스.png" />" />
+					<img src="<c:url value="/images/지디넷코리아 주요뉴스.png" />" />
+					<img src="<c:url value="/images/키뉴스 주요뉴스.png" />" />
+				</c:when>
+				<c:otherwise>
+					
+				</c:otherwise>
+			</c:choose>
         </div>
         <!--Custom navigation buttons on both sides-->
         <div class="group1-Wrapper">

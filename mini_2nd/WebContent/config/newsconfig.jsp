@@ -164,13 +164,21 @@
     </div>
 </form>
     
-    <script type="text/javascript">
-   		function doConfig() {
-            document.checkForm.target = "config";
-            document.checkForm.action = "<c:url value='/config' />";
-            document.checkForm.submit();
-            self.close();
-   		}
+<script type="text/javascript">
+	console.log(`id, ${newsid}`)
+    var list = ${newsid};
+    for(var ck of list){
+        console.log(ck);
+        ck.checked = true;
+        console.dir(ck);
+    }
+    // $("input[")
+	function doConfig() {
+		document.checkForm.target = "config";
+		document.checkForm.action = "<c:url value='/config' />";
+		document.checkForm.submit();
+		self.close();
+		}
 //     	console.log( $("input") );
 //     	console.log( $("input").length );
 //         $("input").click(function () {
