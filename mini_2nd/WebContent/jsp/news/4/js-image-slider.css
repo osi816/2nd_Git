@@ -11,7 +11,7 @@
 }      
 
 #slider, #slider .sliderInner {
-    width:960px;height:400px;/* Must be the same size as the slider images */
+    width:900px;height:540px;/* Must be the same size as the slider images */
     border-radius:0px;
 }
 
@@ -63,8 +63,9 @@
 {
     position:absolute;
     z-index:20;
-    top:120px;
-    margin-left:50%;/* position it in the middle of #sliderFrame */
+    top:200px;
+    margin-left: 50%;/* position it in the middle of #sliderFrame */
+/*     margin-right */
     width:1px;
 }
 a.group1-Prev, a.group1-Next

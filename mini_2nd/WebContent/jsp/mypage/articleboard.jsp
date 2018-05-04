@@ -23,7 +23,7 @@
       <a class="navbar-brand" href="#">마이페이지</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="userupdate">회원정보 수정</a></li>
+      <li><a href="mypagemove">회원정보 수정</a></li>
       <li><a href="scrap">스크랩</a></li>
       <li class="active"><a href="#">내 글</a></li>
       <li><a href="comment">내 댓글</a></li>
@@ -53,16 +53,22 @@
         <th>제목</th>
         <th>내용</th>
         <th>작성일</th>
+        <th></th>
       </tr>
     </thead>
      <c:forEach var="board" items="${list}">
     <tr>
       <td>${board.no}</td>
-      <td>${board.title}</td>
+      <td><a href="http://localhost:8000/mini_2nd/articleBoard/detail?no=${board.no}">${board.title}</a></td>
       <td>${board.viewCnt}</td>
       <td><fmt:formatDate value="${board.regDate}" pattern="yyyy-MM-dd" /></td>
     </tr>
    </c:forEach>
+   <c:if test="${empty list}"> 
+   <tr>
+   <td colspan="4" align="center">데이터가 존재하지 않습니다.</td>
+   </tr>
+   </c:if>
   </table>
 </div>
 

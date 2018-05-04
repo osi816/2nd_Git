@@ -36,41 +36,40 @@
 
  <script>
  $("#form").on("submit", function() {
-		var pass = $("#pwd").val();
+		var pwd = $("#pwd").val();
 		var pwdcheck =$("#pwd-check").val();
 		
 		var npwd = $("#npwd").val();
 		var npwdcheck = $("#npwd-check").val();
 		
-		if(pass == "" ||pwdcheck == ""||npwd =="" ||npwdcheck==""){
+		if(pwd == "" ||pwdcheck == ""||npwd =="" ||npwdcheck==""){
 			alert("빈칸을 채워주십시오.");
 			return false;
 		}
 		
-		if(pass != pwdcheck){
-			alert("현재 비밀번호를 똑같이 입력해주십시오.")
+		if(pwd != pwdcheck){
+			alert("현재 비밀번호를 똑같이 입력해주십시오.");
 			return false;
 		}
 		
 		if(npwd != npwdcheck){
-			alert("새로운 비밀번호를 똑같이 입력해주십시오.")
+			alert("새로운 비밀번호를 똑같이 입력해주십시오.");
+			return false;
 		}
 		
-		if(pass == pwdcheck && npwd == npwdcheck){
+		if(pwd == pwdcheck && npwd == npwdcheck){
 			$.ajax({
-					url: "/mini_2nd/jsp/mypage/passchange",
+					url: "/mini_2nd/mypage/passchange",
 					data: "pwd=" + pwd + "&npwd=" + npwd,
 					dataType: "json",
 					success: function(data){
 						if(data.result == 1){
-							console.log(data.result);
-							alert("비밀번호 변경 성공.")
-							location.href = "/mini_2nd/login/logout"
+							alert("비밀번호 변경 성공")
+							location.href = "/mini_2nd/mypage/mypagemove"
 							}
 						else{
 							alert("비밀번호가 일치하지 않습니다.");
-							console.log(data.result);
-							location.href="/mini_2nd/mypage/leavemove"
+							location.href="/mini_2nd/mypage/passchangemove"
 							}
 				}
 			})
@@ -81,8 +80,6 @@
 		}
 		});
            
-        
         </script>
-
 </body>
 </html>
