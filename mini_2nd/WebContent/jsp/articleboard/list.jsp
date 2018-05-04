@@ -31,7 +31,7 @@
 		<c:forEach var="board" items="${list}">
 	<tr>
 		<td>${board.no}</td>
-		<td><a href='detail?no=${board.no}'>${board.title}</a></td>
+		<td><a href='detail?no=${board.no}'>${board.title} [${board.cmtCount}]</a></td>
 		<td>${board.userId}</td>
 		<td><fmt:formatDate value="${board.regDate}" pattern="yyyy-MM-dd" /></td>
 		<td>${board.viewCnt}</td>

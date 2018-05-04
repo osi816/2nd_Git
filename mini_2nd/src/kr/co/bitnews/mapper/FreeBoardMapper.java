@@ -31,5 +31,10 @@ public interface FreeBoardMapper {
 	
 	// 전체 게시글 개수
 	int selectBoardCount(Page search);
+	
+	// 댓글 갯수
+	int selectCommentCountByNo(int no);
+	List<Integer> selectboardWithComment();
+	
 
 }

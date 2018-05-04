@@ -60,6 +60,12 @@
 		} return false;
 	});
 	
+	function docmtDel() {
+		if(confirm("정말로 삭제하시겠습니까?")){
+			return true;
+		} return false;
+	};
+	
 	function commentDelete(commentNo) {
 		$.ajax({
 			url: "<c:url value='/freeBoard/commentDelete'/>",
@@ -169,7 +175,7 @@
 			html += '	<td>' + time + '</td>';  
 			html += '	<td>';    
 			html += '		<a href="javascript:commentUpdateForm(' + comment.commentNo + ')" class="btn btn-success btn-sm" role="button">수정</a>';    
-			html += '		<a href="javascript:commentDelete(' + comment.commentNo + ')" class="btn btn-danger btn-sm" role="button">삭제</a>';    
+			html += '		<a href="javascript:commentDelete(' + comment.commentNo + ')" class="btn btn-danger btn-sm" onclick="return docmtDel();" role="button">삭제</a>';    
 			html += '	</td>';    
 			html += '</tr>';
 		}
@@ -196,5 +202,3 @@
 		
 </body>
 </html>
-
-

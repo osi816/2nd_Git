@@ -38,7 +38,7 @@
 				<c:otherwise>삽니다</c:otherwise>
 			</c:choose>
 		</td>
-		<td><a href='detail?no=${board.no}'>${board.title}</a></td>
+		<td><a href='detail?no=${board.no}'>${board.title} [${board.cmtCount}]</a></td>
 		<td>${board.userId}</td>
 		<td><fmt:formatDate value="${board.regDate}" pattern="yyyy-MM-dd" /></td>
 		<td>${board.viewCnt}</td>
@@ -59,6 +59,5 @@
 		location.href = "list?pageNo=" + pageNo;
 	}
 </script>
-
 </body>
 </html>

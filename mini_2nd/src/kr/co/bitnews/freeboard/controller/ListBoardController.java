@@ -30,7 +30,6 @@ public class ListBoardController extends HttpServlet {
 		
 		List<Board> list = mapper.selectBoard(search);
 		int count = mapper.selectBoardCount(search);
-		
 		request.setAttribute("list", list);
 		request.setAttribute("pageResult", new PageResult(search.getPageNo(), count));
 		

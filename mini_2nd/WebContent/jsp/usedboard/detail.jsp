@@ -12,7 +12,7 @@
 		 text-align: center;
 		 font-size: 40px;
 		 font-weight: bold;"
-	> 자유 게시판
+	> 중고장터 게시판
 	</div>
 
 <hr/>
@@ -65,6 +65,12 @@
 			return true;
 		} return false;
 	});
+	
+	function docmtDel() {
+		if(confirm("정말로 삭제하시겠습니까?")){
+			return true;
+		} return false;
+	};
 	
 	function commentDelete(commentNo) {
 		$.ajax({

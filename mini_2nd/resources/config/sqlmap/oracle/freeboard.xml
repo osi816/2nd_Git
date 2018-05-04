@@ -10,6 +10,7 @@
 		<result column="content" property="content"/>
 		<result column="reg_date" property="regDate"/>
 		<result column="view_cnt" property="viewCnt"/>
+		<result column="cmtCount" property="cmtCount" />
 	</resultMap>
 	
 	<select id="selectById" resultMap = "boardMap" parameterType="string">
@@ -63,11 +64,11 @@
 	<!-- 페이징 관련 -->
 	
 	<select id="selectBoard" parameterType="page" resultMap="boardMap">
-    	select *
+    	select b.*, (select count(*) from tb_freeboard_cmt where no=b.no) as cmtCount
     	  from ( 
     	  		 select rownum rnum, a.*
     	           from (select * from tb_freeboard order by no desc) a 
-    	       )  
+    	       ) b 
     	 where rnum between #{begin} and #{end}
     </select> 
 

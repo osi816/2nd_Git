@@ -19,6 +19,14 @@ public class Board {
 	
 	private String head;
 	
+	private int cmtCount;
+	
+	public int getCmtCount() {
+		return cmtCount;
+	}
+	public void setCmtCount(int cmtCount) {
+		this.cmtCount = cmtCount;
+	}
 	public String getHead() {
 		return head;
 	}
