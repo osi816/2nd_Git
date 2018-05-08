@@ -30,6 +30,9 @@
   margin-bottom:60px;
   margin-right:90px;
   }
+  #update{
+  margin-left:140px;
+  }
 </style>
 </head>
 
@@ -51,7 +54,7 @@
 </nav>
 
 <form class="form-horizontal" id="form" action="/mini_2nd/mypage/userupdate" method="post">
-  <h2>회원정보수정</h2>
+  <h2 id="update">회원정보수정</h2>
   <div class="form-group">
     <label for="inputPW" class="col-sm-2 control-label">PW</label>
     <div class="col-sm-10">
