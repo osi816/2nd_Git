@@ -194,7 +194,7 @@ onsubmit="return doAction()">
 			//var profileImage = naverLogin.user.getProfileImage();
 			//var nickName = naverLogin.user.getNickName();
 			var email = naverLogin.user.getEmail();
-			var uniqId = nav erLogin.user.getId();
+			var uniqId = naverLogin.user.getId();
 			var name = naverLogin.user.getNickName();
   			var hf = document.hForm;
 			
