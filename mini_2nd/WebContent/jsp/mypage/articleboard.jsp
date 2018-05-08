@@ -59,7 +59,7 @@
      <c:forEach var="board" items="${list}">
     <tr>
       <td>${board.no}</td>
-      <td><a href="http://localhost:8000/mini_2nd/articleBoard/detail?no=${board.no}">${board.title}</a></td>
+      <td><a href="${pageContext.request.contextPath}/articleBoard/detail?no=${board.no}">${board.title}</a></td>
       <td>${board.viewCnt}</td>
       <td><fmt:formatDate value="${board.regDate}" pattern="yyyy-MM-dd" /></td>
     </tr>
