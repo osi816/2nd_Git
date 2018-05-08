@@ -24,8 +24,8 @@
 	.form-p{
 	padding-left:200px;
 	}
-	#naverimg{
-	padding-left:80px;
+	#naverIdLogin{
+	padding-left:140px;
 		}
 	#cb{
 	padding-left:100px;
@@ -58,7 +58,7 @@ onsubmit="return doAction()">
   </div>
   	<div id="naverIdLogin">
 		<a id="naverIdLogin_loginButton" href="#" role="button">
-			<img id="naverimg" src="https://static.nid.naver.com/oauth/big_g.PNG" width=470>
+			<img id="naverimg" src="https://static.nid.naver.com/oauth/big_g.PNG" width=500>
 		</a>
 	</div>
   <div class="form-group">
