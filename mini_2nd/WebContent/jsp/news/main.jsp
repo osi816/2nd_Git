@@ -140,6 +140,10 @@ a:-webkit-any-link {
             		success: function (result) {
                         for(let path of result){
                             console.log(path.imgPath);
+                            var img = $("#slider > img");
+                            for(let i of img){
+                                console.log(i);
+                            }
 //                             $("#slider").html("");
 //                             var img = $("<img src='<c:url value = 'captureimages/" + path.imgPath + "' /> />");
 //                             console.log(img);

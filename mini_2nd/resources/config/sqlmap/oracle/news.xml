@@ -80,10 +80,10 @@
 	</select>
 	
 	
-	<select id="selectAfterNews" parameterType="string" resultMap="newsimgMap">
+	<select id="selectAfterNews" parameterType="newsimg" resultMap="newsimgMap">
 		select *
 		  from tb_news_img
-		 where day = #{day}
+		 where day = #{day} and news_id = #{newsId}
 	</select>
 	
 </mapper>

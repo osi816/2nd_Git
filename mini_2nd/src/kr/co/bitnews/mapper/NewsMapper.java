@@ -13,5 +13,5 @@ public interface NewsMapper {
 	public NewsImg selectNewsImgByid(String newsId);
 	public List<NewsImg> selectNewsImg();
 	public List<String> selectnewsImgByDay(String newsId);
-	public List<NewsImg> selectAfterNews(String day);
+	public NewsImg selectAfterNews(String day);
 }
