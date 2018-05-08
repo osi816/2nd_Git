@@ -54,12 +54,12 @@
 		
 	<script>
 	
-	$("#mod").click( function () {
+/* 	$("#mod").click( function () {
 		if ( $("sessionScope.user.userId") != $("user.userId") ) {
 			alert("자신이 작성한 글이 아닙니다.");
 			return false;
 		} return true;
-	});
+	}); */
 
 	$("#del").click( function () {
 		if(confirm("정말로 삭제하시겠습니까?")){

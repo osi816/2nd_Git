@@ -54,17 +54,17 @@
 		
 	<script>
 	
-	$("#mod").click( function () {
+	/* $("#mod").click( function () {
 		if ( ${sessionScope.user.userId} != ${board.userId}){			
 			alert("자신이 작성한 글이 아닙니다.");
 			return false;
 		} return true;
-	});
+	}); */
 	
 	console.log("${sessionScope.user.userId}");
 	console.log("${board.userId}");
 	
-	$("#del").click( function () {
+	/* $("#del").click( function () {
 		if ( ${sessionScope.user.userId} != ${user.userId} ) {
 			alert("자신이 작성한 글이 아닙니다.");
 			return false;
@@ -72,7 +72,7 @@
 			confirm("정말로 삭제하시겠습니까?");
 			return true;
 		} return false;
-	});
+	}); */
 	
 	function commentDelete(commentNo) {
 		$.ajax({
