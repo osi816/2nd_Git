@@ -6,6 +6,13 @@
 <head>
 	<meta charset='utf-8'>
 	<title>bit news</title>
+	<style>
+	
+	div.container {
+		width: 90%;
+	}
+	
+	</style>
 </head>
 <body>
 	<div style="
@@ -16,18 +23,21 @@
 	</div>
 
 <hr />
-번호 :  ${board.no}<br>
-글쓴이 : <c:out value="${board.userId}" /><br>
-제목 : <c:out value="${board.title}" /><br>
-내용 : <c:out value="${board.content}" /><br>
-등록일 : <fmt:formatDate value="${board.regDate}" pattern="yyyy-MM-dd HH:mm:ss" /><br><br>
+	<div class="container">
+번호 :  ${board.no}<br><br>
+글쓴이 : <c:out value="${board.userId}" /><br><br>
+제목 : <c:out value="${board.title}" /><br><br>
+내용 : <c:out value="${board.content}" /><br><br>
+등록일 : <fmt:formatDate value="${board.regDate}" pattern="yyyy-MM-dd HH:mm:ss" /><br><br><br>
 조회수 : ${board.viewCnt}<br>
 첨부파일 : <c:forEach var="file" items="${fileList}">
 	<a href="/mini_2nd/common/file/down?path=${file.filePath}&sName=${file.systemName}&dName=${file.oriName}">${file.oriName}</a>(${file.fileSize} bytes)<br>
 	</c:forEach><br>
 <hr />
-	<a href='updateForm?no=${board.no}'>수정</a>
-	<a href='delete?no=${board.no}' id="del">삭제</a>
+	<c:if test="${sessionScope.user.userId eq board.userId}">
+		<a href='updateForm?no=${board.no}' id="mod">수정</a>
+		<a href='delete?no=${board.no}' id="del">삭제</a>
+	</c:if>
 	<a href='list'>목록</a>
 <hr />
 	 <%--  댓글 파트입니다.  --%>	
@@ -45,8 +55,9 @@
 		    <div class="form-group">
 			    <input type="text" name="writer" class="form-control" readonly value="${user.userId}" placeholder="아이디를 입력하세요">
 		    </div>
+		    	<input type="text" size="50" name="content" class="form-control input-wp1" placeholder="내용을 입력하세요.">
 		    <div class="form-group">
-			    <input type="text" name="content" class="form-control input-wp1" placeholder="내용을 입력하세요">
+		    
 		    </div>
 		  	<button class="btn btn-primary">등록</button>
 		</div>
@@ -66,13 +77,6 @@
 			return true;
 		} return false;
 	});
-	
-	function docmtDel() {
-		if(confirm("정말로 삭제하시겠습니까?")){
-			return true;
-		} return false;
-	};
-	
 	
 	function commentDelete(commentNo) {
 		$.ajax({
@@ -207,7 +211,7 @@
 	// 상세 페이지 로딩시 댓글 목록 조회 ajax 호출
 	commentList();	
 	</script>	
-		
+	</div>
 </body>
 </html>
 

@@ -6,6 +6,13 @@
 <head>
 	<meta charset='utf-8'>
 	<title>bit news</title>
+	<style>
+	
+	div.container {
+		width: 90%;
+	}
+	
+	</style>
 </head>
 <body>
 	<div style="
@@ -16,20 +23,26 @@
 	</div>
 
 <hr />
-번호 :  ${board.no}<br>
-글쓴이 : <c:out value="${board.userId}" /><br>
-제목 : <c:out value="${board.title}" /><br>
-내용 : <c:out value="${board.content}" /><br>
-등록일 : <fmt:formatDate value="${board.regDate}" pattern="yyyy-MM-dd HH:mm:ss" /><br><br>
+	<div class="container">
+	
+번호 :  ${board.no}<br><br>
+글쓴이 : <c:out value="${board.userId}" /><br><br>
+제목 : <c:out value="${board.title}" /><br><br>
+내용 : <c:out value="${board.content}" /><br><br>
+등록일 : <fmt:formatDate value="${board.regDate}" pattern="yyyy-MM-dd HH:mm:ss" /><br><br><br>
 조회수 : ${board.viewCnt}<br>
 첨부파일 : <c:forEach var="file" items="${fileList}">
 	<a href="/mini_2nd/common/file/down?path=${file.filePath}&sName=${file.systemName}&dName=${file.oriName}">${file.oriName}</a>(${file.fileSize} bytes)<br>
 	</c:forEach><br>
+
 <hr />
-	<a href='updateForm?no=${board.no}' id="mod">수정</a>
-	<a href='delete?no=${board.no}' id="del">삭제</a>
-	<a href='list'>목록</a>
+	<c:if test="${sessionScope.user.userId eq board.userId}">
+		<a href='updateForm?no=${board.no}' id="mod">수정</a>
+		<a href='delete?no=${board.no}' id="del">삭제</a>
+	</c:if>
+		<a href='list'>목록</a>	
 <hr />
+
 	 <%--  댓글 파트입니다.  --%>	
 	 <form action="commentUpdate" method="post">
 		<input type="hidden" name="no" value="${board.no}" />
@@ -46,33 +59,18 @@
 			    <input type="text" name="writer" class="form-control" readonly value="${user.userId}" placeholder="아이디를 입력하세요">
 		    </div>
 		    <div class="form-group">
-			    <input type="text" name="content" class="form-control input-wp1" placeholder="내용을 입력하세요">
+			    <input type="text" size="50" name="content" class="form-control input-wp1" placeholder="내용을 입력하세요.">
 		    </div>
 		  	<button class="btn btn-primary">등록</button>
 		</div>
 	 </form>
-		
 	<script>
-	
-	/* $("#mod").click( function () {
-		if ( ${sessionScope.user.userId} != ${board.userId}){			
-			alert("자신이 작성한 글이 아닙니다.");
-			return false;
-		} return true;
-	}); */
-	
-	console.log("${sessionScope.user.userId}");
-	console.log("${board.userId}");
-	
-	/* $("#del").click( function () {
-		if ( ${sessionScope.user.userId} != ${user.userId} ) {
-			alert("자신이 작성한 글이 아닙니다.");
-			return false;
-		} else { 
-			confirm("정말로 삭제하시겠습니까?");
+
+	$("#del").click( function () {
+		if(confirm("정말로 삭제하시겠습니까?")){
 			return true;
 		} return false;
-	}); */
+	});
 	
 	function commentDelete(commentNo) {
 		$.ajax({
@@ -181,16 +179,17 @@
 			         + date.getMinutes() + ":"
 			         + date.getSeconds();
 			html += '	<td>' + time + '</td>';  
-			html += '	<td>';    
+			html += '	<td>';
 			html += '		<a href="javascript:commentUpdateForm(' + comment.commentNo + ')" class="btn btn-success btn-sm" id="a" role="button">수정</a>';    
 			html += '		<a href="javascript:commentDelete(' + comment.commentNo + ')" class="btn btn-danger btn-sm" id="b" role="button">삭제</a>';    
-			html += '	</td>';    
+			html += '	</td>';
 			html += '</tr>';
 		}
 		
 		if (result.length == 0) {
 			html += '<tr><td colspan="4">댓글이 존재하지 않습니다.</td></tr>';
 		}
+		
 		html += "</title>";
 		$("#commentList").html(html);
 	}
@@ -208,6 +207,7 @@
 	// 상세 페이지 로딩시 댓글 목록 조회 ajax 호출
 	commentList();	
 	</script>	
+	</div>
 		
 </body>
 </html>

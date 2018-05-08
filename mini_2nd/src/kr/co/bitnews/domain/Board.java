@@ -79,7 +79,7 @@ public class Board {
 	}
 	@Override
 	public String toString() {
-		return "Board [no=" + no + ", userId=" + userId + ", title=" + title + ", content=" + content + ", regDate="
+		return "Board [no=" + no + ", userName=" + userId + ", title=" + title + ", content=" + content + ", regDate="
 				+ regDate + ", viewCnt=" + viewCnt + "]";
 	}
 }

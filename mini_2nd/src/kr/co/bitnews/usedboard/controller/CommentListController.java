@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 
 import common.db.MyAppSqlConfig;
-import kr.co.bitnews.mapper.FreeBoardMapper;
+import kr.co.bitnews.mapper.UsedBoardMapper;
 
 @WebServlet("/usedBoard/commentList")
 public class CommentListController extends HttpServlet {
@@ -21,13 +21,13 @@ public class CommentListController extends HttpServlet {
 	public void service(
 			HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		FreeBoardMapper mapper = MyAppSqlConfig.getSqlSession().getMapper(FreeBoardMapper.class);
+		UsedBoardMapper mapper = MyAppSqlConfig.getSqlSession().getMapper(UsedBoardMapper.class);
 		
 		int no = Integer.parseInt(request.getParameter("no"));
-		
+		System.out.println(no);
 		response.setContentType("application/json; charset=utf-8"); 
 		PrintWriter out = response.getWriter();
-		
+		System.out.println(mapper.selectCommentByNo(no));
 		out.println(new Gson().toJson(mapper.selectCommentByNo(no)));
 	}
 }

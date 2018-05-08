@@ -8,6 +8,10 @@
 <head>
 	<meta charset='utf-8'>
 	<title>bit news</title>
+	<style>
+		tdoby {border: 1px solid;}
+		div ~ container {width: 90%}
+	</style>
 </head>
 <body>
 	<div style="
@@ -16,7 +20,7 @@
 		 font-weight: bold;"
 	> 기사 게시판 
 	</div>
-	
+	<div class="container">
 	전체 <c:out value="${pageResult.count}"/>개
 	<hr>
 	
@@ -45,6 +49,7 @@
 	</table>
 		<a href='writeForm'>글쓰기</a>
 	<navi:page data="${pageResult}" />
+	</div>
 <script>
 	$("ul.nav.navbar-nav > li").removeClass("active");
 	
