@@ -21,17 +21,19 @@
 	h2{
 	text-align: center;
 	margin-bottom: 60px;
+	margin-left:140px;
 	}
 	.form-p{
 	padding-left:200px;
 	}
-	
+
 
 </style>
 </head>
 <body>
 <form name="mForm" class="form-horizontal" action="${pageContext.request.contextPath}/findacc" onsubmit="return doAction()">
-  <h2>ID/PW 찾기</h2>
+  <h2 id="fipw">ID/PW 찾기</h2>
+  <br><br><br>
   <p class="form-p" style="color: red;">${errMsg}</p>
   <div class="form-group">
     <label for="inputName" class="col-sm-2 control-label">NAME</label>

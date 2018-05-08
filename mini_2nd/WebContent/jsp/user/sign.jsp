@@ -25,13 +25,21 @@ h2 {
 	text-align: center;
 	margin-bottom: 60px;
 }
+#signbtn{
+	margin-left:160px;
+}
+#sign{
+	margin-left:140px;
+}
+
 </style>
 </head>
 <body>
 	<form name="mForm" class="form-horizontal" method="post"
 		action="${pageContext.request.contextPath}/user/sign"
-		onsubmit="return doAction()">
-		<h2>회원가입</h2>
+		onsubmit="return doAction()" class="page-header">
+		<h2 id="sign">회원가입</h2>
+		<br><br><br>
 		<div class="form-group">
 			<label for="inputID" class="col-sm-2 control-label">ID</label>
 			<div class="col-sm-10">
@@ -100,7 +108,7 @@ h2 {
 <!-- 				      &nbsp;&nbsp;<button type="button" >확인</button> -->
 			</div>
 		</div>
-		<button>회원가입</button>
+		<button id="signbtn">회원가입</button>
 	</form>
 	<script>
 		var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;

@@ -24,6 +24,12 @@
 	.form-p{
 	padding-left:200px;
 	}
+	#naverimg{
+	padding-left:80px;
+		}
+	#cb{
+	padding-left:100px;
+	}
 </style>
 <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
@@ -52,12 +58,12 @@ onsubmit="return doAction()">
   </div>
   	<div id="naverIdLogin">
 		<a id="naverIdLogin_loginButton" href="#" role="button">
-			<img src="https://static.nid.naver.com/oauth/big_g.PNG" width=420>
+			<img id="naverimg" src="https://static.nid.naver.com/oauth/big_g.PNG" width=470>
 		</a>
 	</div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <div class="checkbox">
+      <div class="checkbox" id="cb">
         <label>   
           <input type="checkbox" id="idSaveCheck"> ID 저장        
           <a href="<c:url value="/findaccform" />">ID/PW 찾기</a>		 
@@ -93,6 +99,7 @@ onsubmit="return doAction()">
 	//ID저장
 	$(document).ready(function(){
 	    // 저장된 쿠키값을 가져와서 ID 칸에 넣어준다. 없으면 공백으로 들어감.
+	    console.log("쿠키 레디");
 	    var userInputId = getCookie("userInputId");
 	    $("input[name='id']").val(userInputId); 
 	     
@@ -101,6 +108,7 @@ onsubmit="return doAction()">
 	    }
 	     
 	    $("#idSaveCheck").change(function(){ // 체크박스에 변화가 있다면,
+	    	console.log("클릭변경");
 	        if($("#idSaveCheck").is(":checked")){ // ID 저장하기 체크했을 때,
 	            var userInputId = $("input[name='id']").val();
 	            setCookie("userInputId", userInputId, 7); // 7일 동안 쿠키 보관
@@ -111,6 +119,7 @@ onsubmit="return doAction()">
 	     
 	    // ID 저장하기를 체크한 상태에서 ID를 입력하는 경우, 이럴 때도 쿠키 저장.
 	    $("input[name='id']").keyup(function(){ // ID 입력 칸에 ID를 입력할 때,
+// 	    	console.log("쿠키 키업");
 	        if($("#idSaveCheck").is(":checked")){ // ID 저장하기를 체크한 상태라면,
 	            var userInputId = $("input[name='id']").val();
 	            setCookie("userInputId", userInputId, 7); // 7일 동안 쿠키 보관
@@ -185,7 +194,7 @@ onsubmit="return doAction()">
 			//var profileImage = naverLogin.user.getProfileImage();
 			//var nickName = naverLogin.user.getNickName();
 			var email = naverLogin.user.getEmail();
-			var uniqId = naverLogin.user.getId();
+			var uniqId = nav erLogin.user.getId();
 			var name = naverLogin.user.getNickName();
   			var hf = document.hForm;
 			
