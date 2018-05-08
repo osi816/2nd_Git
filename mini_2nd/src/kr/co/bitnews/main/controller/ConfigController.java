@@ -26,19 +26,22 @@ public class ConfigController extends HttpServlet{
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		NewsMapper mapper = MyAppSqlConfig.getSqlSession().getMapper(NewsMapper.class); 
 		String[] newsId = request.getParameterValues("newsId");
-		List<String> list = new ArrayList<>();
-		Collections.addAll(list, newsId);
+		User user = (User) request.getSession().getAttribute("user");
+		if(newsId != null) {
+			List<String> list = new ArrayList<>();
+			Collections.addAll(list, newsId);
 //		System.out.println(list.size());
 //		System.out.println("서블릿 옴");
-		User user = (User) request.getSession().getAttribute("user");
-		mapper.deleteNewsById(user.getUserId());
-		for (String newsid : list) {
-			News news = new News();
-			news.setNewsId(newsid);
-			news.setUserId(user.getUserId());
-			mapper.insertNews(news);
+			mapper.deleteNewsById(user.getUserId());
+			for (String newsid : list) {
+				News news = new News();
+				news.setNewsId(newsid);
+				news.setUserId(user.getUserId());
+				mapper.insertNews(news);
+			}
+		}else {
+			mapper.deleteNewsById(user.getUserId());
 		}
-		
 		response.sendRedirect(request.getContextPath() + "/main");
 	}
 	

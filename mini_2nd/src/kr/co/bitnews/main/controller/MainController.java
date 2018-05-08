@@ -24,16 +24,24 @@ public class MainController extends HttpServlet {
 		NewsMapper mapper = MyAppSqlConfig.getSqlSession().getMapper(NewsMapper.class);
 		User user = (User)request.getSession().getAttribute("user");
 		if(user != null){
-			List<String> newsidList =  mapper.selectNewsByUser(user.getUserId());
 			List<NewsImg> imgList = new ArrayList<>();
+			List<String> newsidList =  mapper.selectNewsByUser(user.getUserId());
 			for (String newsid : newsidList) {
-				System.out.println(newsid);
+//				System.out.println(newsid);
 				NewsImg newsimg = mapper.selectNewsImgByid(newsid);
-				System.out.println(newsimg.getImgPath());
+//				System.out.println(newsimg.getImgPath());
 				imgList.add(newsimg);
 			}
-			request.setAttribute("imgList", imgList);
-			System.out.println(imgList.size());
+			if(newsidList.isEmpty() == true) {
+				request.setAttribute("imgList", mapper.selectNewsImg());
+			}else {
+				request.setAttribute("imgList", imgList);
+				request.setAttribute("dateList", mapper.selectnewsImgByDay(newsidList.get(0)));
+			}
+//			System.out.println(imgList.size());
+		}else {
+			request.setAttribute("imgList", mapper.selectNewsImg());
+//			System.out.println(mapper.selectNewsImg().size());
 		}
 		RequestDispatcher rd = request.getRequestDispatcher("/jsp/news/main.jsp");
 		rd.forward(request, response);

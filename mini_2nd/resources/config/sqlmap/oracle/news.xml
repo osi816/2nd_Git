@@ -53,7 +53,37 @@
 		
 	<select id="selectNewsImgByid" parameterType="string" resultMap="newsimgMap">
 		select *
+		  from (
+			  select *
+			    from tb_news_img
+			   where news_id = #{newsId}
+			   order by day desc
+			  )
+		 where rownum = 1
+	</select>
+	
+	<select id="selectNewsImg" resultMap="newsimgMap">
+		select * 
+		  from (
+			   select *
+			     from tb_news_img
+			    order by day desc
+		   )   
+		  where rownum <![CDATA[ < ]]> 12
+	</select>
+	
+	<select id="selectnewsImgByDay" parameterType="string" resultType="string">
+		select day
 		  from tb_news_img
 		 where news_id = #{newsId}
+		 order by day
 	</select>
+	
+	
+	<select id="selectAfterNews" parameterType="string" resultMap="newsimgMap">
+		select *
+		  from tb_news_img
+		 where day = #{day}
+	</select>
+	
 </mapper>
